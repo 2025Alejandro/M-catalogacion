@@ -1,0 +1,230 @@
+/**
+ * Estilos de la maqueta.
+ * Secciones: aviso, encabezado, disposición, chat, burbujas,
+ * sugerencias, entrada y panel del flujo.
+ * Sin librerías. El foco visible y el aviso fijo son parte del contrato.
+ */
+
+/* Aviso: permanece visible y no se confunde con una respuesta del bot. */
+.aviso {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 0.75rem 1.25rem;
+  background: #2c241c;
+  color: #f6f0e6;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Encabezado */
+.encabezado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.25rem 0.5rem;
+}
+
+.encabezado-sobre {
+  margin: 0;
+  color: #6d6256;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.encabezado h1 {
+  margin: 0.15rem 0 0;
+  font-family: Georgia, "Iowan Old Style", Palatino, serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Disposición: chat y panel lado a lado; en pantallas estrechas, en columna. */
+.cuerpo {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(16rem, 0.9fr);
+  gap: 1rem;
+  padding: 1rem 1.25rem 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .cuerpo {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Chat */
+.chat {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  background: #fffdf8;
+  border: 1px solid #d9d0c1;
+  border-radius: 12px;
+}
+
+.mensajes {
+  flex: 1;
+  margin: 0;
+  padding: 1rem;
+  list-style: none;
+  overflow-y: auto;
+  max-height: 62vh;
+}
+
+.ancla {
+  height: 0;
+  list-style: none;
+}
+
+/* Burbujas. pre-line respeta los \n de las plantillas y sigue partiendo líneas largas. */
+.burbuja {
+  max-width: 42rem;
+  margin: 0 0 0.75rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+}
+
+.burbuja p {
+  margin: 0.2rem 0 0;
+  white-space: pre-line;
+  line-height: 1.45;
+}
+
+.burbuja-autor {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.burbuja-usuario {
+  margin-left: auto;
+  background: #243044;
+  color: #f7f4ee;
+}
+
+.burbuja-bot {
+  background: #f3efe6;
+  color: #1e1a16;
+  border: 1px solid #e4dccf;
+}
+
+.burbuja-espera {
+  opacity: 0.8;
+}
+
+/* Sugerencias */
+.sugerencias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.sugerencias button,
+.entrada button,
+.boton-secundario {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid #8d2f2a;
+  background: #fffdf8;
+  color: #8d2f2a;
+  padding: 0.45rem 0.8rem;
+}
+
+.entrada button,
+.boton-secundario {
+  background: #8d2f2a;
+  color: #fffdf8;
+}
+
+.sugerencias button:disabled,
+.entrada button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* Entrada */
+.entrada {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.entrada label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.entrada-fila {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.entrada input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #b7ab9b;
+  border-radius: 8px;
+  background: #fff;
+  color: #1e1a16;
+}
+
+/* Panel del flujo */
+.panel {
+  align-self: start;
+  background: #fffdf8;
+  border: 1px solid #d9d0c1;
+  border-radius: 12px;
+  padding: 0.4rem 0.9rem 0.9rem;
+}
+
+.panel summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.6rem 0;
+}
+
+.panel-vacio {
+  margin: 0.2rem 0 0;
+  color: #6d6256;
+}
+
+.panel-lista {
+  margin: 0;
+}
+
+.panel-lista dt {
+  margin-top: 0.7rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #6d6256;
+}
+
+.panel-lista dd {
+  margin: 0.2rem 0 0;
+  white-space: pre-line;
+  line-height: 1.4;
+}
+
+/* Foco visible en teclado, para todos los controles. */
+:focus-visible {
+  outline: 3px solid #0b5cab;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}

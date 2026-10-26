@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evidencias — Catalogación, modo simulado</title>
+  <style>
+    :focus-visible { outline: 3px solid #0b5cab; outline-offset: 2px; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+      color: #1e1a16;
+      background: #f3efe6;
+      line-height: 1.45;
+    }
+    header {
+      background: #2c241c;
+      color: #f6f0e6;
+      padding: 1.5rem 1.25rem 1.25rem;
+    }
+    header p { margin: 0.35rem 0 0; max-width: 46rem; }
+    h1, h2, h3 { font-family: Georgia, Palatino, serif; font-weight: 600; }
+    h1 { margin: 0; font-size: 1.8rem; }
+    main { padding: 1.25rem; max-width: 72rem; }
+    .resumen {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      gap: 0.75rem;
+      margin: 0 0 1.5rem;
+    }
+    .cifra {
+      background: #fffdf8;
+      border: 1px solid #d9d0c1;
+      border-radius: 12px;
+      padding: 0.8rem 1rem;
+    }
+    .cifra strong { display: block; font-size: 1.6rem; }
+    .cifra span { color: #6d6256; font-size: 0.85rem; }
+    section { margin: 0 0 2rem; }
+    .modulos { columns: 2; }
+    @media (max-width: 700px) { .modulos { columns: 1; } }
+    .caso {
+      background: #fffdf8;
+      border: 1px solid #d9d0c1;
+      border-radius: 12px;
+      margin: 0 0 1.25rem;
+      overflow: hidden;
+    }
+    .caso header {
+      background: transparent;
+      color: inherit;
+      padding: 0.9rem 1rem 0.2rem;
+    }
+    .caso h3 { margin: 0; font-size: 1.15rem; }
+    .meta { margin: 0.35rem 0 0.6rem; color: #6d6256; font-size: 0.9rem; }
+    .ok { color: #1d6b3a; font-weight: 700; }
+    figure { margin: 0; }
+    img { width: 100%; height: auto; display: block; border-top: 1px solid #e4dccf; }
+    figcaption { padding: 0.7rem 1rem 1rem; font-size: 0.92rem; }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    a { color: #8d2f2a; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portal de evidencias</h1>
+    <p>Primera versión de Catalogación: maqueta del asistente del acervo, en modo simulado y con catálogo ficticio. Las capturas se tomaron el 25 de octubre de 2026 en http://localhost:3000, con el panel «Cómo respondió» abierto.</p>
+  </header>
+  <main>
+    <section class="resumen" aria-label="Resultado de la batería">
+      <div class="cifra"><strong>14</strong><span>conversaciones distintas</span></div>
+      <div class="cifra"><strong>16</strong><span>turnos en pantalla</span></div>
+      <div class="cifra"><strong>14</strong><span>coinciden con la intención esperada</span></div>
+      <div class="cifra"><strong>simulado</strong><span>modelo usado en todas</span></div>
+    </section>
+
+    <section>
+      <h2>Qué incluye esta versión</h2>
+      <p>No hay un modelo de lenguaje cargado. Cada mensaje pasa por extracción, recuperación, plantillas del modelo simulado y validación de citas. El adaptador de LM Studio está escrito y no se usó.</p>
+      <ul class="modulos">
+        <li><code>src/data/baseConocimiento.json</code> — catálogo, intenciones y plantillas.</li>
+        <li><code>src/chatbot/textoUtils.js</code> — normalización, raíces y fechas fijas.</li>
+        <li><code>src/chatbot/extraccionDatos.js</code> — ID, tiempo, tipo, rango, frase.</li>
+        <li><code>src/chatbot/recuperacion.js</code> — índice del acervo.</li>
+        <li><code>src/chatbot/modeloSimulado.js</code> — puntajes y textos, sin IA.</li>
+        <li><code>src/chatbot/validacion.js</code> — IDs y timecodes citados.</li>
+        <li><code>src/chatbot/chatbot.js</code> — orquestador y respaldo.</li>
+        <li><code>src/components</code> y <code>src/hooks/useChatbot.js</code> — interfaz.</li>
+        <li><code>Dockerfile</code> y <code>docker-compose.yml</code> — ejecución sin Node en Windows.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conversaciones</h2>
+
+      <article class="caso">
+        <header>
+          <h3>1. Ficha por ID</h3>
+          <p class="meta">Intención esperada: buscar_por_id · <span class="ok">observada: buscar_por_id</span> · validación aceptada</p>
+        </header>
+        <figure>
+          <img src="capturas/01-ficha-por-id.png" alt="Respuesta con la ficha de NT20045, duración 00:42:10 y estado Completado." />
+          <figcaption>«¿Qué es el material NT20045?» devolvió título, tipo, duración, ingreso y estado Completado.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>2. Resumen y seguimiento de duración</h3>
+          <p class="meta">Turno 1: resumen_material. Turno 2, sin repetir el ID: buscar_por_id por contexto NT20045. <span class="ok">Ambos correctos.</span></p>
+        </header>
+        <figure>
+          <img src="capturas/02-resumen-y-duracion.png" alt="Dos turnos: resumen del metro y luego la duración 00:42:10 usando el material anterior." />
+          <figcaption>«¿Y cuánto dura?» no trae ID. El panel muestra por contexto NT20045 y la ficha con 00:42:10.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>3. Personas sin nombre</h3>
+          <p class="meta">personas_en_material · <span class="ok">observada</span> · validación aceptada</p>
+        </header>
+        <figure>
+          <img src="capturas/03-personas-sin-nombre.png" alt="El asistente dice que en NT20045 no se identifican personas con certeza por nombre." />
+          <figcaption>No inventa el nombre de la funcionaria. Explica que no hay rótulo.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>4. Transcripción y minuto</h3>
+          <p class="meta">transcripcion_material y después fragmento_por_timecode · <span class="ok">ambas observadas</span></p>
+        </header>
+        <figure>
+          <img src="capturas/04-transcripcion-y-minuto.png" alt="Transcripción con 00:05:32 y 00:21:48, y el fragmento de la tarifa en el minuto 21:48." />
+          <figcaption>El segundo turno usa el contexto y cita el fragmento de las 00:21:48 sobre la tarifa.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>5. Búsqueda por tema</h3>
+          <p class="meta">buscar_por_tema · <span class="ok">observada</span></p>
+        </header>
+        <figure>
+          <img src="capturas/05-busqueda-por-tema.png" alt="Resultado EN10388 con el fragmento 00:03:10 sobre inundaciones." />
+          <figcaption>«Busca materiales sobre inundaciones» encuentra solo EN10388 y cita 00:03:10.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>6. Búsqueda por frase</h3>
+          <p class="meta">buscar_por_frase · <span class="ok">observada</span></p>
+        </header>
+        <figure>
+          <img src="capturas/06-busqueda-por-frase.png" alt="La frase de la tarifa se localiza en NT20045 a las 00:21:48." />
+          <figcaption>«¿En qué video dijeron que no habrá aumento en la tarifa?» apunta a NT20045, 00:21:48.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>7. Fecha y tipo</h3>
+          <p class="meta">buscar_por_fecha_tipo · <span class="ok">observada</span></p>
+        </header>
+        <figure>
+          <img src="capturas/07-fecha-y-tipo.png" alt="Dos entrevistas de la semana: EN10391 del 24 de octubre y EN10388 del 22." />
+          <figcaption>Semana del 2026-10-19 al 2026-10-25. Entran EN10391 y EN10388. NT20045 queda fuera por ser conferencia.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>8. Disponibilidad</h3>
+          <p class="meta">disponibilidad_validacion · <span class="ok">observada</span></p>
+        </header>
+        <figure>
+          <img src="capturas/08-disponibilidad.png" alt="NT20150 está En cola y aún no se puede buscar por su contenido." />
+          <figcaption>NT20150 sigue en cola. La respuesta no finge que ya tenga transcripción.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>9. Material todavía en proceso</h3>
+          <p class="meta">personas_en_material · <span class="ok">observada</span></p>
+        </header>
+        <figure>
+          <img src="capturas/09-material-en-proceso.png" alt="RB30077 está Transcribiendo y aún no hay datos de personas." />
+          <figcaption>RB30077 está Transcribiendo. No hay lista de personas inventada.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>10. ID que no existe</h3>
+          <p class="meta">buscar_por_id · <span class="ok">observada</span></p>
+        </header>
+        <figure>
+          <img src="capturas/10-id-inexistente.png" alt="El asistente indica que NT99999 no existe en el catálogo de demostración." />
+          <figcaption>NT99999 se rechaza con el aviso del catálogo de demostración. No se recuerda como material activo.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>11. Búsqueda por persona</h3>
+          <p class="meta">buscar_por_persona · <span class="ok">observada</span></p>
+        </header>
+        <figure>
+          <img src="capturas/11-persona-laura-mendoza.png" alt="Laura Mendoza aparece en EN10391 a las 00:00:35 por rótulo." />
+          <figcaption>Laura Mendoza se localiza en EN10391, 00:00:35, origen rótulo.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>12. Guía de búsqueda</h3>
+          <p class="meta">guia_de_busqueda · <span class="ok">observada</span></p>
+        </header>
+        <figure>
+          <img src="capturas/12-guia-de-busqueda.png" alt="Lista de formas de buscar: ID, tema, frase, persona y fecha." />
+          <figcaption>«¿Cómo puedo buscar en el acervo?» explica ID, tema, frase, persona y fecha.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>13. Corrección de una descripción</h3>
+          <p class="meta">corregir_o_reportar · <span class="ok">observada</span></p>
+        </header>
+        <figure>
+          <img src="capturas/13-correccion.png" alt="NT20112 está Pendiente de revisión y se indica reportarlo a soporte con el ID." />
+          <figcaption>NT20112 está Pendiente de revisión. La respuesta indica corregir en la ficha o reportar el ID.</figcaption>
+        </figure>
+      </article>
+
+      <article class="caso">
+        <header>
+          <h3>14. Fuera de alcance</h3>
+          <p class="meta">respaldo · <span class="ok">observada</span> · la respuesta no cita VV50003</p>
+        </header>
+        <figure>
+          <img src="capturas/14-fuera-de-alcance.png" alt="El asistente dice que no entendió. El panel recuperó VV50003 por términos, pero la respuesta no lo menciona." />
+          <figcaption>«¿Quién ganó el partido de ayer?» cae en respaldo. El índice vio VV50003 por el título, y la respuesta no lo usa.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section>
+      <h2>Qué se sostiene en esta versión</h2>
+      <ul>
+        <li>Las 14 intenciones pedidas en estas conversaciones salieron como correspondía, incluido el respaldo.</li>
+        <li>El contexto de un turno sirve para el siguiente cuando no se repite el ID.</li>
+        <li>No se inventan personas, transcripciones ni fichas ausentes.</li>
+        <li>El banner y el panel dicen en todo momento que el modelo es simulado.</li>
+        <li>Las citas de ID y de timecode que sí se muestran existen en el catálogo.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Limitaciones que dejó ver la ejecución</h2>
+      <ul>
+        <li>No entiende fuera de las frases y las palabras del JSON. «¿Quién ganó el partido de ayer?» no se contesta, aunque el título de VV50003 contiene «partido». El puntaje de fecha se quedó en 1, bajo el umbral de 2, y ganó el respaldo. Eso evita una respuesta inventada y, a la vez, impide preguntas cortas o distintas de los ejemplos.</li>
+        <li>El índice recupera varios criterios a la vez. En la captura 14 el panel lista VV50003 por términos y HI40015 más EN10391 por el filtro de «ayer», pero la respuesta no habla de ellos. En la captura 7 también aparecen IDs en «por términos» y «por frase» aunque la respuesta salió del filtro de fecha. El panel parece decir que esos criterios decidieron la respuesta.</li>
+        <li>Cuando cae el respaldo, el panel marca la validación como «rechazada». No es un texto inválido: es que no hubo intención. La etiqueta confunde.</li>
+        <li>Los términos del panel son raíces («inund», «laur», «mendoz», «cuant»). Sirven para depurar y no para leerlos en una redacción.</li>
+        <li>La frase citada conserva el signo de interrogación final, como se ve en la captura 6.</li>
+        <li>Las personas solo existen si hay rótulo o mención en el audio. La funcionaria de NT20045 se describe y no se nombra. Es la regla del acervo, y también su límite.</li>
+        <li>Un material en cola o en transcripción no tiene <code>palabras_relacionadas</code>. No aparece en una búsqueda por tema.</li>
+        <li>El catálogo tiene ocho fichas ficticias. No hay video, no hay usuarios y la corrección no abre una ficha real: solo indica qué hacer.</li>
+        <li>La conversación vive en memoria. Al recargar se pierde.</li>
+        <li>LM Studio y Hermes no se ejecutaron. No hay paráfrasis libre ni redacción que no salga de una plantilla.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Mejoras para las siguientes etapas</h2>
+      <ul>
+        <li>Cuando haya equipo para un modelo, activar <code>MODO_MODELO: 'lmstudio'</code> y mantener la validación de IDs y timecodes antes de mostrar el texto.</li>
+        <li>En el panel, separar «criterio que armó la respuesta» de «otras coincidencias del índice».</li>
+        <li>Si la intención es nula y hay un solo acierto fuerte por título, preguntar si se refiere a esa ficha en lugar de cerrar con el respaldo. No contestar el marcador del partido.</li>
+        <li>Cambiar «validación rechazada» por «sin intención suficiente» cuando el texto mostrado es el de respaldo.</li>
+        <li>Mostrar las palabras de la consulta junto a su raíz, y quitar la puntuación sobrante de la frase.</li>
+        <li>Cubrir en el guion visual las intenciones que el código ya tiene y esta batería no fotografió: lugares, material relacionado y cortesía suelta.</li>
+        <li>Crecer el catálogo con un criterio editorial y palabras relacionadas revisadas, no solo con ajustes para que una prueba pase.</li>
+        <li>Enlazar cada ID a la ficha o al video cuando el acervo deje de ser de demostración.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

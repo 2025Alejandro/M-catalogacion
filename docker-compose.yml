@@ -1,0 +1,28 @@
+# Orquestación de la maqueta.
+# web publica la interfaz en el puerto 3000.
+# test ejecuta Jest una sola vez, con el código copiado en la imagen.
+# Ningún servicio llama a un modelo de lenguaje real.
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      HOST: 0.0.0.0
+      CHOKIDAR_USEPOLLING: "true"
+      WATCHPACK_POLLING: "true"
+      CI: "true"
+    stdin_open: true
+    volumes:
+      - .:/app
+      - web_node_modules:/app/node_modules
+
+  test:
+    build: .
+    environment:
+      CI: "true"
+    command: ["npm", "test", "--", "--watchAll=false"]
+
+volumes:
+  web_node_modules:

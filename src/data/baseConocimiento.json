@@ -1,0 +1,850 @@
+{
+  "metadatos": {
+    "nombre": "Asistente del acervo histórico de noticias",
+    "version": "0.1 (Avance 1)",
+    "idioma": "es",
+    "nota": "Todos los registros son ficticios y sirven solo para demostrar el flujo de consulta."
+  },
+  "referencia": {
+    "fechaReferencia": "2026-10-25"
+  },
+  "instrucciones_modelo": [
+    "Responde en español, de forma breve y solo con los registros entregados.",
+    "Cita siempre el ID del material y el timecode cuando corresponda.",
+    "No identifiques personas por su rostro: solo si aparecen rotuladas o se mencionan en el audio.",
+    "Si el registro no contiene el dato, di que no hay dato; no inventes.",
+    "Devuelve un JSON con la intención detectada y la respuesta."
+  ],
+  "palabras_vacias_busqueda": [
+    "a",
+    "al",
+    "algo",
+    "algun",
+    "alguna",
+    "algunas",
+    "algunos",
+    "acerca",
+    "ante",
+    "buscar",
+    "busca",
+    "busco",
+    "buscame",
+    "buscas",
+    "con",
+    "cual",
+    "cuales",
+    "cuando",
+    "como",
+    "contenido",
+    "dame",
+    "de",
+    "del",
+    "donde",
+    "el",
+    "ella",
+    "ellos",
+    "en",
+    "encuentra",
+    "encuentrame",
+    "encontrar",
+    "entre",
+    "es",
+    "esa",
+    "ese",
+    "esta",
+    "este",
+    "favor",
+    "hable",
+    "hablen",
+    "hay",
+    "la",
+    "las",
+    "lo",
+    "los",
+    "mas",
+    "material",
+    "materiales",
+    "me",
+    "mencionen",
+    "menciona",
+    "mi",
+    "muestra",
+    "muestrame",
+    "necesito",
+    "o",
+    "para",
+    "por",
+    "podrias",
+    "puedes",
+    "que",
+    "quiero",
+    "relacionado",
+    "relacionados",
+    "se",
+    "si",
+    "sobre",
+    "su",
+    "sus",
+    "tema",
+    "temas",
+    "tienen",
+    "tienes",
+    "trate",
+    "traten",
+    "u",
+    "un",
+    "una",
+    "uno",
+    "unos",
+    "unas",
+    "ver",
+    "video",
+    "videos",
+    "y",
+    "ya",
+    "yo",
+    "tu",
+    "te",
+    "ayudame",
+    "quisiera",
+    "archivo",
+    "declaracion",
+    "declaraciones",
+    "hacer",
+    "mucho",
+    "mucha",
+    "muchos",
+    "muchas",
+    "dijeron",
+    "dijo",
+    "aparece",
+    "aparecen",
+    "aparecer",
+    "sale",
+    "salen"
+  ],
+  "palabras_vacias_frase": [
+    "a",
+    "al",
+    "con",
+    "de",
+    "del",
+    "el",
+    "en",
+    "la",
+    "las",
+    "lo",
+    "los",
+    "que",
+    "se",
+    "su",
+    "un",
+    "una",
+    "y",
+    "o",
+    "no",
+    "es",
+    "por",
+    "para"
+  ],
+  "tipos_material": {
+    "entrevista": [
+      "entrevista",
+      "entrevistas"
+    ],
+    "conferencia de prensa": [
+      "conferencia",
+      "conferencias",
+      "rueda de prensa"
+    ],
+    "ceremonia": [
+      "ceremonia",
+      "ceremonias",
+      "inauguracion"
+    ],
+    "material en bruto": [
+      "material en bruto",
+      "en bruto"
+    ],
+    "cinta histórica": [
+      "cinta historica",
+      "cintas historicas",
+      "historica",
+      "historicas"
+    ],
+    "emisión en vivo": [
+      "emision en vivo",
+      "emisiones en vivo",
+      "en vivo"
+    ],
+    "cumbre": [
+      "cumbre",
+      "cumbres"
+    ]
+  },
+  "intenciones": {
+    "buscar_por_id": {
+      "descripcion": "Ficha de un material a partir de su ID.",
+      "fuertes": [
+        "que es el material",
+        "dame la ficha",
+        "ficha",
+        "ficha del material",
+        "informacion del material",
+        "datos del material",
+        "cuanto dura",
+        "duracion"
+      ],
+      "claves": []
+    },
+    "resumen_material": {
+      "descripcion": "De qué trata un material.",
+      "fuertes": [
+        "de que trata",
+        "que trata",
+        "de que va",
+        "de que se trata",
+        "resumen",
+        "resumeme",
+        "trata"
+      ],
+      "claves": [
+        "tema"
+      ]
+    },
+    "personas_en_material": {
+      "descripcion": "Personas que aparecen en un material.",
+      "fuertes": [
+        "aparece alguna persona",
+        "aparece alguien",
+        "quien aparece",
+        "quienes aparecen",
+        "que personas aparecen",
+        "personas aparecen",
+        "hay personas",
+        "personas identificadas",
+        "por su cara",
+        "por su rostro"
+      ],
+      "claves": [
+        "persona",
+        "personas",
+        "rostro"
+      ]
+    },
+    "lugares_y_elementos_visuales": {
+      "descripcion": "Lugares y elementos visuales de un material.",
+      "fuertes": [
+        "donde se grabo",
+        "donde se filmo",
+        "que lugares",
+        "que lugar",
+        "que se ve",
+        "que aparece en pantalla",
+        "elementos visuales",
+        "texto en pantalla",
+        "descripcion visual",
+        "que imagenes"
+      ],
+      "claves": [
+        "lugar",
+        "lugares",
+        "escenas",
+        "visual"
+      ]
+    },
+    "transcripcion_material": {
+      "descripcion": "Transcripción de un material.",
+      "fuertes": [
+        "que dicen",
+        "que dice",
+        "transcripcion",
+        "transcribe",
+        "texto del audio",
+        "palabra por palabra"
+      ],
+      "claves": [
+        "dicen",
+        "audio"
+      ]
+    },
+    "fragmento_por_timecode": {
+      "descripcion": "Qué se dice en un tiempo concreto.",
+      "fuertes": [
+        "en el minuto",
+        "minuto",
+        "en el segundo",
+        "en el timecode"
+      ],
+      "claves": [
+        "timecode",
+        "segundo"
+      ]
+    },
+    "buscar_por_tema": {
+      "descripcion": "Busca materiales por tema.",
+      "fuertes": [
+        "busca",
+        "buscame",
+        "busco",
+        "buscar",
+        "muestrame",
+        "encuentrame",
+        "materiales sobre",
+        "videos sobre",
+        "material sobre",
+        "videos de",
+        "hay materiales",
+        "tienes materiales",
+        "hay videos",
+        "algo sobre",
+        "algo donde",
+        "donde hablen",
+        "hablen de",
+        "entrevistas sobre",
+        "noticias sobre"
+      ],
+      "claves": [
+        "materiales",
+        "videos"
+      ]
+    },
+    "buscar_por_frase": {
+      "descripcion": "Busca materiales por una frase dicha.",
+      "fuertes": [
+        "en que video dijeron",
+        "en que material dijeron",
+        "en que video dijo",
+        "donde dijeron",
+        "dijeron que",
+        "dijo que",
+        "quien dijo",
+        "mencionaron que",
+        "mencionan que",
+        "frase exacta",
+        "cita textual",
+        "declaracion exacta"
+      ],
+      "claves": [
+        "dijeron",
+        "dijo",
+        "declaracion",
+        "declaraciones",
+        "frase"
+      ]
+    },
+    "buscar_por_persona": {
+      "descripcion": "Busca materiales donde aparece una persona.",
+      "fuertes": [
+        "en que materiales aparece",
+        "en que videos aparece",
+        "en que material aparece",
+        "donde aparece",
+        "materiales donde aparece",
+        "apariciones de",
+        "en que materiales sale"
+      ],
+      "claves": []
+    },
+    "buscar_por_fecha_tipo": {
+      "descripcion": "Filtra por fecha de ingreso y tipo.",
+      "fuertes": [
+        "ingresadas",
+        "ingresados",
+        "ingresaron",
+        "esta semana",
+        "este mes",
+        "semana pasada",
+        "cintas historicas",
+        "cinta historica"
+      ],
+      "claves": [
+        "entrevistas",
+        "entrevista",
+        "conferencias",
+        "conferencia",
+        "historicas",
+        "historica",
+        "hoy",
+        "ayer",
+        "semana",
+        "mes"
+      ]
+    },
+    "material_relacionado": {
+      "descripcion": "Material relacionado con otro.",
+      "fuertes": [
+        "mas material",
+        "material parecido",
+        "material relacionado",
+        "materiales relacionados",
+        "algo parecido",
+        "parecido a",
+        "como el",
+        "relacionado con"
+      ],
+      "claves": [
+        "parecido",
+        "relacionado",
+        "relacionados"
+      ]
+    },
+    "disponibilidad_validacion": {
+      "descripcion": "Disponibilidad y validación de un material.",
+      "fuertes": [
+        "ya puedo consultar",
+        "ya se puede consultar",
+        "se puede consultar",
+        "puedo consultar",
+        "ya esta disponible",
+        "esta disponible",
+        "esta validada",
+        "esta aprobada",
+        "descripcion validada",
+        "ya esta listo",
+        "cuando estara listo",
+        "estado del material",
+        "en que estado",
+        "estado"
+      ],
+      "claves": [
+        "disponible",
+        "validada",
+        "aprobada",
+        "listo"
+      ]
+    },
+    "guia_de_busqueda": {
+      "descripcion": "Explica cómo buscar en el acervo.",
+      "fuertes": [
+        "como puedo buscar",
+        "como busco",
+        "como buscar",
+        "como se busca",
+        "como funciona la busqueda",
+        "formas de buscar",
+        "como consulto",
+        "como consultar",
+        "como encontrar",
+        "como encuentro",
+        "por donde empiezo",
+        "que puedo buscar",
+        "ayuda",
+        "ayudame",
+        "que puedes hacer",
+        "que sabes hacer",
+        "para que sirves",
+        "menu",
+        "opciones"
+      ],
+      "claves": [
+        "ayuda"
+      ]
+    },
+    "corregir_o_reportar": {
+      "descripcion": "Corregir o reportar un problema.",
+      "fuertes": [
+        "descripcion incorrecta",
+        "informacion incorrecta",
+        "dato incorrecto",
+        "esta mal",
+        "esta equivocada",
+        "tiene un error",
+        "hay un error",
+        "error en",
+        "corregir",
+        "corrijo",
+        "corrige",
+        "reportar",
+        "reporto",
+        "reporte",
+        "problema",
+        "no encuentro un material",
+        "no aparece el material",
+        "falta un material",
+        "soporte",
+        "que hago",
+        "incorrecta",
+        "incorrecto"
+      ],
+      "claves": [
+        "error",
+        "mal",
+        "equivocado",
+        "equivocada"
+      ]
+    },
+    "cortesia": {
+      "descripcion": "Saludo, despedida o agradecimiento.",
+      "subintenciones": {
+        "saludo": {
+          "fuertes": [
+            "hola",
+            "buenos dias",
+            "buenas tardes",
+            "buenas noches",
+            "buen dia",
+            "saludos",
+            "hey",
+            "buenas"
+          ],
+          "claves": [],
+          "respuestas": [
+            "¡Hola! Soy el asistente del acervo histórico de noticias. ¿Qué material quieres buscar?"
+          ]
+        },
+        "despedida": {
+          "fuertes": [
+            "adios",
+            "hasta luego",
+            "hasta pronto",
+            "nos vemos",
+            "chao",
+            "bye",
+            "eso es todo",
+            "es todo",
+            "me despido"
+          ],
+          "claves": [],
+          "respuestas": [
+            "¡Hasta luego! Cuando necesites buscar un material del acervo, aquí estaré."
+          ]
+        },
+        "agradecimiento": {
+          "fuertes": [
+            "gracias",
+            "muchas gracias",
+            "te agradezco",
+            "muy amable"
+          ],
+          "claves": [],
+          "respuestas": [
+            "¡Con gusto! ¿Qué otro material quieres buscar?"
+          ]
+        }
+      }
+    }
+  },
+  "plantillas": {
+    "ficha": "{id} · «{titulo}»\nTipo: {tipo} · Duración: {duracion} · Ingreso: {ingreso} · Estado: {estado}",
+    "resumen": "{id} · «{titulo}»\n{resumen}\nEtiquetas: {etiquetas}.",
+    "resumen_sin_datos": "{id} aún no tiene resumen: su estado es {estado}.",
+    "personas_sin_procesar": "{id} sigue en proceso ({estado}): aún no hay datos de personas.",
+    "personas_con_datos": "Personas identificadas en {id}:\n{lineas}\nSolo se nombra a quienes aparecen rotulados o se mencionan en el audio.",
+    "personas_linea": "• {nombre} ({rol}) · {tc} · por {origen}",
+    "personas_ninguna": "En {id} no se identifican personas con certeza por nombre. {descripcion_personas}",
+    "lugares_sin_procesar": "{id} sigue en proceso ({estado}): aún no hay datos de lugares ni elementos visuales.",
+    "lugares_con_datos": "En {id}:\nLugares: {lugares}.\nSe ve: {elementos}.",
+    "transcripcion_con_datos": "Transcripción de {id} (fragmentos):\n{lineas}\nLa transcripción completa está en la ficha del material.",
+    "transcripcion_sin_datos": "{id} aún no tiene transcripción: su estado es {estado}.",
+    "fragmento_linea": "• {tc} «{texto}»",
+    "timecode_con_datos": "En {id}, el fragmento más cercano a {tiempo} está en {tc}: «{texto}»",
+    "resultados_encabezado": "Encontré {n} material(es) en el catálogo de demostración:",
+    "resultado_linea": "• {id} — {titulo} [{estado}]",
+    "resultado_fragmento": "    ▸ {tc} «{texto}»",
+    "resultado_sin_transcripcion": "    ▸ Aún sin transcripción: solo se encontró por el título.",
+    "tema_sin_terminos": "¿Sobre qué tema quieres buscar? Por ejemplo: inundaciones, hospital, transporte o seguridad vial.",
+    "tema_sin_resultados": "No encontré materiales relacionados con «{terminos}» en el catálogo de demostración. Prueba con otra palabra, un ID, una persona o una frase.",
+    "frase_con_resultados": "Lo encontré en:\n{lineas}",
+    "frase_linea": "• {id} — {titulo} · {tc} «{texto}»",
+    "frase_sin_resultados": "No encontré ese fragmento en las transcripciones disponibles. Prueba con otras palabras de la frase.",
+    "frase_sin_datos": "Dime la frase que quieres ubicar, por ejemplo: «¿En qué video dijeron que no habrá aumento en la tarifa?».",
+    "persona_con_resultados": "{nombre} aparece en:\n{lineas}",
+    "persona_linea": "• {id} — {titulo} · {tc} (por {origen})",
+    "persona_sin_resultados": "No encuentro a «{terminos}» en los materiales con personas identificadas. Solo se registra a quienes aparecen rotulados o se mencionan en el audio.",
+    "persona_sin_datos": "¿A quién buscas? Escribe el nombre, por ejemplo: «¿En qué materiales aparece Laura Mendoza?».",
+    "filtro_encabezado": "Encontré {n} material(es){descripcion_filtro}:",
+    "filtro_linea": "• {id} — {titulo} [{estado}] · ingresado el {ingreso}",
+    "filtro_sin_resultados": "No encontré materiales{descripcion_filtro} en el catálogo de demostración.",
+    "filtro_sin_datos": "Indícame un tipo de material (entrevista, conferencia, cinta histórica…) o una fecha (hoy, esta semana, un año) para filtrar.",
+    "relacionados_con_datos": "Material relacionado con {id}:\n{lineas}",
+    "relacionado_linea": "• {id} — {titulo} (en común: {comun})",
+    "relacionados_sin_datos": "No encontré material relacionado con {id} en el catálogo de demostración.",
+    "disp_completado": "{id} está {estado}: ya se puede buscar y su descripción está aprobada.",
+    "disp_pendiente_revision": "{id} está {estado}: ya se puede buscar, pero su descripción aún no está aprobada.",
+    "disp_en_proceso": "{id} está {estado}: aún no se puede buscar por su contenido; por ahora solo se encuentra por el título.",
+    "disp_error": "{id} tuvo un error de procesamiento: {detalle}. Repórtalo a soporte con su ID.",
+    "corregir_pendiente_revision": "{id} está Pendiente de revisión: puedes corregir su descripción en la ficha del material y aprobarla. Si no puedes hacerlo, repórtalo a soporte con el ID.",
+    "corregir_aprobado": "{id} ya está aprobado: para cambiarlo, repórtalo a soporte con el ID y el dato que está incorrecto.",
+    "corregir_otro_estado": "{id} sigue en proceso ({estado}): espera a que termine y, si el dato sigue mal, repórtalo a soporte con el ID.",
+    "corregir_sin_id": "Para corregir o reportar un problema incluye el ID del material, qué dato está mal y dónde lo ves. Si no encuentras un material que debería estar, indícalo también.",
+    "guia": "Puedes buscar en el acervo de estas formas:\n• Por ID: «Dame la ficha del NT20045».\n• Por tema: «Busca materiales sobre inundaciones».\n• Por frase: «¿En qué video dijeron que no habrá aumento en la tarifa?».\n• Por persona: «¿En qué materiales aparece Laura Mendoza?».\n• Por fecha o tipo: «Entrevistas ingresadas esta semana».\nY sobre un material: de qué trata, quién aparece, qué se dice y en qué minuto.",
+    "pedir_id": "¿De qué material hablas? Indícame su ID (por ejemplo, NT20045).",
+    "id_inexistente": "El ID {id} no existe en el catálogo de demostración. Verifica que tenga 2 o 3 letras y de 4 a 6 números (por ejemplo, NT20045)."
+  },
+  "respaldo": {
+    "respuestas": [
+      "No estoy seguro de haber entendido. Puedes buscar por ID, tema, persona, frase o fecha. Escribe «ayuda» para ver ejemplos.",
+      "Esa consulta queda fuera de lo que puedo responder. Puedes buscar por ID, tema, persona, frase o fecha."
+    ],
+    "repetido": "Sigo sin entender. Si prefieres hablar con una persona, escribe «soporte» y te indico cómo reportarlo."
+  },
+  "estados": {
+    "en_cola": {
+      "etiqueta": "En cola",
+      "descripcion": "El material está registrado y espera turno para la transcripción."
+    },
+    "transcribiendo": {
+      "etiqueta": "Transcribiendo",
+      "descripcion": "Se está convirtiendo el audio a texto."
+    },
+    "analizando_video": {
+      "etiqueta": "Analizando video",
+      "descripcion": "Se está describiendo el contenido visual."
+    },
+    "pendiente_revision": {
+      "etiqueta": "Pendiente de revisión",
+      "descripcion": "La IA terminó la pre-catalogación y falta que una persona la revise y apruebe."
+    },
+    "completado": {
+      "etiqueta": "Completado",
+      "descripcion": "La pre-catalogación está completa y aprobada."
+    },
+    "error": {
+      "etiqueta": "Error de procesamiento",
+      "descripcion": "El procesamiento falló."
+    }
+  },
+  "catalogo_demo": {
+    "NT20045": {
+      "titulo": "Conferencia sobre movilidad y transporte público",
+      "tipo": "conferencia de prensa",
+      "estado": "completado",
+      "duracion": "00:42:10",
+      "ingreso": "2026-10-20",
+      "etiquetas": [
+        "movilidad",
+        "transporte público",
+        "metro",
+        "tarifas",
+        "conferencia de prensa"
+      ],
+      "resumen": "Una funcionaria presenta la ampliación de una línea de metro y los cambios propuestos a las tarifas.",
+      "fragmentos": [
+        {
+          "tc": "00:05:32",
+          "texto": "La ampliación de la línea permitirá reducir en veinte minutos los traslados diarios."
+        },
+        {
+          "tc": "00:21:48",
+          "texto": "No habrá aumento en la tarifa del transporte durante este año."
+        }
+      ],
+      "personas": [],
+      "descripcion_personas": "Se ve a una funcionaria presentando la ampliación de la línea, sin rótulo con su nombre.",
+      "lugares": [
+        "sala de prensa"
+      ],
+      "elementos_visuales": [
+        "podio con micrófonos",
+        "mapa de la línea de metro en pantalla",
+        "texto en pantalla: «Ampliación de línea»"
+      ],
+      "palabras_relacionadas": [
+        "transporte",
+        "metro",
+        "movilidad",
+        "tarifa",
+        "traslados",
+        "autobus",
+        "trenes"
+      ]
+    },
+    "EN10388": {
+      "titulo": "Entrevista sobre lluvias e inundaciones en zonas bajas",
+      "tipo": "entrevista",
+      "estado": "completado",
+      "duracion": "00:18:45",
+      "ingreso": "2026-10-22",
+      "etiquetas": [
+        "lluvias",
+        "inundaciones",
+        "protección civil",
+        "entrevista"
+      ],
+      "resumen": "Un especialista de protección civil explica qué colonias son más vulnerables y cómo prepararse ante las lluvias.",
+      "fragmentos": [
+        {
+          "tc": "00:03:10",
+          "texto": "Las inundaciones se concentran en las zonas bajas cuando el drenaje se satura."
+        },
+        {
+          "tc": "00:12:05",
+          "texto": "Recomendamos tener una mochila de emergencia y conocer las rutas de evacuación."
+        }
+      ],
+      "personas": [
+        {
+          "nombre": "Ricardo Salas",
+          "rol": "especialista de protección civil",
+          "tc": "00:00:40",
+          "origen": "rótulo"
+        }
+      ],
+      "descripcion_personas": "",
+      "lugares": [
+        "estudio de entrevista",
+        "calles de una zona baja"
+      ],
+      "elementos_visuales": [
+        "entrevistado frente a cámara",
+        "imágenes de calles con agua"
+      ],
+      "palabras_relacionadas": [
+        "lluvia",
+        "llueve",
+        "llover",
+        "tormenta",
+        "inundacion",
+        "drenaje",
+        "encharcamientos",
+        "evacuacion",
+        "emergencia"
+      ]
+    },
+    "NT20112": {
+      "titulo": "Inauguración de hospital regional",
+      "tipo": "ceremonia",
+      "estado": "pendiente_revision",
+      "duracion": "00:31:05",
+      "ingreso": "2026-10-23",
+      "etiquetas": [
+        "salud",
+        "hospital",
+        "inauguración"
+      ],
+      "resumen": "Ceremonia de inauguración de un hospital regional con recorrido por las nuevas áreas de urgencias y pediatría.",
+      "fragmentos": [
+        {
+          "tc": "00:07:40",
+          "texto": "El hospital contará con cien camas y un área de urgencias las veinticuatro horas."
+        }
+      ],
+      "personas": [],
+      "descripcion_personas": "Se ve a autoridades y personal médico durante el corte de listón, sin rótulos con nombre.",
+      "lugares": [
+        "hospital regional"
+      ],
+      "elementos_visuales": [
+        "corte de listón",
+        "área de urgencias",
+        "sala de pediatría"
+      ],
+      "palabras_relacionadas": [
+        "hospital",
+        "salud",
+        "medicos",
+        "camas",
+        "urgencias",
+        "pediatria"
+      ]
+    },
+    "EN10391": {
+      "titulo": "Entrevista con especialista en seguridad vial",
+      "tipo": "entrevista",
+      "estado": "completado",
+      "duracion": "00:25:30",
+      "ingreso": "2026-10-24",
+      "etiquetas": [
+        "seguridad vial",
+        "accidentes",
+        "entrevista",
+        "peatones"
+      ],
+      "resumen": "Un especialista habla de las principales causas de accidentes y de las medidas para proteger a peatones y ciclistas.",
+      "fragmentos": [
+        {
+          "tc": "00:09:15",
+          "texto": "La velocidad excesiva es la principal causa de accidentes graves en avenidas."
+        }
+      ],
+      "personas": [
+        {
+          "nombre": "Laura Mendoza",
+          "rol": "especialista en seguridad vial",
+          "tc": "00:00:35",
+          "origen": "rótulo"
+        }
+      ],
+      "descripcion_personas": "",
+      "lugares": [
+        "estudio de entrevista",
+        "avenida"
+      ],
+      "elementos_visuales": [
+        "entrevistado frente a cámara",
+        "imágenes de cruces peatonales"
+      ],
+      "palabras_relacionadas": [
+        "transito",
+        "accidentes",
+        "velocidad",
+        "peatones",
+        "ciclistas",
+        "avenidas",
+        "conductores"
+      ]
+    },
+    "RB30077": {
+      "titulo": "Material en bruto: mercado de abastos",
+      "tipo": "material en bruto",
+      "estado": "transcribiendo",
+      "duracion": "01:12:30",
+      "ingreso": "2026-10-25",
+      "etiquetas": [],
+      "resumen": "",
+      "fragmentos": [],
+      "personas": [],
+      "descripcion_personas": "",
+      "lugares": [],
+      "elementos_visuales": [],
+      "palabras_relacionadas": []
+    },
+    "HI40015": {
+      "titulo": "Cinta histórica: festival de música de 1998",
+      "tipo": "cinta histórica",
+      "estado": "analizando_video",
+      "duracion": "00:55:00",
+      "ingreso": "2026-10-24",
+      "etiquetas": [],
+      "resumen": "",
+      "fragmentos": [],
+      "personas": [],
+      "descripcion_personas": "",
+      "lugares": [],
+      "elementos_visuales": [],
+      "palabras_relacionadas": []
+    },
+    "NT20150": {
+      "titulo": "Cumbre sobre cambio climático: mensajes de apertura",
+      "tipo": "cumbre",
+      "estado": "en_cola",
+      "duracion": "02:03:12",
+      "ingreso": "2026-10-25",
+      "etiquetas": [],
+      "resumen": "",
+      "fragmentos": [],
+      "personas": [],
+      "descripcion_personas": "",
+      "lugares": [],
+      "elementos_visuales": [],
+      "palabras_relacionadas": []
+    },
+    "VV50003": {
+      "titulo": "Emisión en vivo: resumen de partido de futbol",
+      "tipo": "emisión en vivo",
+      "estado": "error",
+      "duracion": "00:48:20",
+      "ingreso": "2026-10-23",
+      "detalle_error": "no se detectó pista de audio en el archivo",
+      "etiquetas": [],
+      "resumen": "",
+      "fragmentos": [],
+      "personas": [],
+      "descripcion_personas": "",
+      "lugares": [],
+      "elementos_visuales": [],
+      "palabras_relacionadas": []
+    }
+  }
+}

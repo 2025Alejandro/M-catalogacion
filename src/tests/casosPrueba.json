@@ -1,0 +1,207 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ficha por ID",
+    "turnos": [
+      {
+        "usuario": "¿Qué es el material NT20045?",
+        "intencionEsperada": "buscar_por_id",
+        "respuestaDebeContener": [
+          "Conferencia sobre movilidad y transporte público",
+          "00:42:10",
+          "2026-10-20",
+          "Completado"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Resumen con contexto",
+    "turnos": [
+      {
+        "usuario": "¿De qué trata el NT20045?",
+        "intencionEsperada": "resumen_material",
+        "respuestaDebeContener": [
+          "ampliación de una línea de metro",
+          "tarifas"
+        ]
+      },
+      {
+        "usuario": "¿Y cuánto dura?",
+        "intencionEsperada": "buscar_por_id",
+        "respuestaDebeContener": [
+          "00:42:10"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Personas en un material",
+    "turnos": [
+      {
+        "usuario": "¿Aparece alguna persona en el NT20045?",
+        "intencionEsperada": "personas_en_material",
+        "respuestaDebeContener": [
+          "no se identifican personas con certeza"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Transcripción y minuto exacto",
+    "turnos": [
+      {
+        "usuario": "¿Qué dicen en el NT20045?",
+        "intencionEsperada": "transcripcion_material",
+        "respuestaDebeContener": [
+          "00:05:32",
+          "00:21:48"
+        ]
+      },
+      {
+        "usuario": "¿Qué se dice en el minuto 21:48?",
+        "intencionEsperada": "fragmento_por_timecode",
+        "respuestaDebeContener": [
+          "00:21:48",
+          "no habrá aumento en la tarifa"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Búsqueda por tema",
+    "turnos": [
+      {
+        "usuario": "Busca materiales sobre inundaciones",
+        "intencionEsperada": "buscar_por_tema",
+        "respuestaDebeContener": [
+          "EN10388",
+          "00:03:10"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Búsqueda con paráfrasis",
+    "turnos": [
+      {
+        "usuario": "Necesito algo donde hablen de qué hacer si llueve mucho",
+        "intencionEsperada": "buscar_por_tema",
+        "respuestaDebeContener": [
+          "EN10388"
+        ],
+        "respuestaNoDebeContener": [
+          "NT20045"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Búsqueda por frase",
+    "turnos": [
+      {
+        "usuario": "¿En qué video dijeron que no habrá aumento en la tarifa?",
+        "intencionEsperada": "buscar_por_frase",
+        "respuestaDebeContener": [
+          "NT20045",
+          "00:21:48"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Búsqueda por fecha y tipo",
+    "turnos": [
+      {
+        "usuario": "Entrevistas ingresadas esta semana",
+        "intencionEsperada": "buscar_por_fecha_tipo",
+        "respuestaDebeContener": [
+          "EN10388",
+          "2026-10-22",
+          "EN10391",
+          "2026-10-24"
+        ],
+        "respuestaNoDebeContener": [
+          "NT20045"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Disponibilidad",
+    "turnos": [
+      {
+        "usuario": "¿Ya puedo consultar el NT20150?",
+        "intencionEsperada": "disponibilidad_validacion",
+        "respuestaDebeContener": [
+          "En cola",
+          "aún no se puede buscar"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Dato aún no disponible",
+    "turnos": [
+      {
+        "usuario": "¿Qué personas aparecen en el RB30077?",
+        "intencionEsperada": "personas_en_material",
+        "respuestaDebeContener": [
+          "Transcribiendo",
+          "aún no hay datos de personas"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "ID inexistente",
+    "turnos": [
+      {
+        "usuario": "Dame la ficha del NT99999",
+        "intencionEsperada": "buscar_por_id",
+        "respuestaDebeContener": [
+          "no existe en el catálogo"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Corrección de una descripción",
+    "turnos": [
+      {
+        "usuario": "El NT20112 tiene una descripción incorrecta, ¿qué hago?",
+        "intencionEsperada": "corregir_o_reportar",
+        "respuestaDebeContener": [
+          "Pendiente de revisión"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "nombre": "Fuera de alcance",
+    "turnos": [
+      {
+        "usuario": "¿Quién ganó el partido de ayer?",
+        "intencionEsperada": "respaldo",
+        "respuestaDebeContener": [
+          "persona, frase o fecha"
+        ],
+        "respuestaNoDebeContener": [
+          "VV50003"
+        ]
+      }
+    ]
+  }
+]

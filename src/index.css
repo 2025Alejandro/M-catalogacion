@@ -1,0 +1,23 @@
+/**
+ * Ajustes generales de la página, antes de los estilos de la maqueta.
+ * App.css define el chat, el aviso y el panel.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  color: #1e1a16;
+  background: #f3efe6;
+}

@@ -1,0 +1,6 @@
+# No copiar dependencias ni el build del host: la imagen los genera sola.
+node_modules
+build
+.git
+.gitignore
+npm-debug.log
