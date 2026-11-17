@@ -1,0 +1,275 @@
+{
+  "stemmer": "NLTK SnowballStemmer('spanish')",
+  "n_train": 875,
+  "n_test_plantilla": 209,
+  "n_test_independiente": 102,
+  "n_intenciones": 17,
+  "modelos": {
+    "Naive Bayes": {
+      "cv_f1_macro_media": 0.9537443809412297,
+      "cv_f1_macro_desv": 0.011061551126103951,
+      "plantilla": {
+        "accuracy": 0.69377990430622,
+        "precision_macro": 0.7209246443675509,
+        "recall_macro": 0.6971479500891266,
+        "f1_macro": 0.6858225108225108
+      },
+      "independiente": {
+        "accuracy": 0.803921568627451,
+        "precision_macro": 0.7725490196078432,
+        "recall_macro": 0.803921568627451,
+        "f1_macro": 0.782703570938865
+      },
+      "por_intencion_independiente": {
+        "buscar_por_fecha_tipo": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1-score": 0.9230769230769231,
+          "support": 6.0
+        },
+        "buscar_por_frase": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 6.0
+        },
+        "buscar_por_id": {
+          "precision": 0.7142857142857143,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7692307692307693,
+          "support": 6.0
+        },
+        "buscar_por_persona": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 6.0
+        },
+        "buscar_por_tema": {
+          "precision": 0.625,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7142857142857143,
+          "support": 6.0
+        },
+        "corregir_o_reportar": {
+          "precision": 0.625,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7142857142857143,
+          "support": 6.0
+        },
+        "cortesia": {
+          "precision": 0.7142857142857143,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7692307692307693,
+          "support": 6.0
+        },
+        "describir_imagen": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1-score": 0.9230769230769231,
+          "support": 6.0
+        },
+        "disponibilidad_validacion": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1-score": 0.9230769230769231,
+          "support": 6.0
+        },
+        "fragmento_por_timecode": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 6.0
+        },
+        "fuera_de_alcance": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "guia_de_busqueda": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.6666666666666666,
+          "support": 6.0
+        },
+        "lugares_y_elementos_visuales": {
+          "precision": 0.8,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.7272727272727273,
+          "support": 6.0
+        },
+        "material_relacionado": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.9090909090909091,
+          "support": 6.0
+        },
+        "personas_en_material": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8333333333333334,
+          "support": 6.0
+        },
+        "resumen_material": {
+          "precision": 0.75,
+          "recall": 0.5,
+          "f1-score": 0.6,
+          "support": 6.0
+        },
+        "transcripcion_material": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8333333333333334,
+          "support": 6.0
+        },
+        "accuracy": 0.803921568627451,
+        "macro avg": {
+          "precision": 0.7725490196078432,
+          "recall": 0.803921568627451,
+          "f1-score": 0.782703570938865,
+          "support": 102.0
+        },
+        "weighted avg": {
+          "precision": 0.7725490196078431,
+          "recall": 0.803921568627451,
+          "f1-score": 0.782703570938865,
+          "support": 102.0
+        }
+      }
+    },
+    "SVM (LinearSVC)": {
+      "cv_f1_macro_media": 0.9587943836992376,
+      "cv_f1_macro_desv": 0.015536903703006656,
+      "plantilla": {
+        "accuracy": 0.7081339712918661,
+        "precision_macro": 0.7344381882307579,
+        "recall_macro": 0.711764705882353,
+        "f1_macro": 0.6942945897125464
+      },
+      "independiente": {
+        "accuracy": 0.7843137254901961,
+        "precision_macro": 0.7894830659536543,
+        "recall_macro": 0.784313725490196,
+        "f1_macro": 0.7737949094350478
+      },
+      "por_intencion_independiente": {
+        "buscar_por_fecha_tipo": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1-score": 0.9230769230769231,
+          "support": 6.0
+        },
+        "buscar_por_frase": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 6.0
+        },
+        "buscar_por_id": {
+          "precision": 0.45454545454545453,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.5882352941176471,
+          "support": 6.0
+        },
+        "buscar_por_persona": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 6.0
+        },
+        "buscar_por_tema": {
+          "precision": 0.7142857142857143,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7692307692307693,
+          "support": 6.0
+        },
+        "corregir_o_reportar": {
+          "precision": 0.7142857142857143,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.7692307692307693,
+          "support": 6.0
+        },
+        "cortesia": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8333333333333334,
+          "support": 6.0
+        },
+        "describir_imagen": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1-score": 0.9230769230769231,
+          "support": 6.0
+        },
+        "disponibilidad_validacion": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1-score": 0.9230769230769231,
+          "support": 6.0
+        },
+        "fragmento_por_timecode": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 6.0
+        },
+        "fuera_de_alcance": {
+          "precision": 0.3333333333333333,
+          "recall": 0.16666666666666666,
+          "f1-score": 0.2222222222222222,
+          "support": 6.0
+        },
+        "guia_de_busqueda": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.6666666666666666,
+          "support": 6.0
+        },
+        "lugares_y_elementos_visuales": {
+          "precision": 0.8,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.7272727272727273,
+          "support": 6.0
+        },
+        "material_relacionado": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.9090909090909091,
+          "support": 6.0
+        },
+        "personas_en_material": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8333333333333334,
+          "support": 6.0
+        },
+        "resumen_material": {
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.4,
+          "support": 6.0
+        },
+        "transcripcion_material": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 6.0
+        },
+        "accuracy": 0.7843137254901961,
+        "macro avg": {
+          "precision": 0.7894830659536543,
+          "recall": 0.784313725490196,
+          "f1-score": 0.7737949094350478,
+          "support": 102.0
+        },
+        "weighted avg": {
+          "precision": 0.7894830659536543,
+          "recall": 0.7843137254901961,
+          "f1-score": 0.7737949094350479,
+          "support": 102.0
+        }
+      }
+    }
+  }
+}

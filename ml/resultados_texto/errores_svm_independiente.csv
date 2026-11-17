@@ -1,0 +1,23 @@
+texto,intencion,predicha
+¿Me pasas la información básica de NT20112?,buscar_por_id,corregir_o_reportar
+¿Puedes contarme brevemente qué muestra el EN10391?,resumen_material,describir_imagen
+¿Cuál es el asunto principal del material NT20045?,resumen_material,buscar_por_id
+¿Qué se aborda en el video EN10391?,resumen_material,buscar_por_id
+¿Me haces un extracto del NT20045?,resumen_material,guia_de_busqueda
+¿Se ve a alguna autoridad en el NT20112?,personas_en_material,lugares_y_elementos_visuales
+¿Qué se alcanza a ver en las imágenes del NT20112?,lugares_y_elementos_visuales,buscar_por_id
+¿Qué ubicaciones aparecen en el material EN10388?,lugares_y_elementos_visuales,buscar_por_id
+Necesito leer lo que se habla en el NT20045,transcripcion_material,resumen_material
+Quiero revisar las palabras del entrevistado en el EN10391,transcripcion_material,personas_en_material
+¿Cuál es la transcripción disponible del NT20112?,transcripcion_material,disponibilidad_validacion
+¿Existe archivo en el que se trate el tema de hospitales?,buscar_por_tema,resumen_material
+¿Hay piezas análogas al EN10391 en el archivo?,material_relacionado,buscar_por_id
+"Soy nuevo aquí, ¿cómo le hago para encontrar cosas?",guia_de_busqueda,fuera_de_alcance
+¿Cuáles son las opciones del asistente?,guia_de_busqueda,fuera_de_alcance
+Necesito avisar de una falla en la ficha del NT20112,corregir_o_reportar,buscar_por_id
+"Nos hablamos después, cuídate",cortesia,buscar_por_tema
+¿Me recomiendas un buen restaurante cerca?,fuera_de_alcance,cortesia
+¿A cuánto está el euro hoy?,fuera_de_alcance,buscar_por_fecha_tipo
+Platícame sobre la historia del futbol,fuera_de_alcance,buscar_por_tema
+¿Puedes ayudarme a escribir una carta de renuncia?,fuera_de_alcance,guia_de_busqueda
+¿Qué películas están en cartelera?,fuera_de_alcance,corregir_o_reportar

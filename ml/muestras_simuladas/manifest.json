@@ -1,0 +1,86 @@
+[
+  {
+    "archivo": "muestra_conferencia_prensa_1.jpg",
+    "clase": "conferencia_prensa",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_conferencia_prensa_2.jpg",
+    "clase": "conferencia_prensa",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_entrevista_estudio_1.jpg",
+    "clase": "entrevista_estudio",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_entrevista_estudio_2.jpg",
+    "clase": "entrevista_estudio",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_exteriores_calle_1.jpg",
+    "clase": "exteriores_calle",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_exteriores_calle_2.jpg",
+    "clase": "exteriores_calle",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_ceremonia_evento_1.jpg",
+    "clase": "ceremonia_evento",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_ceremonia_evento_2.jpg",
+    "clase": "ceremonia_evento",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_multitud_manifestacion_1.jpg",
+    "clase": "multitud_manifestacion",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_multitud_manifestacion_2.jpg",
+    "clase": "multitud_manifestacion",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_deportes_estadio_1.jpg",
+    "clase": "deportes_estadio",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  },
+  {
+    "archivo": "muestra_deportes_estadio_2.jpg",
+    "clase": "deportes_estadio",
+    "autor": "generado para la maqueta",
+    "licencia": "sintetica, sin terceros",
+    "origen": "ml/visual/generar_muestras_simuladas.py"
+  }
+]

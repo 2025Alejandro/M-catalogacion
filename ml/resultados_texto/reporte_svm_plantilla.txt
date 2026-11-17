@@ -1,0 +1,23 @@
+                              precision    recall  f1-score   support
+
+       buscar_por_fecha_tipo      1.000     1.000     1.000        12
+            buscar_por_frase      1.000     1.000     1.000        12
+               buscar_por_id      0.462     1.000     0.632        12
+          buscar_por_persona      0.923     1.000     0.960        12
+             buscar_por_tema      0.733     0.917     0.815        12
+         corregir_o_reportar      0.667     0.500     0.571        12
+                    cortesia      0.579     1.000     0.733        11
+            describir_imagen      0.833     1.000     0.909        15
+   disponibilidad_validacion      0.800     0.667     0.727        12
+      fragmento_por_timecode      1.000     1.000     1.000        12
+            fuera_de_alcance      1.000     0.267     0.421        15
+            guia_de_busqueda      0.667     0.500     0.571        12
+lugares_y_elementos_visuales      0.857     0.500     0.632        12
+        material_relacionado      0.667     0.500     0.571        12
+        personas_en_material      0.462     0.500     0.480        12
+            resumen_material      0.462     0.500     0.480        12
+      transcripcion_material      0.375     0.250     0.300        12
+
+                    accuracy                          0.708       209
+                   macro avg      0.734     0.712     0.694       209
+                weighted avg      0.740     0.708     0.693       209

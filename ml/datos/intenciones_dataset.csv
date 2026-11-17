@@ -1,0 +1,1085 @@
+texto,intencion,plantilla_id,particion
+¿Qué es el mterial EN10391?,buscar_por_id,buscar_por_id#0,train
+¿Qué es el material VV50003?,buscar_por_id,buscar_por_id#0,train
+¿Qué es el matreial NT20045?,buscar_por_id,buscar_por_id#0,train
+Dame la ficha del NT20201,buscar_por_id,buscar_por_id#1,train
+Dame la ficha del NT20150,buscar_por_id,buscar_por_id#1,train
+Dame la ficha del HI40015,buscar_por_id,buscar_por_id#1,train
+Ficha del material VV50003,buscar_por_id,buscar_por_id#2,train
+Ficha del material RB30201,buscar_por_id,buscar_por_id#2,train
+Ficha del material VV50010,buscar_por_id,buscar_por_id#2,train
+Muéstrame los datos del NT20310,buscar_por_id,buscar_por_id#3,train
+"Oye, muéstrame los datos del EN10391",buscar_por_id,buscar_por_id#3,train
+"Mira, muéstrame los datos del HI40015",buscar_por_id,buscar_por_id#3,train
+Información del material NT20045,buscar_por_id,buscar_por_id#4,test
+Información del material VV50003,buscar_por_id,buscar_por_id#4,test
+Información del material HI40015,buscar_por_id,buscar_por_id#4,test
+"Oye, ¿Cuánto dura el HI40033?",buscar_por_id,buscar_por_id#5,train
+"Por favor, ¿Cuánto dura el NT20045?",buscar_por_id,buscar_por_id#5,train
+"Oye, ¿Cuánto dura el RB30077?",buscar_por_id,buscar_por_id#5,train
+Duración del EN10455 gracias,buscar_por_id,buscar_por_id#6,train
+Duración del RB30077,buscar_por_id,buscar_por_id#6,train
+Druación del NT20045,buscar_por_id,buscar_por_id#6,train
+¿Qué tipo de material es el EN10455?,buscar_por_id,buscar_por_id#7,train
+¿Qué tipo de maerial es el EN10388?,buscar_por_id,buscar_por_id#7,train
+"Oye, ¿Qué tipo de material es el VV50003?",buscar_por_id,buscar_por_id#7,train
+Necesito saber: ¿Cuándo ingresó el RB30120?,buscar_por_id,buscar_por_id#8,train
+¿Cuándo ingresó el NT20045?,buscar_por_id,buscar_por_id#8,train
+¿Cuándo ingresó el VV50003?,buscar_por_id,buscar_por_id#8,train
+"Disculpa, necesito los datos del EN10402",buscar_por_id,buscar_por_id#9,test
+Necesiot los datos del NT20201,buscar_por_id,buscar_por_id#9,test
+Necesito los datos del EN10455,buscar_por_id,buscar_por_id#9,test
+Abre el material HI40033,buscar_por_id,buscar_por_id#10,train
+Abre el material HI40015,buscar_por_id,buscar_por_id#10,train
+Abre el material VV50003,buscar_por_id,buscar_por_id#10,train
+Quiero ver la ficha de VV50003,buscar_por_id,buscar_por_id#11,train
+Quireo ver la ficha de VV50010,buscar_por_id,buscar_por_id#11,train
+Quiro ver la ficha de NT20310,buscar_por_id,buscar_por_id#11,train
+¿Qué video es el RB30120?,buscar_por_id,buscar_por_id#12,train
+¿Qué video es el RB30077?,buscar_por_id,buscar_por_id#12,train
+¿Qué video es el NT20150?,buscar_por_id,buscar_por_id#12,train
+Datos generales de HI40015,buscar_por_id,buscar_por_id#13,train
+Datos generales de NT20150 por favor,buscar_por_id,buscar_por_id#13,train
+Datos generales de NT20150,buscar_por_id,buscar_por_id#13,train
+NT20310,buscar_por_id,buscar_por_id#14,test
+RB30120,buscar_por_id,buscar_por_id#14,test
+"Disculpa, vV50003",buscar_por_id,buscar_por_id#14,test
+Busca el NT20112 por favor,buscar_por_id,buscar_por_id#15,train
+Busca el NT20310,buscar_por_id,buscar_por_id#15,train
+Busca el HI40033,buscar_por_id,buscar_por_id#15,train
+Consulta el ID NT20310,buscar_por_id,buscar_por_id#16,train
+Consulta el ID NT20045,buscar_por_id,buscar_por_id#16,train
+Consulta el ID VV50010,buscar_por_id,buscar_por_id#16,train
+"Necesito saber: ¿Cuál es el título del RB30201, por favor",buscar_por_id,buscar_por_id#17,train
+"Por favor, ¿Cuál es el título del NT20045?",buscar_por_id,buscar_por_id#17,train
+¿Cuál es el título del HI40015?,buscar_por_id,buscar_por_id#17,train
+¿De qué fecha es el VV50010?,buscar_por_id,buscar_por_id#18,train
+¿De qué fecha es el EN10388 por favor,buscar_por_id,buscar_por_id#18,train
+¿De qué fecha es el NT20310?,buscar_por_id,buscar_por_id#18,train
+Ficha técnica RB30201 por favor,buscar_por_id,buscar_por_id#19,test
+Ficha técnica VV50010,buscar_por_id,buscar_por_id#19,test
+Ficha técnica NT20201,buscar_por_id,buscar_por_id#19,test
+Dime qué es RB30201,buscar_por_id,buscar_por_id#20,train
+Dime qué es VV50003,buscar_por_id,buscar_por_id#20,train
+Dime qué es NT20045,buscar_por_id,buscar_por_id#20,train
+Detalles del archivo EN10391,buscar_por_id,buscar_por_id#21,train
+Detalles del archivo NT20112,buscar_por_id,buscar_por_id#21,train
+Necesito saber: detalles del archivo EN10455 gracias,buscar_por_id,buscar_por_id#21,train
+"Hola, ¿De qué trata el NT20112?",resumen_material,resumen_material#0,train
+¿De qué trata el VV50003?,resumen_material,resumen_material#0,train
+¿De qué trata el NT20150?,resumen_material,resumen_material#0,train
+Resumen del EN10402,resumen_material,resumen_material#1,train
+Resumen del RB30201 gracias,resumen_material,resumen_material#1,train
+Resumen del NT20045,resumen_material,resumen_material#1,train
+Hazme un resumen del material NT20310 gracias,resumen_material,resumen_material#2,train
+Hazme un resumen del material RB30201,resumen_material,resumen_material#2,train
+Hazme un resumen del material NT20045,resumen_material,resumen_material#2,train
+Necesito saber: ¿De qué va el video NT20150?,resumen_material,resumen_material#3,train
+¿De qué va el video EN10402?,resumen_material,resumen_material#3,train
+¿De qué va el video RB30077?,resumen_material,resumen_material#3,train
+¿Qué contiene el NT20150?,resumen_material,resumen_material#4,test
+¿Qué contiene el EN10402?,resumen_material,resumen_material#4,test
+¿Qué contieen el VV50010?,resumen_material,resumen_material#4,test
+Céuntame de qué se trata el VV50010 por favor,resumen_material,resumen_material#5,train
+Cuéntame de qué se trata el RB30077,resumen_material,resumen_material#5,train
+Cuéntame de qué se trata el VV50010,resumen_material,resumen_material#5,train
+"¿Cuál es el tema del NT20112, por favor",resumen_material,resumen_material#6,train
+¿Cuál es el tema del NT20310?,resumen_material,resumen_material#6,train
+¿Cuál es el tema del VV50003?,resumen_material,resumen_material#6,train
+Dame un resumen de EN10402,resumen_material,resumen_material#7,train
+Dame un resumen de NT20045,resumen_material,resumen_material#7,train
+Dame un resumen de VV50003,resumen_material,resumen_material#7,train
+¿Qué etiquetas tiene el EN10391 urgente,resumen_material,resumen_material#8,train
+¿Qué etiquetas tiene el HI40015?,resumen_material,resumen_material#8,train
+¿Qué etiquetas tiene el EN10402?,resumen_material,resumen_material#8,train
+Explícame brevemente el HI40033,resumen_material,resumen_material#9,test
+Explícame brevemente el VV50010,resumen_material,resumen_material#9,test
+Explícame brevemente el NT20112,resumen_material,resumen_material#9,test
+¿Sobre qué es el material VV50003?,resumen_material,resumen_material#10,train
+"Disculpa, ¿Sobre qué es el material RB30077?",resumen_material,resumen_material#10,train
+¿Sobre qué es el material HI40033?,resumen_material,resumen_material#10,train
+¿Qué temas aborda el NT20112?,resumen_material,resumen_material#11,train
+"Mira, ¿Qué temas aborda el NT20150?",resumen_material,resumen_material#11,train
+¿Qué temas aborda el NT20201?,resumen_material,resumen_material#11,train
+Resume el NT20201,resumen_material,resumen_material#12,train
+Resume el EN10455,resumen_material,resumen_material#12,train
+"Oye, resume el RB30201",resumen_material,resumen_material#12,train
+¿Qué hay en el NT20201?,resumen_material,resumen_material#13,train
+¿Qué hay en el EN10391?,resumen_material,resumen_material#13,train
+"¿Qué hay en el RB30120, por favor",resumen_material,resumen_material#13,train
+Quiero saber de qué habla el HI40033,resumen_material,resumen_material#14,test
+Quiero saber de qué habla el NT20310,resumen_material,resumen_material#14,test
+Quiero saber de qué habla el EN10391,resumen_material,resumen_material#14,test
+Descripción general de NT20045,resumen_material,resumen_material#15,train
+Descripción general de VV50010,resumen_material,resumen_material#15,train
+"Una duda: descripción general de EN10402, por favor",resumen_material,resumen_material#15,train
+¿De qué se habla en el NT20310 por favor,resumen_material,resumen_material#16,train
+"Por favor, ¿De qué se habla en el RB30201?",resumen_material,resumen_material#16,train
+"Hola, ¿De qué se habla en el NT20201?",resumen_material,resumen_material#16,train
+Sinopsis del HI40033,resumen_material,resumen_material#17,train
+Una duda: sinopsis del VV50010,resumen_material,resumen_material#17,train
+Sinopsis del NT20112,resumen_material,resumen_material#17,train
+¿Me resumes el material VV50003?,resumen_material,resumen_material#18,train
+¿Me resumes el material RB30077?,resumen_material,resumen_material#18,train
+¿Me resumes el material RB30201?,resumen_material,resumen_material#18,train
+De qué trata RB30120,resumen_material,resumen_material#19,test
+"De qué trata NT20112, por favor",resumen_material,resumen_material#19,test
+De qué trata VV50010,resumen_material,resumen_material#19,test
+"Por favor, ¿Aparece alguna persona en el EN10388?",personas_en_material,personas_en_material#0,train
+¿Aparece algua persona en el HI40015 urgente,personas_en_material,personas_en_material#0,train
+¿Aparece alguna persona en el RB30077?,personas_en_material,personas_en_material#0,train
+¿Quiénes aparecen en el NT20112?,personas_en_material,personas_en_material#1,train
+"Por favor, ¿Quiénes aparecen en el NT20112?",personas_en_material,personas_en_material#1,train
+¿Quiénes aparecen en el VV50003?,personas_en_material,personas_en_material#1,train
+Necesito saber: ¿Qué personas salen en el material RB30120?,personas_en_material,personas_en_material#2,train
+¿Qué personas salen en el material EN10455?,personas_en_material,personas_en_material#2,train
+¿Qué personas salen en el material VV50003?,personas_en_material,personas_en_material#2,train
+¿Se identifica a alguien en el NT20310?,personas_en_material,personas_en_material#3,train
+"Hola, ¿Se identifica a alguien en el EN10391 gracias",personas_en_material,personas_en_material#3,train
+¿Se identiifca a alguien en el NT20045 gracias,personas_en_material,personas_en_material#3,train
+"Oye, ¿Quién habla en el EN10388 gracias",personas_en_material,personas_en_material#4,test
+¿Quién habla en el NT20310?,personas_en_material,personas_en_material#4,test
+¿Quién habla en el EN10391?,personas_en_material,personas_en_material#4,test
+"Disculpa, ¿Hay personas identificadas en HI40033, por favor",personas_en_material,personas_en_material#5,train
+¿Hay personas identificadas en EN10388?,personas_en_material,personas_en_material#5,train
+"Mira, ¿Hay personas identificadas en RB30120?",personas_en_material,personas_en_material#5,train
+"Por favor, dime quién aparece en el HI40015",personas_en_material,personas_en_material#6,train
+Dime quién apaece en el VV50010,personas_en_material,personas_en_material#6,train
+Dime quién aparece en el NT20310,personas_en_material,personas_en_material#6,train
+Personas que aparecen en el NT20112 urgente,personas_en_material,personas_en_material#7,train
+"Mira, personas que aparecen en el EN10455",personas_en_material,personas_en_material#7,train
+"Oye, personas que aparecen en el NT20201",personas_en_material,personas_en_material#7,train
+¿Salen funcionarios en el EN10388 gracias,personas_en_material,personas_en_material#8,train
+¿Salen funcionarios en el HI40033?,personas_en_material,personas_en_material#8,train
+¿Salen funcionarios en el NT20045?,personas_en_material,personas_en_material#8,train
+Necesito saber: ¿Quién es el entrevsitado del EN10402?,personas_en_material,personas_en_material#9,test
+"Por favor, ¿Quién es el entrevistado del EN10402?",personas_en_material,personas_en_material#9,test
+"Oye, ¿Quién es el entrevistado del NT20045 por favor",personas_en_material,personas_en_material#9,test
+¿A quién entrevistan en el RB30201?,personas_en_material,personas_en_material#10,train
+¿A quién entrevistan en el HI40033?,personas_en_material,personas_en_material#10,train
+¿A quién entrevistan en el RB30077?,personas_en_material,personas_en_material#10,train
+¿Aparece algún político en el NT20201 gracias,personas_en_material,personas_en_material#11,train
+"¿Aparece algún político en el RB30077, por favor",personas_en_material,personas_en_material#11,train
+¿Aparece algún político en el NT20201?,personas_en_material,personas_en_material#11,train
+"Hola, ¿Qué personajes aparecen en RB30201?",personas_en_material,personas_en_material#12,train
+¿Qué personajes aparecen en RB30077 gracias,personas_en_material,personas_en_material#12,train
+¿Qué personajes aparecen en EN10455?,personas_en_material,personas_en_material#12,train
+¿Hay algún rótulo con nombre en el RB30120?,personas_en_material,personas_en_material#13,train
+"Disculpa, ¿Hay algún rótulo con nombre en el VV50010?",personas_en_material,personas_en_material#13,train
+¿Hay algún rótulo con nombre en el RB30201?,personas_en_material,personas_en_material#13,train
+¿Se menciona el nombre del especialista en el EN10388 por favor,personas_en_material,personas_en_material#14,test
+¿Se menciona el nombre del especialista en el EN10391?,personas_en_material,personas_en_material#14,test
+¿Se menciona el nombre del especialista en el VV50010?,personas_en_material,personas_en_material#14,test
+Lista de personas del RB30077,personas_en_material,personas_en_material#15,train
+Lista de personas del RB30201,personas_en_material,personas_en_material#15,train
+Lista de personas del NT20045,personas_en_material,personas_en_material#15,train
+"Hola, ¿Cuántas personas hay en el VV50010?",personas_en_material,personas_en_material#16,train
+¿Cuántas personas hay en el NT20150?,personas_en_material,personas_en_material#16,train
+¿Cuántas personas hay en el RB30201?,personas_en_material,personas_en_material#16,train
+¿Quién sale en NT20201?,personas_en_material,personas_en_material#17,train
+¿Quién sale en NT20150?,personas_en_material,personas_en_material#17,train
+¿Quién sale en HI40033?,personas_en_material,personas_en_material#17,train
+Una duda: ¿Reconoce a las personas del NT20150?,personas_en_material,personas_en_material#18,train
+"Mira, ¿Reconoce a las personas del VV50003?",personas_en_material,personas_en_material#18,train
+¿Reconoce a las persoans del NT20310?,personas_en_material,personas_en_material#18,train
+¿Aparece alguien conocido en el HI40015?,personas_en_material,personas_en_material#19,test
+¿Aparece alguien conocido en el NT20045?,personas_en_material,personas_en_material#19,test
+¿Aparece alguien concoido en el EN10455?,personas_en_material,personas_en_material#19,test
+¿Qué personas se ven en HI40015 gracias,personas_en_material,personas_en_material#20,train
+¿Qué persons se ven en NT20045?,personas_en_material,personas_en_material#20,train
+¿Qué personas se ven en EN10391?,personas_en_material,personas_en_material#20,train
+¿Dónde se grabó el EN10391?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#0,train
+¿Dónde se grabó el NT20310?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#0,train
+¿Dónde se grabó el HI40033?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#0,train
+¿Qué se ve en el EN10455 gracias,lugares_y_elementos_visuales,lugares_y_elementos_visuales#1,train
+¿Qué se ve en el EN10388?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#1,train
+"Hola, ¿Qué se ve en el NT20310?",lugares_y_elementos_visuales,lugares_y_elementos_visuales#1,train
+¿Qué lugares aparecen en el NT20310?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#2,train
+¿Qué lugres aparecen en el HI40033?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#2,train
+"Por favor, ¿Qué lugares aparecen en el NT20310?",lugares_y_elementos_visuales,lugares_y_elementos_visuales#2,train
+"Oye, descripción visual del EN10388",lugares_y_elementos_visuales,lugares_y_elementos_visuales#3,train
+Descripción visual del VV50003,lugares_y_elementos_visuales,lugares_y_elementos_visuales#3,train
+Descripción visual del RB30201,lugares_y_elementos_visuales,lugares_y_elementos_visuales#3,train
+¿Qué elementos visuales tiene el RB30201?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#4,test
+¿Qué eementos visuales tiene el VV50010?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#4,test
+¿Qué elementos visuales tiene el EN10388?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#4,test
+¿Qué aparece en pantalla en el NT20150?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#5,train
+¿Qué aparece en pantalla en el EN10402?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#5,train
+¿Qué aparece en pantalla en el RB30201?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#5,train
+¿Hay texto en pantalla en el NT20310?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#6,train
+Necesito saber: ¿Hay texto en pantalla en el RB30120?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#6,train
+Necesito saber: ¿Hay texto en pantalla en el EN10388?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#6,train
+¿En qué lugar sucede el NT20150?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#7,train
+¿En qué lugar sucede el NT20045?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#7,train
+Una duda: ¿En qué lugar sucede el NT20310?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#7,train
+¿Qué ecenas tiene el NT20112?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#8,train
+¿Qué escenas tiene el RB30201?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#8,train
+¿Qué escenas tiene el EN10388?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#8,train
+¿Qué imágenes se ven en EN10388?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#9,test
+¿Qué imágenes se ven en EN10402?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#9,test
+¿Qué imágenes se ven en NT20112?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#9,test
+¿Se ve algún mapa en el VV50010?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#10,train
+"Por favor, ¿Se ve algún mapa en el VV50010?",lugares_y_elementos_visuales,lugares_y_elementos_visuales#10,train
+"Oye, ¿Se ve algún mapa en el HI40015?",lugares_y_elementos_visuales,lugares_y_elementos_visuales#10,train
+¿Cómo es el escenario del RB30120?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#11,train
+¿Cómo es el escenario del HI40015 por favor,lugares_y_elementos_visuales,lugares_y_elementos_visuales#11,train
+¿Cómo es el escenario del RB30201?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#11,train
+Describe lo que se ve en el EN10402,lugares_y_elementos_visuales,lugares_y_elementos_visuales#12,train
+"Hola, describe lo que se ve en el RB30077",lugares_y_elementos_visuales,lugares_y_elementos_visuales#12,train
+Describe lo que se ve en el RB30201,lugares_y_elementos_visuales,lugares_y_elementos_visuales#12,train
+¿En qué sitio se filmó el HI40015 por favor,lugares_y_elementos_visuales,lugares_y_elementos_visuales#13,train
+¿En qué sitio se filmó el EN10402?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#13,train
+¿En qué sitio se filmó el NT20310 gracias,lugares_y_elementos_visuales,lugares_y_elementos_visuales#13,train
+"Oye, ¿Qué objetos aparecen en el HI40015?",lugares_y_elementos_visuales,lugares_y_elementos_visuales#14,test
+¿Qué objetos aparecen en el VV50003?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#14,test
+¿Qué objetos aparecen en el EN10391?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#14,test
+¿Hay rótulos o gráficos en el RB30201?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#15,train
+¿Hay rótulos o gráficos en el NT20045?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#15,train
+¿Hay rótulos o gráficos en el VV50003?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#15,train
+Cuáles son los lugares de VV50010,lugares_y_elementos_visuales,lugares_y_elementos_visuales#16,train
+Cuáles son los lugares de RB30120,lugares_y_elementos_visuales,lugares_y_elementos_visuales#16,train
+Necesito saber: cuáles son los lugares de VV50010,lugares_y_elementos_visuales,lugares_y_elementos_visuales#16,train
+Necesito saber: ¿Cómo luce el video NT20112?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#17,train
+¿Cómo luce el video RB30077?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#17,train
+¿Cómo luce el video HI40015?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#17,train
+¿Qué tomas tiene el RB30077?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#18,train
+"Por favor, ¿Qué tomas tiene el RB30201?",lugares_y_elementos_visuales,lugares_y_elementos_visuales#18,train
+¿Qué tomas tiene el RB30201?,lugares_y_elementos_visuales,lugares_y_elementos_visuales#18,train
+Elementos visuales de EN10455,lugares_y_elementos_visuales,lugares_y_elementos_visuales#19,test
+Elementos visuales de NT20201,lugares_y_elementos_visuales,lugares_y_elementos_visuales#19,test
+Elementos visuales de NT20310,lugares_y_elementos_visuales,lugares_y_elementos_visuales#19,test
+¿Qué dicen en el RB30120?,transcripcion_material,transcripcion_material#0,train
+¿Qué dicen en el EN10388?,transcripcion_material,transcripcion_material#0,train
+¿Qué dicen en el RB30077?,transcripcion_material,transcripcion_material#0,train
+Muéstrame la transcripcinó del NT20201,transcripcion_material,transcripcion_material#1,train
+Muéstrame la transcripción del NT20112,transcripcion_material,transcripcion_material#1,train
+Muésrame la transcripción del RB30077,transcripcion_material,transcripcion_material#1,train
+Transcripción del material NT20150 graicas,transcripcion_material,transcripcion_material#2,train
+"Por favor, transcripción del material NT20310",transcripcion_material,transcripcion_material#2,train
+Transcripción del material RB30120,transcripcion_material,transcripcion_material#2,train
+Una duda: ¿Qué se dice en el HI40033?,transcripcion_material,transcripcion_material#3,train
+¿Qué se dice en el EN10455?,transcripcion_material,transcripcion_material#3,train
+¿Qué se dice en el EN10391?,transcripcion_material,transcripcion_material#3,train
+"Hola, dame el texto del audio del EN10402",transcripcion_material,transcripcion_material#4,test
+"Oye, dame el texto del audio del RB30201",transcripcion_material,transcripcion_material#4,test
+Dame el texto del audio del VV50010,transcripcion_material,transcripcion_material#4,test
+Quiero leer lo que dicen en NT20112,transcripcion_material,transcripcion_material#5,train
+Quiero leer lo que dicen en NT20310,transcripcion_material,transcripcion_material#5,train
+Quiero leer lo que dicen en RB30077 por favor,transcripcion_material,transcripcion_material#5,train
+¿Qué dijo el entrevistado en el EN10388?,transcripcion_material,transcripcion_material#6,train
+¿Qué dijo el entrevistado en el HI40015?,transcripcion_material,transcripcion_material#6,train
+¿Qué dijo el entrevistado en el NT20201 por favor,transcripcion_material,transcripcion_material#6,train
+"Mira, pásame la transcripción de NT20201",transcripcion_material,transcripcion_material#7,train
+"Pásame la transcripción de EN10391, por favor",transcripcion_material,transcripcion_material#7,train
+Pásame la transcripción de RB30077,transcripcion_material,transcripcion_material#7,train
+¿Qué declaarciones hay en el HI40033?,transcripcion_material,transcripcion_material#8,train
+¿Qué declaraciones hay en el RB30120?,transcripcion_material,transcripcion_material#8,train
+¿Qué dclaraciones hay en el EN10455?,transcripcion_material,transcripcion_material#8,train
+Texto completo del NT20045,transcripcion_material,transcripcion_material#9,test
+Texto completo del RB30077,transcripcion_material,transcripcion_material#9,test
+Necesito saber: texto completo del EN10391,transcripcion_material,transcripcion_material#9,test
+"Por favor, lee lo que se habla en el RB30120",transcripcion_material,transcripcion_material#10,train
+"Disculpa, lee lo que se habla en el RB30077",transcripcion_material,transcripcion_material#10,train
+Lee lo que se habla en el EN10455,transcripcion_material,transcripcion_material#10,train
+¿Qué se escucha en el RB30077?,transcripcion_material,transcripcion_material#11,train
+"Mira, ¿Qué se esucha en el VV50010?",transcripcion_material,transcripcion_material#11,train
+¿Qué se escucha en el HI40033?,transcripcion_material,transcripcion_material#11,train
+Fragmentos de la transcripción del NT20112,transcripcion_material,transcripcion_material#12,train
+Fragmentos de la transcripción del NT20045,transcripcion_material,transcripcion_material#12,train
+"Hola, fragmentos de la transcripción del VV50003",transcripcion_material,transcripcion_material#12,train
+Necesito el audio transcrito del VV50003,transcripcion_material,transcripcion_material#13,train
+"Mira, necesito el audio transcirto del VV50010",transcripcion_material,transcripcion_material#13,train
+Necesito el audio transcrito del HI40015,transcripcion_material,transcripcion_material#13,train
+¿Qué hablan en el HI40033 urgente,transcripcion_material,transcripcion_material#14,test
+¿Qué hablan en el RB30077 gracias,transcripcion_material,transcripcion_material#14,test
+¿Qué hablan en el RB30201?,transcripcion_material,transcripcion_material#14,test
+Las declaraciones del EN10388,transcripcion_material,transcripcion_material#15,train
+Las declaraciones del VV50010,transcripcion_material,transcripcion_material#15,train
+Las declaraciones del RB30201,transcripcion_material,transcripcion_material#15,train
+Una duda: ¿Tiene transcripción el EN10402?,transcripcion_material,transcripcion_material#16,train
+¿Tiene transcripción el VV50003?,transcripcion_material,transcripcion_material#16,train
+¿Tiene transcripción el RB30120?,transcripcion_material,transcripcion_material#16,train
+Subtítulos del VV50010,transcripcion_material,transcripcion_material#17,train
+Subtítuos del VV50003,transcripcion_material,transcripcion_material#17,train
+Subtítulos del NT20112,transcripcion_material,transcripcion_material#17,train
+Transcribe el HI40015,transcripcion_material,transcripcion_material#18,train
+Transcrbe el EN10402,transcripcion_material,transcripcion_material#18,train
+"Transcribe el RB30201, por favor",transcripcion_material,transcripcion_material#18,train
+¿Cuáles son las frases más importantes del RB30201?,transcripcion_material,transcripcion_material#19,test
+"Mira, ¿Cuáles son las frases más importants del NT20201?",transcripcion_material,transcripcion_material#19,test
+¿Cuáles son las frases más importantes del VV50003?,transcripcion_material,transcripcion_material#19,test
+¿Qué se dice en el minuto 15:20 del RB30201?,fragmento_por_timecode,fragmento_por_timecode#0,train
+"Hola, ¿Qué se dice en el minuto 12:05 del RB30077 por favor",fragmento_por_timecode,fragmento_por_timecode#0,train
+¿Qué se dice en el minuto 03:10 del RB30077?,fragmento_por_timecode,fragmento_por_timecode#0,train
+¿Qué dicen en el minuto 10:00?,fragmento_por_timecode,fragmento_por_timecode#1,train
+¿Qué dicen en el minuto 07:40?,fragmento_por_timecode,fragmento_por_timecode#1,train
+¿Qué dicen en el minuto 15:20?,fragmento_por_timecode,fragmento_por_timecode#1,train
+Muéstrame el fragmento en 07:40 del VV50003,fragmento_por_timecode,fragmento_por_timecode#2,train
+Muéstrame el frgamento en 07:40 del EN10391,fragmento_por_timecode,fragmento_por_timecode#2,train
+Muéstrame el fragmento en 21:48 del RB30201,fragmento_por_timecode,fragmento_por_timecode#2,train
+¿Qué pasa en el 00:09:15 del NT20045?,fragmento_por_timecode,fragmento_por_timecode#3,train
+¿Qué pasa en el 15:20 del HI40033?,fragmento_por_timecode,fragmento_por_timecode#3,train
+¿Qué pasa en el 07:40 del HI40033?,fragmento_por_timecode,fragmento_por_timecode#3,train
+Lo que se dice a los 07:40 en VV50003,fragmento_por_timecode,fragmento_por_timecode#4,test
+Lo que se dice a los 21:48 en RB30077,fragmento_por_timecode,fragmento_por_timecode#4,test
+Lo que se dice a los 03:10 en NT20201,fragmento_por_timecode,fragmento_por_timecode#4,test
+Texto en el timecode 03:10,fragmento_por_timecode,fragmento_por_timecode#5,train
+Texto en el timecode 07:40,fragmento_por_timecode,fragmento_por_timecode#5,train
+Texto en el timecode 21:48,fragmento_por_timecode,fragmento_por_timecode#5,train
+¿Qué dicen en el segundo 01:02:30?,fragmento_por_timecode,fragmento_por_timecode#6,train
+¿Qué dicen en el segundo 00:31:05?,fragmento_por_timecode,fragmento_por_timecode#6,train
+¿Qué dicen en el segundo 03:10?,fragmento_por_timecode,fragmento_por_timecode#6,train
+Ve al minuto 00:31:05 del EN10402,fragmento_por_timecode,fragmento_por_timecode#7,train
+"Por favor, ve al minuto 07:40 del EN10391",fragmento_por_timecode,fragmento_por_timecode#7,train
+Ve al minto 05:32 del RB30077,fragmento_por_timecode,fragmento_por_timecode#7,train
+Qué hay en 12:05 del HI40015,fragmento_por_timecode,fragmento_por_timecode#8,train
+Necesito saber: qué hay en 03:10 del EN10388 gracias,fragmento_por_timecode,fragmento_por_timecode#8,train
+"Mira, qué hay en 15:20 del EN10402 urgente",fragmento_por_timecode,fragmento_por_timecode#8,train
+"Mira, ¿Qué declaran en 03:10?",fragmento_por_timecode,fragmento_por_timecode#9,test
+¿Qué declaarn en 10:00?,fragmento_por_timecode,fragmento_por_timecode#9,test
+¿Qué declaran en 21:48?,fragmento_por_timecode,fragmento_por_timecode#9,test
+Fragmento de 15:20,fragmento_por_timecode,fragmento_por_timecode#10,train
+"Disculpa, fragmento de 05:32",fragmento_por_timecode,fragmento_por_timecode#10,train
+Fragmento de 21:48,fragmento_por_timecode,fragmento_por_timecode#10,train
+Necesito saber: ¿Qué se escucha en el minuto 00:31:05 urgente,fragmento_por_timecode,fragmento_por_timecode#11,train
+¿Qué se escucha en el minuto 21:48?,fragmento_por_timecode,fragmento_por_timecode#11,train
+"Disculpa, ¿Qué se escucha en el minuto 21:48?",fragmento_por_timecode,fragmento_por_timecode#11,train
+Dame el texto a partir del 12:05 de NT20112,fragmento_por_timecode,fragmento_por_timecode#12,train
+Dame el texto a partir del 12:05 de NT20310,fragmento_por_timecode,fragmento_por_timecode#12,train
+Dame el texto a partir del 15:20 de EN10455,fragmento_por_timecode,fragmento_por_timecode#12,train
+Salta al 15:20 de RB30201,fragmento_por_timecode,fragmento_por_timecode#13,train
+Salta al 01:02:30 de VV50003,fragmento_por_timecode,fragmento_por_timecode#13,train
+Salta al 10:00 de VV50010,fragmento_por_timecode,fragmento_por_timecode#13,train
+"Por favor, ¿Qué dicen alrededor del minuto 03:10?",fragmento_por_timecode,fragmento_por_timecode#14,test
+¿Qué dicen alrededor del minuto 10:00 por favor,fragmento_por_timecode,fragmento_por_timecode#14,test
+¿Qué dicen alrededor del minuto 21:48?,fragmento_por_timecode,fragmento_por_timecode#14,test
+"En el EN10402, ¿qué dicen en 00:09:15?",fragmento_por_timecode,fragmento_por_timecode#15,train
+"Disculpa, en el RB30201, ¿qué dicen en 05:32?",fragmento_por_timecode,fragmento_por_timecode#15,train
+"Una duda: en el HI40033, ¿qué dicen en 12:05?",fragmento_por_timecode,fragmento_por_timecode#15,train
+Cita en el minuto 03:10 del NT20150,fragmento_por_timecode,fragmento_por_timecode#16,train
+Cita en el minuto 12:05 del EN10455,fragmento_por_timecode,fragmento_por_timecode#16,train
+Necesito saber: cita en el minuto 10:00 del RB30201,fragmento_por_timecode,fragmento_por_timecode#16,train
+¿Qué se menciona en el timecode 00:09:15 del material VV50010?,fragmento_por_timecode,fragmento_por_timecode#17,train
+¿Qué se menciona en el timecode 01:02:30 del material EN10402?,fragmento_por_timecode,fragmento_por_timecode#17,train
+¿Qué se menciona en el timecode 01:02:30 del material RB30077?,fragmento_por_timecode,fragmento_por_timecode#17,train
+"Por favor, a las 15:20 del NT20310 ¿qué dicen, por favor",fragmento_por_timecode,fragmento_por_timecode#18,train
+"Mira, a las 21:48 del EN10402 ¿qué dicen?",fragmento_por_timecode,fragmento_por_timecode#18,train
+A las 00:09:15 del VV50003 ¿qué dicen por favor,fragmento_por_timecode,fragmento_por_timecode#18,train
+Qué dicen en 21:48,fragmento_por_timecode,fragmento_por_timecode#19,test
+Qué dicen en 10:00,fragmento_por_timecode,fragmento_por_timecode#19,test
+Qué dicen en 15:20,fragmento_por_timecode,fragmento_por_timecode#19,test
+Busca materiales sobre salud pública,buscar_por_tema,buscar_por_tema#0,train
+Busca materiales sobre mercados,buscar_por_tema,buscar_por_tema#0,train
+Busca materiales sobre contaminación del aire,buscar_por_tema,buscar_por_tema#0,train
+Necesito saber: ¿Hay videos de lluvias fuertes?,buscar_por_tema,buscar_por_tema#1,train
+¿Hay videos de hospitales?,buscar_por_tema,buscar_por_tema#1,train
+"Oye, ¿Hay videos de mercados?",buscar_por_tema,buscar_por_tema#1,train
+Muéstrame material sobre transporte público,buscar_por_tema,buscar_por_tema#2,train
+"Por favor, muéstrame material sobre cambio climático",buscar_por_tema,buscar_por_tema#2,train
+"Muéstrame material sobre protección civil, por favor",buscar_por_tema,buscar_por_tema#2,train
+Necesito algo donde hablen de vivienda,buscar_por_tema,buscar_por_tema#3,train
+Necesito algo donde hablen de elecciones,buscar_por_tema,buscar_por_tema#3,train
+"Oye, necesito algo donde hablen de cambio climático por favor",buscar_por_tema,buscar_por_tema#3,train
+"Por favor, encuéntrame videos sobre lluvias fuertes",buscar_por_tema,buscar_por_tema#4,test
+Encunétrame videos sobre tarifas del metro,buscar_por_tema,buscar_por_tema#4,test
+"Por favor, encuéntrame videos sobre educación",buscar_por_tema,buscar_por_tema#4,test
+¿Tienen material de vivienda?,buscar_por_tema,buscar_por_tema#5,train
+¿Tienen material de protección civil?,buscar_por_tema,buscar_por_tema#5,train
+¿Tienen mtaerial de festivales de música?,buscar_por_tema,buscar_por_tema#5,train
+Busco grabaciones sobre vivienda,buscar_por_tema,buscar_por_tema#6,train
+Una duda: busco grabaciones sobre educación,buscar_por_tema,buscar_por_tema#6,train
+Una duda: busco grabaciones sobre accidentes de tránsito,buscar_por_tema,buscar_por_tema#6,train
+Quiero ver todo lo que haya de educación,buscar_por_tema,buscar_por_tema#7,train
+Quiero ver todo lo que haya de elecciones,buscar_por_tema,buscar_por_tema#7,train
+Quiero ver todo lo que haya de vivienda,buscar_por_tema,buscar_por_tema#7,train
+Videos relacionados con elecciones,buscar_por_tema,buscar_por_tema#8,train
+Videos relacionados con sequía,buscar_por_tema,buscar_por_tema#8,train
+Videos relacionados con accidentes de tránsito,buscar_por_tema,buscar_por_tema#8,train
+Una duda: algo sobre accidentes de trnásito gracias,buscar_por_tema,buscar_por_tema#9,test
+Algo sobre obras en avenidas,buscar_por_tema,buscar_por_tema#9,test
+Algo sobre vivienda,buscar_por_tema,buscar_por_tema#9,test
+Material de archivo sobre accidentes de tránsito,buscar_por_tema,buscar_por_tema#10,train
+"Mira, material de archivo sobre festivales de música",buscar_por_tema,buscar_por_tema#10,train
+Material de archivo sobre cambio climático,buscar_por_tema,buscar_por_tema#10,train
+"Por favor, ¿Qué tienen sobre accidentes de tránsito?",buscar_por_tema,buscar_por_tema#11,train
+¿Qué tienen sobre festivales de música?,buscar_por_tema,buscar_por_tema#11,train
+Necesito saber: ¿Qué tienen sobre elecciones?,buscar_por_tema,buscar_por_tema#11,train
+Busca vivienda,buscar_por_tema,buscar_por_tema#12,train
+Busca educación,buscar_por_tema,buscar_por_tema#12,train
+Busca accidentes de tránsito,buscar_por_tema,buscar_por_tema#12,train
+Locliza material donde se hable de tarifas del metro,buscar_por_tema,buscar_por_tema#13,train
+"Mira, localiza material donde se hable de elecciones",buscar_por_tema,buscar_por_tema#13,train
+Localiza material donde se hable de lluvias fuertes,buscar_por_tema,buscar_por_tema#13,train
+¿Existe algún video acerca de educación?,buscar_por_tema,buscar_por_tema#14,test
+¿Existe algún video acerca de turismo?,buscar_por_tema,buscar_por_tema#14,test
+"Por favor, ¿Existe algún video acerca de accidentes de tránsito?",buscar_por_tema,buscar_por_tema#14,test
+Necesito imágenes de salud pública,buscar_por_tema,buscar_por_tema#15,train
+"Oye, necesito imágenes de salud pública",buscar_por_tema,buscar_por_tema#15,train
+Necesito imágenes de transporte público,buscar_por_tema,buscar_por_tema#15,train
+Dame los materiales que traten mercados,buscar_por_tema,buscar_por_tema#16,train
+Dame los materiales que traetn seguridad vial,buscar_por_tema,buscar_por_tema#16,train
+Dame los materiales que traten incendios forestales,buscar_por_tema,buscar_por_tema#16,train
+"Disculpa, busca noticias de salud pública",buscar_por_tema,buscar_por_tema#17,train
+"Hola, busca noticias de accidentes de tránsito",buscar_por_tema,buscar_por_tema#17,train
+Busca noticias de elecciones,buscar_por_tema,buscar_por_tema#17,train
+¿Algún material sobre accidentes de tránsito en el archivo?,buscar_por_tema,buscar_por_tema#18,train
+¿Algún material sobre contaminación del aire en el archivo?,buscar_por_tema,buscar_por_tema#18,train
+¿Algún material sobre elecciones en el archivo?,buscar_por_tema,buscar_por_tema#18,train
+"Oye, estoy buscando contenido de educación",buscar_por_tema,buscar_por_tema#19,test
+Estoy buscando contenido de vivienda,buscar_por_tema,buscar_por_tema#19,test
+Estoy buscando contenido de elecciones,buscar_por_tema,buscar_por_tema#19,test
+Encuentra todo sobre transporte público,buscar_por_tema,buscar_por_tema#20,train
+Encuenra todo sobre protección civil,buscar_por_tema,buscar_por_tema#20,train
+Encuentra todo sobre lluvisa fuertes,buscar_por_tema,buscar_por_tema#20,train
+Material acerca de protección civil,buscar_por_tema,buscar_por_tema#21,train
+Material acerca de cambio climático,buscar_por_tema,buscar_por_tema#21,train
+Material acerca de incendios forestales,buscar_por_tema,buscar_por_tema#21,train
+¿En qué video dijeron «vamos a ampliar la línea» urgente,buscar_por_frase,buscar_por_frase#0,train
+¿En qué video dijeron «reducir veinte minutos los traslados»?,buscar_por_frase,buscar_por_frase#0,train
+¿En qué video dijeron «mochila de emergencia»?,buscar_por_frase,buscar_por_frase#0,train
+¿Quién dijo que mochila de emergencia?,buscar_por_frase,buscar_por_frase#1,train
+"Disculpa, ¿Quién dijo que cien camas y urgencias las veinticuatro horas por favor",buscar_por_frase,buscar_por_frase#1,train
+"Oye, ¿Quién dijo que vamos a ampliar la línea?",buscar_por_frase,buscar_por_frase#1,train
+Busca la frase «mochila de emergencia»,buscar_por_frase,buscar_por_frase#2,train
+Busca la frase «rutas de evacuación» por favor,buscar_por_frase,buscar_por_frase#2,train
+Busca la frase «mochila de emergencia» por favor,buscar_por_frase,buscar_por_frase#2,train
+¿Dónde dijeron que la obra termina en diciembre?,buscar_por_frase,buscar_por_frase#3,train
+¿Dónde dijeron que la obra termina en diciembre por favor,buscar_por_frase,buscar_por_frase#3,train
+¿Dónde dijeron que no habrá aumento en la tarifa?,buscar_por_frase,buscar_por_frase#3,train
+Necesito la declaración donde dicen «la obra termina en diciembre»,buscar_por_frase,buscar_por_frase#4,test
+Necesito la declaración donde dicen «la velocidad excesiva es la principal causa»,buscar_por_frase,buscar_por_frase#4,test
+Necesito la declaración donde dicen «la velocidad excesiva es la principal causa» por favor,buscar_por_frase,buscar_por_frase#4,test
+Localiza la cita «reducir veinte minutos los traslados»,buscar_por_frase,buscar_por_frase#5,train
+Localiza la cita «rutas de evacuación»,buscar_por_frase,buscar_por_frase#5,train
+Localiza la cita «mochila de emergencia» por favor,buscar_por_frase,buscar_por_frase#5,train
+"¿En qué maetrial mencionaron que las zonas bajas se inundan, por favor",buscar_por_frase,buscar_por_frase#6,train
+¿En qué material mencionaron que la obra termina en diciembre?,buscar_por_frase,buscar_por_frase#6,train
+"Por favor, ¿En qué material mencionaron que cien camas y urgencias las veinticuatro horas?",buscar_por_frase,buscar_por_frase#6,train
+Encuenta el fragmento que dice «no habrá aumento en la tarifa»,buscar_por_frase,buscar_por_frase#7,train
+Encuentra el fragmento que dice «mochila de emergencia»,buscar_por_frase,buscar_por_frase#7,train
+Encuentra el fragmento que dice «la obra termina en diciembre» gracias,buscar_por_frase,buscar_por_frase#7,train
+Quiero ubicar la frase exacta «reducir veinte minutos los traslados»,buscar_por_frase,buscar_por_frase#8,train
+Quiero ubicar la frase exacta «mochila de emergencia»,buscar_por_frase,buscar_por_frase#8,train
+"Por favor, quiero ubicar la frase exacta «no hay riesgo para la población»",buscar_por_frase,buscar_por_frase#8,train
+¿En qué entrevista dijeron que vamos a ampliar la línea?,buscar_por_frase,buscar_por_frase#9,test
+¿En qué entrevista dijeron que no hay riesgo para la población?,buscar_por_frase,buscar_por_frase#9,test
+¿En qué entrevista dijeron que la velocidad excesiva es la principal causa?,buscar_por_frase,buscar_por_frase#9,test
+¿Cuándo dijeron «reducir veinte minutos los traslados»?,buscar_por_frase,buscar_por_frase#10,train
+Una duda: ¿Cuándo dijeron «vamos a ampliar la línea»?,buscar_por_frase,buscar_por_frase#10,train
+¿Cuándo dijeron «no hay riesgo para la población»?,buscar_por_frase,buscar_por_frase#10,train
+Busca la declaración «no habrá aumento en la tarifa»,buscar_por_frase,buscar_por_frase#11,train
+Busca la declaración «las zonas bajas se inundan»,buscar_por_frase,buscar_por_frase#11,train
+Busca la declaración «la obra termina en diciembre» por favor,buscar_por_frase,buscar_por_frase#11,train
+¿Hay algún video donde digan «la velocidad excesiva es la principal causa»?,buscar_por_frase,buscar_por_frase#12,train
+Necesito saber: ¿Hay algún video donde digan «reducir veinte minutos los traslados»?,buscar_por_frase,buscar_por_frase#12,train
+¿Hay algún video donde digan «cien camas y urgencias las veinticuatro horas»?,buscar_por_frase,buscar_por_frase#12,train
+¿En qué minuto dijeron que el drenaje se satura?,buscar_por_frase,buscar_por_frase#13,train
+"Por favor, ¿En qué minuto dijeron que la velocidad excesiva es la principal causa?",buscar_por_frase,buscar_por_frase#13,train
+¿En qué minuto dijeron que la obra termina en diciembre urgente,buscar_por_frase,buscar_por_frase#13,train
+Ubica la cita textual «el drenaje se satura»,buscar_por_frase,buscar_por_frase#14,test
+Ubica la cita textual «rutas de evacuación»,buscar_por_frase,buscar_por_frase#14,test
+Ubica la cita textual «no habrá aumento en la tarifa»,buscar_por_frase,buscar_por_frase#14,test
+"Hola, declaración exacta: «la velocidad excesiva es la principal causa»",buscar_por_frase,buscar_por_frase#15,train
+Declaración exacta: «rutas de evacuación»,buscar_por_frase,buscar_por_frase#15,train
+Declaración exacta: «vamos a ampliar la línea»,buscar_por_frase,buscar_por_frase#15,train
+"Mira, ¿Dónde se menciona que cien camas y urgencias las veinticuatro horas?",buscar_por_frase,buscar_por_frase#16,train
+"Por favor, ¿Dónde se menciona que mochila de emergencia urgente",buscar_por_frase,buscar_por_frase#16,train
+¿Dónde se menciona que cien camas y urgencias las veinticuatro horas?,buscar_por_frase,buscar_por_frase#16,train
+"Por favor, rastrea quién afirmó que la velocidad excesiva es la principal causa, por favor",buscar_por_frase,buscar_por_frase#17,train
+Rastrea quién afirmó que no hay riesgo para la población,buscar_por_frase,buscar_por_frase#17,train
+Rastrea quién afirmó que reducir veinte minutos los traslados,buscar_por_frase,buscar_por_frase#17,train
+Busca en las transcripciones «mochila de emergencia»,buscar_por_frase,buscar_por_frase#18,train
+Busca en las transcripciones «las zonas bajas se inundan»,buscar_por_frase,buscar_por_frase#18,train
+Busca en las transcripciones «el drenaje se satura»,buscar_por_frase,buscar_por_frase#18,train
+"Alguien dijo que reducir veinte minutos los traslados, ¿dónde fue?",buscar_por_frase,buscar_por_frase#19,test
+"Alguien dijo que la obra termina en diciembre, ¿dónde fue?",buscar_por_frase,buscar_por_frase#19,test
+"Alguien dijo que las zonas bajas se inundan, ¿dónde fue?",buscar_por_frase,buscar_por_frase#19,test
+¿En qué materiales aparece Sofía Luna?,buscar_por_persona,buscar_por_persona#0,train
+¿En qué materiales aparece Marta Ibarra por favor,buscar_por_persona,buscar_por_persona#0,train
+Una duda: ¿En qué materiales aparece Sofía Luna?,buscar_por_persona,buscar_por_persona#0,train
+Busca videos donde sale Ana Torres,buscar_por_persona,buscar_por_persona#1,train
+Busca videos donde sale Laura Mendoza,buscar_por_persona,buscar_por_persona#1,train
+Busca videos donde sale Luis Navarro,buscar_por_persona,buscar_por_persona#1,train
+¿Dónde aparece Pedro Cano?,buscar_por_persona,buscar_por_persona#2,train
+¿Dónde aparece Luis Navarro?,buscar_por_persona,buscar_por_persona#2,train
+¿Dónde aparece Elena Ortiz?,buscar_por_persona,buscar_por_persona#2,train
+"Hola, muéstrame las apariciones de Luis Navarro",buscar_por_persona,buscar_por_persona#3,train
+Muéstrame las apariciones de Laura Mendoza,buscar_por_persona,buscar_por_persona#3,train
+"Disculpa, muéstrame las apariciones de Marta Ibarra",buscar_por_persona,buscar_por_persona#3,train
+Materiales con Carlos Vega,buscar_por_persona,buscar_por_persona#4,test
+Materiales con Elena Ortiz,buscar_por_persona,buscar_por_persona#4,test
+Materiales con Luis Navarro por favor,buscar_por_persona,buscar_por_persona#4,test
+¿En qué vidos sale Luis Navarro?,buscar_por_persona,buscar_por_persona#5,train
+¿En qué videos sale Marta Ibarra?,buscar_por_persona,buscar_por_persona#5,train
+¿En qué videos sale Ana Torres?,buscar_por_persona,buscar_por_persona#5,train
+"Disculpa, encuentra entrevistas a Laura Mendoza",buscar_por_persona,buscar_por_persona#6,train
+Encuentra entrevistas a Pedro Cano urgente,buscar_por_persona,buscar_por_persona#6,train
+Encuentra entrevistas a Carlos Vega,buscar_por_persona,buscar_por_persona#6,train
+¿Tienen material de Laura Mendoza?,buscar_por_persona,buscar_por_persona#7,train
+¿Tienen mateiral de Carlos Vega?,buscar_por_persona,buscar_por_persona#7,train
+¿Tienen material de Jorge Ramírez por favor,buscar_por_persona,buscar_por_persona#7,train
+Busca a Pedro Cano en el archivo,buscar_por_persona,buscar_por_persona#8,train
+"Hola, busca a Ana Torres en el archivo por favor",buscar_por_persona,buscar_por_persona#8,train
+Busca a Luis Navarro en el archivo,buscar_por_persona,buscar_por_persona#8,train
+¿Qué materiales hay con Elena Ortiz?,buscar_por_persona,buscar_por_persona#9,test
+¿Qué materiales hay con Jorge Ramírez?,buscar_por_persona,buscar_por_persona#9,test
+¿Qué materiales hay con Pedro Cano por favor,buscar_por_persona,buscar_por_persona#9,test
+Localiza apariciones de Ricardo Salas gracias,buscar_por_persona,buscar_por_persona#10,train
+Localiza apariciones de Ana Torres,buscar_por_persona,buscar_por_persona#10,train
+Una duda: localiza apariciones de Marta Ibarra,buscar_por_persona,buscar_por_persona#10,train
+¿En cuáles videos entrevistaron a Elena Ortiz?,buscar_por_persona,buscar_por_persona#11,train
+¿En cuáles videos entrevistaron a Luis Navarro?,buscar_por_persona,buscar_por_persona#11,train
+"Mira, ¿En cuáles videos entrevistaron a Carlos Vega?",buscar_por_persona,buscar_por_persona#11,train
+Videos en los que participa Pedro Cano,buscar_por_persona,buscar_por_persona#12,train
+Videos en los que participa Ana Torres,buscar_por_persona,buscar_por_persona#12,train
+Videso en los que participa Pedro Cano,buscar_por_persona,buscar_por_persona#12,train
+Una duda: ¿Hay algo donde hable Ana Torres por favor,buscar_por_persona,buscar_por_persona#13,train
+¿Hay algo donde hable Luis Navarro por favor,buscar_por_persona,buscar_por_persona#13,train
+¿Hay algo donde hable Jorge Ramírez?,buscar_por_persona,buscar_por_persona#13,train
+Todo lo que tenga a Pedro Cano,buscar_por_persona,buscar_por_persona#14,test
+Todo lo que tenga a Ricardo Salas,buscar_por_persona,buscar_por_persona#14,test
+Todo lo que tenga a Luis Navarro,buscar_por_persona,buscar_por_persona#14,test
+¿Salió Ana Torres en algún material?,buscar_por_persona,buscar_por_persona#15,train
+¿Salió Carlos Vega en algún material?,buscar_por_persona,buscar_por_persona#15,train
+¿Salió Pedro Cano en algún material?,buscar_por_persona,buscar_por_persona#15,train
+Declaraciones de Marta Ibarra,buscar_por_persona,buscar_por_persona#16,train
+Declaraciones de Elena Ortiz,buscar_por_persona,buscar_por_persona#16,train
+Declaraciones de Sofía Luna,buscar_por_persona,buscar_por_persona#16,train
+¿Se menciona a Elena Ortiz en algún video?,buscar_por_persona,buscar_por_persona#17,train
+Una duda: ¿Se menciona a Marta Ibarra en algún video?,buscar_por_persona,buscar_por_persona#17,train
+¿Se menciona a Ricardo Salas en algún video?,buscar_por_persona,buscar_por_persona#17,train
+Dónde se ve a Marta Ibarra,buscar_por_persona,buscar_por_persona#18,train
+Dónde se ve a Ana Torres,buscar_por_persona,buscar_por_persona#18,train
+"Hola, dónde se ve a Ricardo Salas por favor",buscar_por_persona,buscar_por_persona#18,train
+Apariciones de Marta Ibarra en el acervo,buscar_por_persona,buscar_por_persona#19,test
+Apariciones de Laura Mendoza en el acervo,buscar_por_persona,buscar_por_persona#19,test
+Apariciones de Sofía Luna en el acervo,buscar_por_persona,buscar_por_persona#19,test
+Una duda: entrevistas ingresadas esta semana,buscar_por_fecha_tipo,buscar_por_fecha_tipo#0,train
+Necesito saber: entrevistas ingresadas esta semana,buscar_por_fecha_tipo,buscar_por_fecha_tipo#0,train
+Necesito saber: entrevistas ingresadas hoy,buscar_por_fecha_tipo,buscar_por_fecha_tipo#0,train
+"Oye, muéstrame las materiales en bruto de la semana pasada",buscar_por_fecha_tipo,buscar_por_fecha_tipo#1,train
+Muéstrame las materiales en bruto de la semana pasada gracias,buscar_por_fecha_tipo,buscar_por_fecha_tipo#1,train
+Muéstrame las entrevistas de hoy,buscar_por_fecha_tipo,buscar_por_fecha_tipo#1,train
+¿Qué entrevistas ingresaron esta semana?,buscar_por_fecha_tipo,buscar_por_fecha_tipo#2,train
+¿Qué conferencias ingresaron esta semana?,buscar_por_fecha_tipo,buscar_por_fecha_tipo#2,train
+"Hola, ¿Qué conferencias ingresaron esta semana?",buscar_por_fecha_tipo,buscar_por_fecha_tipo#2,train
+Mterial nuevo de hoy,buscar_por_fecha_tipo,buscar_por_fecha_tipo#3,train
+Material nuevo de este mes,buscar_por_fecha_tipo,buscar_por_fecha_tipo#3,train
+Material nuevo de la semana pasada urgente,buscar_por_fecha_tipo,buscar_por_fecha_tipo#3,train
+Lista de entrevistas ingresadas esta semana,buscar_por_fecha_tipo,buscar_por_fecha_tipo#4,test
+Lista de materiales en bruto ingresadas esta semana,buscar_por_fecha_tipo,buscar_por_fecha_tipo#4,test
+Lista de conferencias ingresadas hoy,buscar_por_fecha_tipo,buscar_por_fecha_tipo#4,test
+entrevistas de 1998 gracias,buscar_por_fecha_tipo,buscar_por_fecha_tipo#5,train
+emisiones en vivo de 1998,buscar_por_fecha_tipo,buscar_por_fecha_tipo#5,train
+conferencias de 2020,buscar_por_fecha_tipo,buscar_por_fecha_tipo#5,train
+Cintas históricas de 2026,buscar_por_fecha_tipo,buscar_por_fecha_tipo#6,train
+Cintas históricas de 1998,buscar_por_fecha_tipo,buscar_por_fecha_tipo#6,train
+Cintas históricas de 2003,buscar_por_fecha_tipo,buscar_por_fecha_tipo#6,train
+¿Qué ingresó este mes?,buscar_por_fecha_tipo,buscar_por_fecha_tipo#7,train
+¿Qué ingresó esta semana?,buscar_por_fecha_tipo,buscar_por_fecha_tipo#7,train
+¿Qué ingresó hoy?,buscar_por_fecha_tipo,buscar_por_fecha_tipo#7,train
+Filtra por conferencia y esta semana,buscar_por_fecha_tipo,buscar_por_fecha_tipo#8,train
+Filtar por emisión en vivo y este mes,buscar_por_fecha_tipo,buscar_por_fecha_tipo#8,train
+Filtra por cinta histórica y la smeana pasada,buscar_por_fecha_tipo,buscar_por_fecha_tipo#8,train
+"Disculpa, videos ingresados ayer",buscar_por_fecha_tipo,buscar_por_fecha_tipo#9,test
+Videos ingresados la semana pasada,buscar_por_fecha_tipo,buscar_por_fecha_tipo#9,test
+Videos ingresados ayer urgente,buscar_por_fecha_tipo,buscar_por_fecha_tipo#9,test
+Dame las materiales en bruto más recientes,buscar_por_fecha_tipo,buscar_por_fecha_tipo#10,train
+Dame las entrevistas más recientes gracias,buscar_por_fecha_tipo,buscar_por_fecha_tipo#10,train
+Dame las ceremonias más recientes,buscar_por_fecha_tipo,buscar_por_fecha_tipo#10,train
+"Mira, ¿Hay conferencias nuevas esta semana?",buscar_por_fecha_tipo,buscar_por_fecha_tipo#11,train
+¿Hay emisiones en vivo nuevas ayer?,buscar_por_fecha_tipo,buscar_por_fecha_tipo#11,train
+¿Hay materiales en bruto nuevas hoy?,buscar_por_fecha_tipo,buscar_por_fecha_tipo#11,train
+Busca entrevistas del año 2024,buscar_por_fecha_tipo,buscar_por_fecha_tipo#12,train
+"Disculpa, busca ceremonias del año 2015",buscar_por_fecha_tipo,buscar_por_fecha_tipo#12,train
+Busca ceremonias del año 2020,buscar_por_fecha_tipo,buscar_por_fecha_tipo#12,train
+Qué material llegó ayer,buscar_por_fecha_tipo,buscar_por_fecha_tipo#13,train
+Qué material llegó hoy por favor,buscar_por_fecha_tipo,buscar_por_fecha_tipo#13,train
+Qué material llegó la semana pasada,buscar_por_fecha_tipo,buscar_por_fecha_tipo#13,train
+Muestra solo conferencias,buscar_por_fecha_tipo,buscar_por_fecha_tipo#14,test
+Muestra solo materiales en bruto,buscar_por_fecha_tipo,buscar_por_fecha_tipo#14,test
+Una duda: muestra solo emisioens en vivo,buscar_por_fecha_tipo,buscar_por_fecha_tipo#14,test
+Materiales recibidos hoy,buscar_por_fecha_tipo,buscar_por_fecha_tipo#15,train
+"Disculpa, materiales recibidos hoy",buscar_por_fecha_tipo,buscar_por_fecha_tipo#15,train
+Materiales recibidos este mes urgente,buscar_por_fecha_tipo,buscar_por_fecha_tipo#15,train
+Material del año 2015,buscar_por_fecha_tipo,buscar_por_fecha_tipo#16,train
+Material del año 2003,buscar_por_fecha_tipo,buscar_por_fecha_tipo#16,train
+"Disculpa, material del año 2003",buscar_por_fecha_tipo,buscar_por_fecha_tipo#16,train
+Últimas cintas históricas que entraron,buscar_por_fecha_tipo,buscar_por_fecha_tipo#17,train
+Últimas emisiones en vivo que entraron,buscar_por_fecha_tipo,buscar_por_fecha_tipo#17,train
+Últimas materiales en bruto que entraron,buscar_por_fecha_tipo,buscar_por_fecha_tipo#17,train
+Qiuero ver las conferencias ingresadas esta semana,buscar_por_fecha_tipo,buscar_por_fecha_tipo#18,train
+Quiero ver las emisiones en vivo ingresadas esta semana,buscar_por_fecha_tipo,buscar_por_fecha_tipo#18,train
+Necesito saber: quiero ver las emisiones en vivo ingresadas ayer,buscar_por_fecha_tipo,buscar_por_fecha_tipo#18,train
+"Mira, fitlrar por fecha de ingreso hoy",buscar_por_fecha_tipo,buscar_por_fecha_tipo#19,test
+Necesito saber: filtrar por fecha de ingreso este mes,buscar_por_fecha_tipo,buscar_por_fecha_tipo#19,test
+Filtrar por fecha de ingreso hoy,buscar_por_fecha_tipo,buscar_por_fecha_tipo#19,test
+"Hola, ¿Hay más material como el RB30077 urgente",material_relacionado,material_relacionado#0,train
+"Oye, ¿Hay más material como el EN10402?",material_relacionado,material_relacionado#0,train
+¿Hay más material como el HI40033?,material_relacionado,material_relacionado#0,train
+Material relacionado con el VV50010,material_relacionado,material_relacionado#1,train
+Material relacionado con el VV50003,material_relacionado,material_relacionado#1,train
+Material relacionado con el RB30201 urgente,material_relacionado,material_relacionado#1,train
+"Por favor, muéstrame algo parecido al RB30077",material_relacionado,material_relacionado#2,train
+Muéstrame algo parecido al EN10402,material_relacionado,material_relacionado#2,train
+Muéstrame algo precido al RB30201,material_relacionado,material_relacionado#2,train
+¿Qué otros videos se parecen al VV50010?,material_relacionado,material_relacionado#3,train
+¿Qué otros videos se parecen al RB30201?,material_relacionado,material_relacionado#3,train
+"Disculpa, ¿Qué otros videos se parecen al HI40033?",material_relacionado,material_relacionado#3,train
+Busca materiales similares al RB30120,material_relacionado,material_relacionado#4,test
+Una duda: busca materiales similares al EN10402,material_relacionado,material_relacionado#4,test
+Busca materiales similares al NT20310,material_relacionado,material_relacionado#4,test
+"Disculpa, más contenido como EN10391",material_relacionado,material_relacionado#5,train
+Más contenido como NT20112,material_relacionado,material_relacionado#5,train
+Más contenido como EN10455,material_relacionado,material_relacionado#5,train
+"Por favor, ¿Hay algo relacionado con el NT20201?",material_relacionado,material_relacionado#6,train
+¿Hay algo relacionado con el EN10402?,material_relacionado,material_relacionado#6,train
+"Mira, ¿Hay algo relacionado con el NT20310?",material_relacionado,material_relacionado#6,train
+Materiales con etiquetas en común con EN10388 por favor,material_relacionado,material_relacionado#7,train
+Materiales con etiquetas en común con NT20112,material_relacionado,material_relacionado#7,train
+Materiales con etiquetas en común con NT20201,material_relacionado,material_relacionado#7,train
+¿Qué más tienen parecido al VV50003?,material_relacionado,material_relacionado#8,train
+¿Qué más tienen parecido al EN10388?,material_relacionado,material_relacionado#8,train
+Necesito saber: ¿Qué más tienen parecido al HI40033?,material_relacionado,material_relacionado#8,train
+Recomiéndame videos similares al VV50003,material_relacionado,material_relacionado#9,test
+Recomiéndame videos similares al EN10455,material_relacionado,material_relacionado#9,test
+Recomiéndame videos similares al NT20310,material_relacionado,material_relacionado#9,test
+"Por favor, otros materiales del mismo tema que EN10455",material_relacionado,material_relacionado#10,train
+Otros materiales del mismo tema que EN10391,material_relacionado,material_relacionado#10,train
+"Disculpa, otros materiales del mismo tema que RB30077",material_relacionado,material_relacionado#10,train
+¿Existe más material sobre lo mismo que el VV50003?,material_relacionado,material_relacionado#11,train
+"Disculpa, ¿Existe más material sobre lo mismo que el HI40015?",material_relacionado,material_relacionado#11,train
+"Mira, ¿Existe más material sobre lo mismo que el NT20310?",material_relacionado,material_relacionado#11,train
+Algo similar al RB30201,material_relacionado,material_relacionado#12,train
+Algo similar al HI40015,material_relacionado,material_relacionado#12,train
+Algo similar al EN10455,material_relacionado,material_relacionado#12,train
+Videos relacionados al NT20201,material_relacionado,material_relacionado#13,train
+Videos relacionados al EN10388,material_relacionado,material_relacionado#13,train
+Videos relacionados al NT20310,material_relacionado,material_relacionado#13,train
+¿Qué más hay como este material?,material_relacionado,material_relacionado#14,test
+¿Qué más hay como este material urgente,material_relacionado,material_relacionado#14,test
+¿Qué más hay como este material por favor,material_relacionado,material_relacionado#14,test
+Mustra más de lo mismo,material_relacionado,material_relacionado#15,train
+Muestra más de lo mismo,material_relacionado,material_relacionado#15,train
+"Disculpa, muestra más de lo mismo",material_relacionado,material_relacionado#15,train
+Materiales parecidos a este,material_relacionado,material_relacionado#16,train
+"Por favor, materiales parecidos a este",material_relacionado,material_relacionado#16,train
+Necesito saber: materiales parecidos a este,material_relacionado,material_relacionado#16,train
+Ver contenido relacionado con EN10388,material_relacionado,material_relacionado#17,train
+Una duda: ver contenido relacionado con HI40015 por favor,material_relacionado,material_relacionado#17,train
+Ver contenido relacionado con RB30201,material_relacionado,material_relacionado#17,train
+"Oye, ¿Tienen otro material como el VV50010?",material_relacionado,material_relacionado#18,train
+"Disculpa, ¿Tienen otro material como el NT20150?",material_relacionado,material_relacionado#18,train
+"Hola, ¿Tienen otro material como el NT20045?",material_relacionado,material_relacionado#18,train
+Busca más del mismo tema que el VV50010,material_relacionado,material_relacionado#19,test
+Busca más del mismo tema que el EN10402,material_relacionado,material_relacionado#19,test
+Busca más del mismo tema que el VV50003,material_relacionado,material_relacionado#19,test
+"Disculpa, ¿Ya puedo consultar el EN10391?",disponibilidad_validacion,disponibilidad_validacion#0,train
+¿Ya puedo consultar el VV50003?,disponibilidad_validacion,disponibilidad_validacion#0,train
+¿Ya puedo consultar el NT20310 por favor,disponibilidad_validacion,disponibilidad_validacion#0,train
+¿En qué estado está el HI40015?,disponibilidad_validacion,disponibilidad_validacion#1,train
+¿En qué estado está el NT20201 gracias,disponibilidad_validacion,disponibilidad_validacion#1,train
+¿En qué estado está el RB30201?,disponibilidad_validacion,disponibilidad_validacion#1,train
+¿Ya está listo el EN10391?,disponibilidad_validacion,disponibilidad_validacion#2,train
+"Disculpa, ¿Ya está listo el EN10388?",disponibilidad_validacion,disponibilidad_validacion#2,train
+¿Ya está listo el RB30201?,disponibilidad_validacion,disponibilidad_validacion#2,train
+¿Está validada la descripción del VV50003?,disponibilidad_validacion,disponibilidad_validacion#3,train
+¿Está validada la descripción del HI40033 urgente,disponibilidad_validacion,disponibilidad_validacion#3,train
+¿Está validada la descripción del NT20310?,disponibilidad_validacion,disponibilidad_validacion#3,train
+¿Ya se procesó el EN10402 urgente,disponibilidad_validacion,disponibilidad_validacion#4,test
+¿Ya se procesó el RB30077?,disponibilidad_validacion,disponibilidad_validacion#4,test
+¿Ya se procesó el VV50010?,disponibilidad_validacion,disponibilidad_validacion#4,test
+Estado del maetrial EN10402,disponibilidad_validacion,disponibilidad_validacion#5,train
+Estado del material NT20310,disponibilidad_validacion,disponibilidad_validacion#5,train
+Estado del material EN10455,disponibilidad_validacion,disponibilidad_validacion#5,train
+¿Cuándo estará listo el VV50003?,disponibilidad_validacion,disponibilidad_validacion#6,train
+"¿Cuándo estará listo el NT20150, por favor",disponibilidad_validacion,disponibilidad_validacion#6,train
+¿Cuándo estará listo el RB30201?,disponibilidad_validacion,disponibilidad_validacion#6,train
+¿Se puede buscar el RB30201?,disponibilidad_validacion,disponibilidad_validacion#7,train
+¿Se puede buscar el EN10391?,disponibilidad_validacion,disponibilidad_validacion#7,train
+¿Se puede buscar el NT20310 urgente,disponibilidad_validacion,disponibilidad_validacion#7,train
+"Disculpa, ¿Ya fue aprobado el EN10402?",disponibilidad_validacion,disponibilidad_validacion#8,train
+¿Ya fue aprobado el RB30201?,disponibilidad_validacion,disponibilidad_validacion#8,train
+¿Ya fue aprobado el VV50010?,disponibilidad_validacion,disponibilidad_validacion#8,train
+¿Sigue en proecso el RB30120?,disponibilidad_validacion,disponibilidad_validacion#9,test
+Una duda: ¿Sigue en proceso el NT20045?,disponibilidad_validacion,disponibilidad_validacion#9,test
+"Oye, ¿Sigue en proceso el NT20150?",disponibilidad_validacion,disponibilidad_validacion#9,test
+"Mira, ¿Terminó de procesarse el EN10455?",disponibilidad_validacion,disponibilidad_validacion#10,train
+"Oye, ¿Terminó de procesarse el NT20310?",disponibilidad_validacion,disponibilidad_validacion#10,train
+"Disculpa, ¿Terminó de procesarse el NT20201?",disponibilidad_validacion,disponibilidad_validacion#10,train
+¿Qué estatus tiene el VV50010?,disponibilidad_validacion,disponibilidad_validacion#11,train
+"¿Qué estatus tiene el VV50003, por favor",disponibilidad_validacion,disponibilidad_validacion#11,train
+"¿Qué estatus tiene el NT20310, por favor",disponibilidad_validacion,disponibilidad_validacion#11,train
+¿Está disponible el RB30077?,disponibilidad_validacion,disponibilidad_validacion#12,train
+"Hola, ¿Está disponible el HI40015?",disponibilidad_validacion,disponibilidad_validacion#12,train
+¿Está disponible el HI40015?,disponibilidad_validacion,disponibilidad_validacion#12,train
+¿El NT20150 está pendiente de revisión?,disponibilidad_validacion,disponibilidad_validacion#13,train
+¿El RB30077 está pendiente de revisión?,disponibilidad_validacion,disponibilidad_validacion#13,train
+¿El NT20201 está pendietne de revisión?,disponibilidad_validacion,disponibilidad_validacion#13,train
+¿Ya transcribieron el RB30201?,disponibilidad_validacion,disponibilidad_validacion#14,test
+¿Ya transcribieron el NT20112?,disponibilidad_validacion,disponibilidad_validacion#14,test
+¿Ya transcribieron el NT20045 urgente,disponibilidad_validacion,disponibilidad_validacion#14,test
+Avance de procesamiento del HI40033,disponibilidad_validacion,disponibilidad_validacion#15,train
+"Disculpa, avance de procesamiento del RB30201",disponibilidad_validacion,disponibilidad_validacion#15,train
+"Oye, avance de procesamiento del NT20150",disponibilidad_validacion,disponibilidad_validacion#15,train
+¿Por qué no aparece el NT20201 en las búsquedas?,disponibilidad_validacion,disponibilidad_validacion#16,train
+¿Por qué no aparece el EN10388 en las búsquedas?,disponibilidad_validacion,disponibilidad_validacion#16,train
+"Por favor, ¿Por qué no aparece el VV50003 en las búsquedas?",disponibilidad_validacion,disponibilidad_validacion#16,train
+¿Falló el procesaimento del VV50003?,disponibilidad_validacion,disponibilidad_validacion#17,train
+¿Falló el procesamiento del RB30120?,disponibilidad_validacion,disponibilidad_validacion#17,train
+"¿Falló el procesamiento del NT20112, por favor",disponibilidad_validacion,disponibilidad_validacion#17,train
+Revisa si el RB30120 ya está completo,disponibilidad_validacion,disponibilidad_validacion#18,train
+Revisa si el EN10388 ya está completo,disponibilidad_validacion,disponibilidad_validacion#18,train
+Revisa si el EN10455 ya está completo,disponibilidad_validacion,disponibilidad_validacion#18,train
+¿Ya pasó la revisión humana el RB30120?,disponibilidad_validacion,disponibilidad_validacion#19,test
+¿Ya pasó la revisión humana el RB30077?,disponibilidad_validacion,disponibilidad_validacion#19,test
+¿Ya pasó la revisión humana el RB30201?,disponibilidad_validacion,disponibilidad_validacion#19,test
+¿Cómo puedo buscar en el acervo?,guia_de_busqueda,guia_de_busqueda#0,train
+"Oye, ¿Cómo puedo buscar en el acervo?",guia_de_busqueda,guia_de_busqueda#0,train
+¿Cómo puedo buscra en el acervo?,guia_de_busqueda,guia_de_busqueda#0,train
+¿Cómo busco una declaración?,guia_de_busqueda,guia_de_busqueda#1,train
+"Mira, ¿Cómo busco una declaración?",guia_de_busqueda,guia_de_busqueda#1,train
+Una duda: ¿Cómo busco una declaración?,guia_de_busqueda,guia_de_busqueda#1,train
+"Hola, ayuda",guia_de_busqueda,guia_de_busqueda#2,train
+Ayuda,guia_de_busqueda,guia_de_busqueda#2,train
+"Mira, ayuda gracias",guia_de_busqueda,guia_de_busqueda#2,train
+"Oye, ¿Qué puedo preguntarte?",guia_de_busqueda,guia_de_busqueda#3,train
+¿Qué puedo preguntarte?,guia_de_busqueda,guia_de_busqueda#3,train
+Necesito saber: ¿Qué puedo preguntarte?,guia_de_busqueda,guia_de_busqueda#3,train
+"Por favor, ¿Qué puedes hacer?",guia_de_busqueda,guia_de_busqueda#4,test
+"Mira, ¿Qué puedes hacer?",guia_de_busqueda,guia_de_busqueda#4,test
+Necesito saber: ¿Qué puedes hacer?,guia_de_busqueda,guia_de_busqueda#4,test
+¿Cómo se usa este asistente?,guia_de_busqueda,guia_de_busqueda#5,train
+"Hola, ¿Cómo se usa este asistente?",guia_de_busqueda,guia_de_busqueda#5,train
+"Disculpa, ¿Cómo se usa este asistente?",guia_de_busqueda,guia_de_busqueda#5,train
+Explícame cómo buscar materiales,guia_de_busqueda,guia_de_busqueda#6,train
+Explícame cómo buscar materiales por favor,guia_de_busqueda,guia_de_busqueda#6,train
+"Hola, explícame cómo bucar materiales gracias",guia_de_busqueda,guia_de_busqueda#6,train
+¿De qué formas puedo buscar?,guia_de_busqueda,guia_de_busqueda#7,train
+¿De qué forms puedo buscar?,guia_de_busqueda,guia_de_busqueda#7,train
+"Hola, ¿De qué fomras puedo buscar?",guia_de_busqueda,guia_de_busqueda#7,train
+Quiero aprender a usar el buscador,guia_de_busqueda,guia_de_busqueda#8,train
+"Oye, quiero aprender a usar el buscador",guia_de_busqueda,guia_de_busqueda#8,train
+Quiero apredner a usar el buscador,guia_de_busqueda,guia_de_busqueda#8,train
+¿Qué tipos de búsqueda existen?,guia_de_busqueda,guia_de_busqueda#9,test
+¿Qué tipos de búsqueda existen gracias,guia_de_busqueda,guia_de_busqueda#9,test
+Necesito saber: ¿Qué tipos de búsqueda existen?,guia_de_busqueda,guia_de_busqueda#9,test
+Dame ejemplos de preguntas,guia_de_busqueda,guia_de_busqueda#10,train
+Dame ejemplos de preguntas por favor,guia_de_busqueda,guia_de_busqueda#10,train
+"Dame ejemplos de preguntas, por favor",guia_de_busqueda,guia_de_busqueda#10,train
+¿Por dónde empiezo?,guia_de_busqueda,guia_de_busqueda#11,train
+¿Por dónde empiezo urgente,guia_de_busqueda,guia_de_busqueda#11,train
+"¿Por dónde empiezo, por favor",guia_de_busqueda,guia_de_busqueda#11,train
+"Oye, no sé cómo buscar urgente",guia_de_busqueda,guia_de_busqueda#12,train
+No sé cómo buscar,guia_de_busqueda,guia_de_busqueda#12,train
+"No sé cómo buscar, por favor",guia_de_busqueda,guia_de_busqueda#12,train
+¿Qué funciones tienes gracias,guia_de_busqueda,guia_de_busqueda#13,train
+¿Qué funciones tienes?,guia_de_busqueda,guia_de_busqueda#13,train
+"Hola, ¿Qué funciones tienes?",guia_de_busqueda,guia_de_busqueda#13,train
+Menú de opciones,guia_de_busqueda,guia_de_busqueda#14,test
+"Menú de opciones, por favor",guia_de_busqueda,guia_de_busqueda#14,test
+Menú de opciones urgente,guia_de_busqueda,guia_de_busqueda#14,test
+"Disculpa, ¿Cómo encuentro un video en el archivo?",guia_de_busqueda,guia_de_busqueda#15,train
+¿Cómo encuentro un video en el archivo?,guia_de_busqueda,guia_de_busqueda#15,train
+"¿Cómo encuentro un video en el archivo, por favor",guia_de_busqueda,guia_de_busqueda#15,train
+¿Cómo funciona la búsqueda?,guia_de_busqueda,guia_de_busqueda#16,train
+Necesito saber: ¿Cómo funciona la búsqueda?,guia_de_busqueda,guia_de_busqueda#16,train
+¿Cómo funciona la búsqueda gracias,guia_de_busqueda,guia_de_busqueda#16,train
+Instrucciones de uso,guia_de_busqueda,guia_de_busqueda#17,train
+"Mira, instrucciones de uso",guia_de_busqueda,guia_de_busqueda#17,train
+Instrucciones de uso gracias,guia_de_busqueda,guia_de_busqueda#17,train
+¿Cómo consulto el archivo?,guia_de_busqueda,guia_de_busqueda#18,train
+"Mira, ¿Cómo consulto el archivo?",guia_de_busqueda,guia_de_busqueda#18,train
+¿Cómo consulto el archvio gracias,guia_de_busqueda,guia_de_busqueda#18,train
+Necesito ayuda para buscar,guia_de_busqueda,guia_de_busqueda#19,test
+Necesito saber: necesito ayuda para buscar,guia_de_busqueda,guia_de_busqueda#19,test
+Necesiot ayuda para buscar,guia_de_busqueda,guia_de_busqueda#19,test
+¿Qué sabes hacer?,guia_de_busqueda,guia_de_busqueda#20,train
+"Mira, ¿Qué sabes hacer?",guia_de_busqueda,guia_de_busqueda#20,train
+¿Qué sabes hacer gracias,guia_de_busqueda,guia_de_busqueda#20,train
+¿Se puede buscar por persona o por frase?,guia_de_busqueda,guia_de_busqueda#21,train
+"Por favor, ¿Se puede buscar por persona o por frase?",guia_de_busqueda,guia_de_busqueda#21,train
+"Mira, ¿Se puede buscar por persona o por frase?",guia_de_busqueda,guia_de_busqueda#21,train
+El VV50010 tiene una descripción incorrecta,corregir_o_reportar,corregir_o_reportar#0,train
+El NT20045 tiene una descripción incorrecta,corregir_o_reportar,corregir_o_reportar#0,train
+El HI40015 tiene una descripción incorrecta,corregir_o_reportar,corregir_o_reportar#0,train
+"Por favor, hay un error en la descripción del EN10388 por favor",corregir_o_reportar,corregir_o_reportar#1,train
+Hay un error en la descripción del EN10402,corregir_o_reportar,corregir_o_reportar#1,train
+Una duda: hay un error en la descripción del RB30120,corregir_o_reportar,corregir_o_reportar#1,train
+Quiero reportar un problema con el RB30077,corregir_o_reportar,corregir_o_reportar#2,train
+Quiero reportar un problema con el NT20112,corregir_o_reportar,corregir_o_reportar#2,train
+Quiero reportar un problema con el EN10391,corregir_o_reportar,corregir_o_reportar#2,train
+Necesito saber: ¿Cómo corrijo la descripción del RB30201?,corregir_o_reportar,corregir_o_reportar#3,train
+¿Cómo corrijo la descripción del RB30201?,corregir_o_reportar,corregir_o_reportar#3,train
+¿Cómo corrijo la descripción del VV50003?,corregir_o_reportar,corregir_o_reportar#3,train
+La transcripción del EN10388 está mal,corregir_o_reportar,corregir_o_reportar#4,test
+La transcripción del VV50003 está mal por favor,corregir_o_reportar,corregir_o_reportar#4,test
+"Por favor, la trasncripción del EN10391 está mal, por favor",corregir_o_reportar,corregir_o_reportar#4,test
+No enuentro un material que debería estar,corregir_o_reportar,corregir_o_reportar#5,train
+No encuentro un material que debería estar,corregir_o_reportar,corregir_o_reportar#5,train
+No encuentro un material que debería estar por favor,corregir_o_reportar,corregir_o_reportar#5,train
+El NT20150 no aparece en el sistema,corregir_o_reportar,corregir_o_reportar#6,train
+El EN10455 no aparece en el sistema,corregir_o_reportar,corregir_o_reportar#6,train
+El EN10391 no apaece en el sistema,corregir_o_reportar,corregir_o_reportar#6,train
+Las etiquetas del EN10388 están eqiuvocadas,corregir_o_reportar,corregir_o_reportar#7,train
+Las etiquetas del HI40033 están equivocadas,corregir_o_reportar,corregir_o_reportar#7,train
+Las etiquetas del RB30120 están equivocadas,corregir_o_reportar,corregir_o_reportar#7,train
+¿Cómo reporto un error?,corregir_o_reportar,corregir_o_reportar#8,train
+Una duda: ¿Cómo repoto un error?,corregir_o_reportar,corregir_o_reportar#8,train
+"Hola, ¿Cómo reporto un error?",corregir_o_reportar,corregir_o_reportar#8,train
+Necesito hablar con soporte,corregir_o_reportar,corregir_o_reportar#9,test
+"Hola, necesito hablar con soporte",corregir_o_reportar,corregir_o_reportar#9,test
+Necesito hablar con sopote,corregir_o_reportar,corregir_o_reportar#9,test
+Se quedó atorado el HI40015,corregir_o_reportar,corregir_o_reportar#10,train
+Se quedó atorado el NT20150,corregir_o_reportar,corregir_o_reportar#10,train
+Se quedó atoardo el RB30201 gracias,corregir_o_reportar,corregir_o_reportar#10,train
+Necesito saber: el nombre de la persona en RB30120 está mal escrito,corregir_o_reportar,corregir_o_reportar#11,train
+El nombre de la persona en EN10455 está mal escrito,corregir_o_reportar,corregir_o_reportar#11,train
+El nombre de la persona en VV50010 está mal escrito,corregir_o_reportar,corregir_o_reportar#11,train
+Quiero editar la información del EN10402,corregir_o_reportar,corregir_o_reportar#12,train
+Quiero editar la información del EN10391,corregir_o_reportar,corregir_o_reportar#12,train
+Quiero editar la información del NT20310,corregir_o_reportar,corregir_o_reportar#12,train
+Detecté un dato incorrecto en EN10391,corregir_o_reportar,corregir_o_reportar#13,train
+Detecté un dato incorrecto en VV50010,corregir_o_reportar,corregir_o_reportar#13,train
+Detecté un dato incorrecto en VV50003,corregir_o_reportar,corregir_o_reportar#13,train
+¿Cómo apruebo la descripción del RB30120?,corregir_o_reportar,corregir_o_reportar#14,test
+"Por favor, ¿Cómo apruebo la descripción del NT20310 gracias",corregir_o_reportar,corregir_o_reportar#14,test
+"Hola, ¿Cómo apruebo la descripción del VV50010 gracisa",corregir_o_reportar,corregir_o_reportar#14,test
+Falta un material en el archivo,corregir_o_reportar,corregir_o_reportar#15,train
+Una duda: falta un material en el archivo,corregir_o_reportar,corregir_o_reportar#15,train
+"Mira, falta un material en el archivo",corregir_o_reportar,corregir_o_reportar#15,train
+Necesito saber: la ficha del EN10391 tiene datos erróneos,corregir_o_reportar,corregir_o_reportar#16,train
+La ficha del EN10455 tiene datos errneos,corregir_o_reportar,corregir_o_reportar#16,train
+"Oye, la ficha del NT20045 tiene datos erróneos",corregir_o_reportar,corregir_o_reportar#16,train
+Necesito saber: reportar falla,corregir_o_reportar,corregir_o_reportar#17,train
+Reportar falla,corregir_o_reportar,corregir_o_reportar#17,train
+"Hola, reportar falla",corregir_o_reportar,corregir_o_reportar#17,train
+El resumen del NT20112 no coincide con el video,corregir_o_reportar,corregir_o_reportar#18,train
+El resumen del HI40033 no coicide con el video,corregir_o_reportar,corregir_o_reportar#18,train
+El resumen del EN10391 no coincide con el video,corregir_o_reportar,corregir_o_reportar#18,train
+¿Dónde corrijo una etiqueta?,corregir_o_reportar,corregir_o_reportar#19,test
+"Mira, ¿Dónde corrjo una etiqueta?",corregir_o_reportar,corregir_o_reportar#19,test
+"Oye, ¿Dónde corrijo una etiqueta?",corregir_o_reportar,corregir_o_reportar#19,test
+Necesito saber: algo no funcioa con el EN10455 por favor,corregir_o_reportar,corregir_o_reportar#20,train
+"Disculpa, algo no funciona con el HI40033",corregir_o_reportar,corregir_o_reportar#20,train
+Algo no funciona con el EN10391,corregir_o_reportar,corregir_o_reportar#20,train
+¿Qué se ve en esta imagen?,describir_imagen,describir_imagen#0,train
+"Disculpa, ¿Qué se ve en esta imagen?",describir_imagen,describir_imagen#0,train
+Una duda: ¿Qué se ve en esta imagen?,describir_imagen,describir_imagen#0,train
+Clasifica esta imagen,describir_imagen,describir_imagen#1,train
+"Mira, clasifica esta imagen",describir_imagen,describir_imagen#1,train
+"Hola, clasifica esta imagen",describir_imagen,describir_imagen#1,train
+¿Qué tipo de escena es esta foto?,describir_imagen,describir_imagen#2,train
+"Disculpa, ¿Qué tipo de escena es esta foto?",describir_imagen,describir_imagen#2,train
+¿Qué tipo de esecna es esta foto?,describir_imagen,describir_imagen#2,train
+Analiza la imagen que subí,describir_imagen,describir_imagen#3,train
+Analiza la imagen que subí por favor,describir_imagen,describir_imagen#3,train
+"Mira, analiza la imagen que subí",describir_imagen,describir_imagen#3,train
+Describe esta captura del video,describir_imagen,describir_imagen#4,test
+"Disculpa, describe esta captura del video",describir_imagen,describir_imagen#4,test
+Una duda: describe esta captura del video,describir_imagen,describir_imagen#4,test
+"Oye, ¿Qué tipo de toma es este fotograma?",describir_imagen,describir_imagen#5,train
+"Por favor, ¿Qué tipo de toma es este fotograma?",describir_imagen,describir_imagen#5,train
+¿Qué tipo de toma es este fotograma?,describir_imagen,describir_imagen#5,train
+Identifica la escena de esta imagen,describir_imagen,describir_imagen#6,train
+Identifica la esena de esta imagen,describir_imagen,describir_imagen#6,train
+Identifica la escena de esta imgen,describir_imagen,describir_imagen#6,train
+"Por favor, ¿A qué categoría pertenece esta imagen?",describir_imagen,describir_imagen#7,train
+¿A qué categoría pertenece esta imagen?,describir_imagen,describir_imagen#7,train
+"Oye, ¿A qué categoría pertenece esta imagen?",describir_imagen,describir_imagen#7,train
+"Te mando un fotograma, ¿qué escena es?",describir_imagen,describir_imagen#8,train
+"Una duda: te mando un fotograma, ¿qué escena es?",describir_imagen,describir_imagen#8,train
+"Te mando un fotograma, ¿qué esena es por favor",describir_imagen,describir_imagen#8,train
+"Hola, mira esta foto y dime qué es",describir_imagen,describir_imagen#9,test
+Mira esta foto y dime qué es,describir_imagen,describir_imagen#9,test
+"Por favor, mira esta foto y dime qué es",describir_imagen,describir_imagen#9,test
+¿Es una conferencia de prensa esta imagen?,describir_imagen,describir_imagen#10,train
+"Mira, ¿Es una conferencia de prensa esta imagen?",describir_imagen,describir_imagen#10,train
+"¿Es una conferencia de prensa esta imagen, por favor",describir_imagen,describir_imagen#10,train
+¿Qué muestra este frame?,describir_imagen,describir_imagen#11,train
+¿Qué meustra este frame?,describir_imagen,describir_imagen#11,train
+¿Qué muestra este frame por favor,describir_imagen,describir_imagen#11,train
+"Hola, dime de qué tipo es esta imagen",describir_imagen,describir_imagen#12,train
+"Disculpa, dime de qué tipo es esta imagen gracias",describir_imagen,describir_imagen#12,train
+Dime de qué tipo es esta imagen,describir_imagen,describir_imagen#12,train
+Revisa esta imagen,describir_imagen,describir_imagen#13,train
+"Mira, revisa esta imagen",describir_imagen,describir_imagen#13,train
+Revisa esta imaen,describir_imagen,describir_imagen#13,train
+¿Qué escena aprece en la foto adjunta?,describir_imagen,describir_imagen#14,test
+¿Qué escena aparece en la foto adjunta?,describir_imagen,describir_imagen#14,test
+"Por favor, ¿Qué escena aparece en la foto adjunta?",describir_imagen,describir_imagen#14,test
+Interpreta esta imagen,describir_imagen,describir_imagen#15,train
+"Oye, interpreta esta imagen",describir_imagen,describir_imagen#15,train
+Interpreta esta imagen por favor,describir_imagen,describir_imagen#15,train
+¿Qué categoría visual tiene esta captura?,describir_imagen,describir_imagen#16,train
+"Una duda: ¿Qué categoría visual tiene esta captura, por favor",describir_imagen,describir_imagen#16,train
+"Disculpa, ¿Qué categoraí visual tiene esta captura gracias",describir_imagen,describir_imagen#16,train
+Busca materiales parecidos a esta imagen,describir_imagen,describir_imagen#17,train
+Busca materiales parecdos a esta imagen,describir_imagen,describir_imagen#17,train
+"Hola, busca materiales parecidos a esta imagen",describir_imagen,describir_imagen#17,train
+¿Qué materiales tienen una escena como esta imagen por favor,describir_imagen,describir_imagen#18,train
+¿Qué materiales tienen una escena como esta imagen?,describir_imagen,describir_imagen#18,train
+Necesito saber: ¿Qué materiales tienen una escena como esta imagen?,describir_imagen,describir_imagen#18,train
+"Con esta foto, ¿qué tipo de material es?",describir_imagen,describir_imagen#19,test
+"Hola, con esta foto, ¿qué tipo de material es, por favor",describir_imagen,describir_imagen#19,test
+"Con esta foto, ¿qué tipo de matreial es?",describir_imagen,describir_imagen#19,test
+Clasifica el fotograma adjunto,describir_imagen,describir_imagen#20,train
+Clasifica el fotograma adjunto por favor,describir_imagen,describir_imagen#20,train
+Clasifica el fotograma adjunto urgente,describir_imagen,describir_imagen#20,train
+Anailza esta toma,describir_imagen,describir_imagen#21,train
+Analiza esta toma,describir_imagen,describir_imagen#21,train
+"Hola, analiza esta toma gracias",describir_imagen,describir_imagen#21,train
+¿Qué ves en esta fotografía?,describir_imagen,describir_imagen#22,train
+Una duda: ¿Qué ves en esta fotografía?,describir_imagen,describir_imagen#22,train
+"Disculpa, ¿Qué ves en esta fotografía?",describir_imagen,describir_imagen#22,train
+"Esta imagen, ¿de qué tipo de escena es?",describir_imagen,describir_imagen#23,train
+"Mira, esta imagen, ¿de qué tipo de escena es?",describir_imagen,describir_imagen#23,train
+"Esta imagen, ¿de qué tipo de escena es gracias",describir_imagen,describir_imagen#23,train
+Quiero saber qué escena es esta,describir_imagen,describir_imagen#24,test
+Quiero saber qué escena es esta gracias,describir_imagen,describir_imagen#24,test
+"Oye, quiero saber qué escena es esta",describir_imagen,describir_imagen#24,test
+"Mira, ¿Quién ganó el partido de ayer?",fuera_de_alcance,fuera_de_alcance#0,train
+¿Quién ganó el partido de ayer?,fuera_de_alcance,fuera_de_alcance#0,train
+¿Quién ganó el partido de ayer urgente,fuera_de_alcance,fuera_de_alcance#0,train
+¿Qué clima hará mañana?,fuera_de_alcance,fuera_de_alcance#1,train
+"Por favor, ¿Qué clima hará mañana?",fuera_de_alcance,fuera_de_alcance#1,train
+"¿Qué clima hará mañana, por favor",fuera_de_alcance,fuera_de_alcance#1,train
+Cuéntame un chiste,fuera_de_alcance,fuera_de_alcance#2,train
+Necesito saber: cuéntame un chiste,fuera_de_alcance,fuera_de_alcance#2,train
+"Por favor, cuéntame un chiste",fuera_de_alcance,fuera_de_alcance#2,train
+¿Cuál es la capital de Francia?,fuera_de_alcance,fuera_de_alcance#3,train
+"Hola, ¿Cuál es la capital de Francia?",fuera_de_alcance,fuera_de_alcance#3,train
+"Disculpa, ¿Cuál es la capital de Francia?",fuera_de_alcance,fuera_de_alcance#3,train
+"Recomiéndame una película, por favor",fuera_de_alcance,fuera_de_alcance#4,test
+Recomiéndame una película,fuera_de_alcance,fuera_de_alcance#4,test
+"Mira, recomiéndame una película",fuera_de_alcance,fuera_de_alcance#4,test
+"Oye, ¿Cuánto cuesta un boleto de avión?",fuera_de_alcance,fuera_de_alcance#5,train
+¿Cuánto cuesta un boleto de avión?,fuera_de_alcance,fuera_de_alcance#5,train
+¿Cuánto cuesta un boleto de avión gracias,fuera_de_alcance,fuera_de_alcance#5,train
+Escribe un poema,fuera_de_alcance,fuera_de_alcance#6,train
+"Por favor, escribe un poema gracias",fuera_de_alcance,fuera_de_alcance#6,train
+"Mira, escribe un poema",fuera_de_alcance,fuera_de_alcance#6,train
+¿Cómo hago arroz?,fuera_de_alcance,fuera_de_alcance#7,train
+"Hola, ¿Cómo hago arroz?",fuera_de_alcance,fuera_de_alcance#7,train
+"Por favor, ¿Cómo hago arroz?",fuera_de_alcance,fuera_de_alcance#7,train
+"¿Qué hora es, por favor",fuera_de_alcance,fuera_de_alcance#8,train
+¿Qué hora es?,fuera_de_alcance,fuera_de_alcance#8,train
+¿Qué hora es gracias,fuera_de_alcance,fuera_de_alcance#8,train
+¿Cuál es el precio del dólar?,fuera_de_alcance,fuera_de_alcance#9,test
+Una duda: ¿Cuál es el preico del dólar?,fuera_de_alcance,fuera_de_alcance#9,test
+¿Cuál es el precio del dólar gracias,fuera_de_alcance,fuera_de_alcance#9,test
+Resuelve esta ecuación,fuera_de_alcance,fuera_de_alcance#10,train
+Resuelve esta ecuación por favor,fuera_de_alcance,fuera_de_alcance#10,train
+Resuelve esta ecuaión,fuera_de_alcance,fuera_de_alcance#10,train
+"Por favor, traduce esta frase al inglés",fuera_de_alcance,fuera_de_alcance#11,train
+Traduce esta frase al inglés,fuera_de_alcance,fuera_de_alcance#11,train
+Traduce esta frase al inglsé,fuera_de_alcance,fuera_de_alcance#11,train
+¿Quién es el presidente de Argentina?,fuera_de_alcance,fuera_de_alcance#12,train
+"Oye, ¿Quién es el presidente de Argentina?",fuera_de_alcance,fuera_de_alcance#12,train
+¿Quién es el persidente de Argentina?,fuera_de_alcance,fuera_de_alcance#12,train
+"Hola, dame consejos de salud",fuera_de_alcance,fuera_de_alcance#13,train
+Dame consejos de salud,fuera_de_alcance,fuera_de_alcance#13,train
+Dame consejos de salud urgente,fuera_de_alcance,fuera_de_alcance#13,train
+¿Cómo cambio la llanta del coche?,fuera_de_alcance,fuera_de_alcance#14,test
+¿Cómo cambio la llanta del coche gracias,fuera_de_alcance,fuera_de_alcance#14,test
+"Por favor, ¿Cómo cambio la llanta del coche gracias",fuera_de_alcance,fuera_de_alcance#14,test
+"Hola, ¿Cuál es tu color favorito?",fuera_de_alcance,fuera_de_alcance#15,train
+¿Cuál es tu color favorito?,fuera_de_alcance,fuera_de_alcance#15,train
+¿Cuál es tu color favorito urgente,fuera_de_alcance,fuera_de_alcance#15,train
+¿Qué opinas de la política?,fuera_de_alcance,fuera_de_alcance#16,train
+Necesito saber: ¿Qué opinas de la política?,fuera_de_alcance,fuera_de_alcance#16,train
+¿Qué opinas de la política gracias,fuera_de_alcance,fuera_de_alcance#16,train
+Programa un recordatorio por favor,fuera_de_alcance,fuera_de_alcance#17,train
+Programa un recordatorio,fuera_de_alcance,fuera_de_alcance#17,train
+"Oye, programa un recordatorio",fuera_de_alcance,fuera_de_alcance#17,train
+"Hola, reserva un restaurante urgente",fuera_de_alcance,fuera_de_alcance#18,train
+Reserva un restaurante,fuera_de_alcance,fuera_de_alcance#18,train
+Una duda: reserva un restaurante,fuera_de_alcance,fuera_de_alcance#18,train
+Dime la receta del pozole,fuera_de_alcance,fuera_de_alcance#19,test
+"Mira, dime la receta del pozole",fuera_de_alcance,fuera_de_alcance#19,test
+"Hola, dime la receta del pozole",fuera_de_alcance,fuera_de_alcance#19,test
+"Hola, ¿Dónde queda el aeropuerto?",fuera_de_alcance,fuera_de_alcance#20,train
+¿Dónde queda el aeropuerto?,fuera_de_alcance,fuera_de_alcance#20,train
+Una duda: ¿Dónde queda el aeropuerto?,fuera_de_alcance,fuera_de_alcance#20,train
+¿Cuál es el mejor celular?,fuera_de_alcance,fuera_de_alcance#21,train
+¿Cuál es el mejor celular gracias,fuera_de_alcance,fuera_de_alcance#21,train
+"Mira, ¿Cuál es el mejor celular?",fuera_de_alcance,fuera_de_alcance#21,train
+Explícame la teoría de la relatividad,fuera_de_alcance,fuera_de_alcance#22,train
+Una duda: explícame la teoría de la relatividad por favor,fuera_de_alcance,fuera_de_alcance#22,train
+"Por favor, explícame la teoría de la relatividad",fuera_de_alcance,fuera_de_alcance#22,train
+Mándame un correo,fuera_de_alcance,fuera_de_alcance#23,train
+Mándame un correo por favor,fuera_de_alcance,fuera_de_alcance#23,train
+"Por favor, mándame un correo",fuera_de_alcance,fuera_de_alcance#23,train
+¿Cuántos años tienes?,fuera_de_alcance,fuera_de_alcance#24,test
+Necesito saber: ¿Cuántos años tienes?,fuera_de_alcance,fuera_de_alcance#24,test
+"Hola, ¿Cuántos años tienes?",fuera_de_alcance,fuera_de_alcance#24,test
+Ponme música,fuera_de_alcance,fuera_de_alcance#25,train
+"Ponme música, por favor",fuera_de_alcance,fuera_de_alcance#25,train
+Ponme músia,fuera_de_alcance,fuera_de_alcance#25,train
+"Oye, ¿Cómo se juega ajedrez?",fuera_de_alcance,fuera_de_alcance#26,train
+¿Cómo se juega ajedrez?,fuera_de_alcance,fuera_de_alcance#26,train
+Una duda: ¿Cómo se juega ajedrez?,fuera_de_alcance,fuera_de_alcance#26,train
+¿Cuál es la población de México gracias,fuera_de_alcance,fuera_de_alcance#27,train
+"¿Cuál es la población de México, por favor",fuera_de_alcance,fuera_de_alcance#27,train
+¿Cuál es la población de México urgente,fuera_de_alcance,fuera_de_alcance#27,train
+Hola,cortesia,cortesia#0,train
+Buenos días,cortesia,cortesia#1,train
+Buenas tardes,cortesia,cortesia#2,train
+Buenas noches,cortesia,cortesia#3,train
+"Hola, buen día",cortesia,cortesia#4,test
+"Hola, buen día urgente",cortesia,cortesia#4,test
+Hey,cortesia,cortesia#5,train
+Hey gracias,cortesia,cortesia#5,train
+Saludos,cortesia,cortesia#6,train
+"Oye, slaudos",cortesia,cortesia#6,train
+Qué tal,cortesia,cortesia#7,train
+"Oye, qué tal",cortesia,cortesia#7,train
+Hola asistente,cortesia,cortesia#8,train
+Hola asistente por favor,cortesia,cortesia#8,train
+Gracias,cortesia,cortesia#9,test
+Muchas gracias,cortesia,cortesia#10,train
+"Por favor, muchas gracias",cortesia,cortesia#10,train
+Te agradezco,cortesia,cortesia#11,train
+"Oye, te agradezoc",cortesia,cortesia#11,train
+Muy amable,cortesia,cortesia#12,train
+Gracias por la ayuda,cortesia,cortesia#13,train
+Adiós,cortesia,cortesia#14,test
+Hasta luego,cortesia,cortesia#15,train
+Nos vemos,cortesia,cortesia#16,train
+Eso es todo,cortesia,cortesia#17,train
+"Por favor, eso es todo",cortesia,cortesia#17,train
+Hasta pronto,cortesia,cortesia#18,train
+Chao,cortesia,cortesia#19,test
+Bye,cortesia,cortesia#20,train
+Me despido,cortesia,cortesia#21,train
+"Listo, gracias",cortesia,cortesia#22,train
+"Perfecto, gracias",cortesia,cortesia#23,train
+"Perfecto, graicas",cortesia,cortesia#23,train
+"Excelente, muchas gracias",cortesia,cortesia#24,test
+"Oye, excelente, muchas gracias",cortesia,cortesia#24,test
+Ok gracias,cortesia,cortesia#25,train
+"Mira, ok garcias",cortesia,cortesia#25,train
+"Hola, ¿cómo estás?",cortesia,cortesia#26,train
+Buen día,cortesia,cortesia#27,train
+Muchísimas gracias,cortesia,cortesia#28,train
+"Gracias, hasta luego",cortesia,cortesia#29,test
+Que tengas buen día,cortesia,cortesia#30,train
+Hasta mañana,cortesia,cortesia#31,train
+Nos vemos luego,cortesia,cortesia#32,train
+Necesito saber: nos vemos luego,cortesia,cortesia#32,train
+Hola de nuevo,cortesia,cortesia#33,train
+"Muy bien, gracias",cortesia,cortesia#34,test
+"Genial, gracias",cortesia,cortesia#35,train
+Mil gracias,cortesia,cortesia#36,train
+Mil gracias gracias,cortesia,cortesia#36,train
+"Hola, buenas",cortesia,cortesia#37,train
+Saludos cordiales,cortesia,cortesia#38,train
+"Gracias, eso era todo",cortesia,cortesia#39,test
+Ya no necesito nada más,cortesia,cortesia#40,train
+Ya no necesito nada más por favor,cortesia,cortesia#40,train
+Es todo por ahora,cortesia,cortesia#41,train
+Es todo por ahora por favor,cortesia,cortesia#41,train
+Hola equipo,cortesia,cortesia#42,train
+"Buenos días, asistente",cortesia,cortesia#43,train
+"Una duda: buenos días, asistente",cortesia,cortesia#43,train
+"Gracias, adiós",cortesia,cortesia#44,test

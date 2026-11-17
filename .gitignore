@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Avance 2: modelos grandes y conjuntos de imágenes. Las muestras pequeñas sí se versionan.
+ml/modelos/
+ml/imagenes_raw/
+ml/dataset_visual/
+*.keras
+*.h5

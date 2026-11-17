@@ -41,7 +41,7 @@ function mostrarPuntajes(puntajes) {
     if (puntajes.length === 0) {
       return '—';
     }
-    return puntajes.map((item) => `${item.intencion}: ${item.puntaje}`).join(' · ');
+    return puntajes.map((item) => `${item.intencion || item.clase}: ${item.puntaje}`).join(' · ');
   }
   if (puntajes && typeof puntajes === 'object' && Object.keys(puntajes).length > 0) {
     return JSON.stringify(puntajes);
@@ -91,14 +91,24 @@ export default function PanelFlujo({ diagnostico }) {
           </dd>
           <dt>Registros recuperados</dt>
           <dd>{mostrarRegistros(diagnostico.registros)}</dd>
+          <dt>Detector</dt>
+          <dd>{diagnostico.detector || 'reglas'}</dd>
           <dt>Intención</dt>
           <dd>{diagnostico.intencion}</dd>
           <dt>Tres mayores puntajes</dt>
-          <dd>{mostrarPuntajes(diagnostico.puntajes)}</dd>
+          <dd>{mostrarPuntajes(diagnostico.clasificador?.puntajes || diagnostico.puntajes)}</dd>
           <dt>Validación</dt>
           <dd>{diagnostico.validacion ? 'aceptada' : 'rechazada'}</dd>
           <dt>Modelo usado</dt>
           <dd>{diagnostico.modelo}</dd>
+          {diagnostico.imagen && (
+            <>
+              <dt>Imagen</dt>
+              <dd>
+                {`${diagnostico.imagen.encontrada ? diagnostico.imagen.nombre : 'sin predicción'}\nConfianza: ${Math.round((diagnostico.imagen.confianza || 0) * 100)}%\nModo: ${diagnostico.imagen.modo}\nIncierta: ${diagnostico.imagen.incierto ? 'sí' : 'no'}\nMateriales: ${mostrar(diagnostico.imagen.materiales)}`}
+              </dd>
+            </>
+          )}
           {diagnostico.aviso && (
             <>
               <dt>Aviso</dt>

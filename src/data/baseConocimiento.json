@@ -523,6 +523,21 @@
           ]
         }
       }
+    },
+    "describir_imagen": {
+      "descripcion": "Clasifica la escena de una imagen de muestra. No identifica personas.",
+      "fuertes": [
+        "que escena es esta imagen",
+        "clasifica esta imagen",
+        "analiza esta foto",
+        "que se ve en esta imagen",
+        "que tipo de escena"
+      ],
+      "claves": [
+        "imagen",
+        "foto",
+        "fotograma"
+      ]
     }
   },
   "plantillas": {
@@ -570,7 +585,11 @@
     "corregir_sin_id": "Para corregir o reportar un problema incluye el ID del material, qué dato está mal y dónde lo ves. Si no encuentras un material que debería estar, indícalo también.",
     "guia": "Puedes buscar en el acervo de estas formas:\n• Por ID: «Dame la ficha del NT20045».\n• Por tema: «Busca materiales sobre inundaciones».\n• Por frase: «¿En qué video dijeron que no habrá aumento en la tarifa?».\n• Por persona: «¿En qué materiales aparece Laura Mendoza?».\n• Por fecha o tipo: «Entrevistas ingresadas esta semana».\nY sobre un material: de qué trata, quién aparece, qué se dice y en qué minuto.",
     "pedir_id": "¿De qué material hablas? Indícame su ID (por ejemplo, NT20045).",
-    "id_inexistente": "El ID {id} no existe en el catálogo de demostración. Verifica que tenga 2 o 3 letras y de 4 a 6 números (por ejemplo, NT20045)."
+    "id_inexistente": "El ID {id} no existe en el catálogo de demostración. Verifica que tenga 2 o 3 letras y de 4 a 6 números (por ejemplo, NT20045).",
+    "describir_imagen": "La imagen parece una escena de «{escena}» (confianza {confianza}). {materiales} Es una clasificación automática y debe confirmarla una persona.",
+    "imagen_incierta": "No puedo asegurar qué escena es: la mejor opción sería «{escena}», pero la confianza es solo {confianza}. Prueba con otra imagen o descríbeme lo que buscas con texto.",
+    "imagen_sin_adjunto": "Adjunta una imagen de muestra con el botón correspondiente y te digo qué tipo de escena parece.",
+    "imagen_no_disponible": "No tengo una predicción guardada para esa imagen; en esta maqueta solo se pueden clasificar las imágenes de muestra."
   },
   "respaldo": {
     "respuestas": [
@@ -604,6 +623,14 @@
       "etiqueta": "Error de procesamiento",
       "descripcion": "El procesamiento falló."
     }
+  },
+  "escenas_visuales": {
+    "conferencia_prensa": "conferencia de prensa",
+    "entrevista_estudio": "entrevista en estudio",
+    "exteriores_calle": "exteriores o calle",
+    "ceremonia_evento": "ceremonia o evento",
+    "multitud_manifestacion": "multitud o manifestación",
+    "deportes_estadio": "deportes o estadio"
   },
   "catalogo_demo": {
     "NT20045": {
@@ -648,7 +675,8 @@
         "traslados",
         "autobus",
         "trenes"
-      ]
+      ],
+      "escenas": ["conferencia_prensa"]
     },
     "EN10388": {
       "titulo": "Entrevista sobre lluvias e inundaciones en zonas bajas",
@@ -700,7 +728,8 @@
         "encharcamientos",
         "evacuacion",
         "emergencia"
-      ]
+      ],
+      "escenas": ["entrevista_estudio", "exteriores_calle"]
     },
     "NT20112": {
       "titulo": "Inauguración de hospital regional",
@@ -737,7 +766,8 @@
         "camas",
         "urgencias",
         "pediatria"
-      ]
+      ],
+      "escenas": ["ceremonia_evento"]
     },
     "EN10391": {
       "titulo": "Entrevista con especialista en seguridad vial",
@@ -783,7 +813,8 @@
         "ciclistas",
         "avenidas",
         "conductores"
-      ]
+      ],
+      "escenas": ["entrevista_estudio"]
     },
     "RB30077": {
       "titulo": "Material en bruto: mercado de abastos",
@@ -798,7 +829,8 @@
       "descripcion_personas": "",
       "lugares": [],
       "elementos_visuales": [],
-      "palabras_relacionadas": []
+      "palabras_relacionadas": [],
+      "escenas": ["exteriores_calle", "multitud_manifestacion"]
     },
     "HI40015": {
       "titulo": "Cinta histórica: festival de música de 1998",
@@ -813,7 +845,8 @@
       "descripcion_personas": "",
       "lugares": [],
       "elementos_visuales": [],
-      "palabras_relacionadas": []
+      "palabras_relacionadas": [],
+      "escenas": ["ceremonia_evento", "multitud_manifestacion"]
     },
     "NT20150": {
       "titulo": "Cumbre sobre cambio climático: mensajes de apertura",
@@ -828,7 +861,8 @@
       "descripcion_personas": "",
       "lugares": [],
       "elementos_visuales": [],
-      "palabras_relacionadas": []
+      "palabras_relacionadas": [],
+      "escenas": ["conferencia_prensa", "ceremonia_evento"]
     },
     "VV50003": {
       "titulo": "Emisión en vivo: resumen de partido de futbol",
@@ -844,7 +878,8 @@
       "descripcion_personas": "",
       "lugares": [],
       "elementos_visuales": [],
-      "palabras_relacionadas": []
+      "palabras_relacionadas": [],
+      "escenas": ["deportes_estadio", "multitud_manifestacion"]
     }
   }
 }

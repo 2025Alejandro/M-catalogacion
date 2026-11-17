@@ -10,6 +10,7 @@
 
 import { useRef, useState } from 'react';
 import base from '../data/baseConocimiento.json';
+import prediccionesVisual from '../data/prediccionesVisual.json';
 import { Chatbot } from '../chatbot/chatbot';
 
 // La bienvenida es la respuesta de cortesía > saludo, no un turno del modelo.
@@ -54,23 +55,28 @@ export function useChatbot() {
   const [mensajes, setMensajes] = useState([{ rol: 'bot', texto: SALUDO_INICIAL }]);
   const [escribiendo, setEscribiendo] = useState(false);
   const [diagnostico, setDiagnostico] = useState(null);
+  const [imagenElegida, setImagenElegida] = useState(null);
 
   /**
-   * Añade el mensaje del usuario y, tras una pausa breve, el del bot.
+   * Envía texto y, si hay, una imagen de muestra.
+   * Sin texto y con imagen, la pregunta es la de escena.
    *
    * @param {string} texto
+   * @param {{ id: string, archivo: string } | null} [imagen]
    * @returns {Promise<void>}
    */
-  async function enviar(texto) {
-    const limpio = String(texto || '').trim();
+  async function enviar(texto, imagen = null) {
+    const elegida = imagen || null;
+    const limpio = String(texto || '').trim() || (elegida ? '¿Qué escena es esta imagen?' : '');
     if (!limpio || escribiendo) {
       return;
     }
 
-    setMensajes((previos) => [...previos, { rol: 'usuario', texto: limpio }]);
+    setMensajes((previos) => [...previos, { rol: 'usuario', texto: limpio, imagen: elegida }]);
     setEscribiendo(true);
+    setImagenElegida(null);
     const inicio = Date.now();
-    const respuesta = await chatbotRef.current.responder(limpio);
+    const respuesta = await chatbotRef.current.responder(limpio, elegida);
     await esperarPausa(inicio);
     setMensajes((previos) => [...previos, { rol: 'bot', texto: respuesta }]);
     setDiagnostico(chatbotRef.current.diagnostico);
@@ -87,6 +93,7 @@ export function useChatbot() {
     setMensajes([{ rol: 'bot', texto: SALUDO_INICIAL }]);
     setDiagnostico(null);
     setEscribiendo(false);
+    setImagenElegida(null);
   }
 
   return {
@@ -95,5 +102,9 @@ export function useChatbot() {
     diagnostico,
     enviar,
     reiniciar,
+    muestras: prediccionesVisual.muestras,
+    imagenElegida,
+    elegirImagen: setImagenElegida,
+    modoVisual: prediccionesVisual.modo,
   };
 }

@@ -21,5 +21,15 @@ export const CONFIG = {
     // una redacción estable, no creativa.
     temperatura: 0.1,
   },
-  VERSION: '0.1 (Avance 1)',
+  VERSION: '0.2 (Avance 2)',
+  // 'clasificador' usa el SVM exportado. 'reglas' conserva el puntaje del Avance 1.
+  // El SVM acierta 13 de 15 turnos del Avance 1. Dos etiquetas cambian
+  // (paráfrasis de lluvia y «fuera_de_alcance» en vez de «respaldo»), así que
+  // el valor por defecto sigue en reglas para no romper esa suite.
+  // Las pruebas multimodales activan 'clasificador' de forma explícita.
+  DETECTOR_INTENCION: 'reglas',
+  // Puntaje mínimo del SVM. Por debajo, la respuesta es el respaldo.
+  UMBRAL_CLASIFICADOR: 0.0,
+  // Por debajo de esta confianza la escena visual se comunica como incierta.
+  UMBRAL_VISUAL: 0.50,
 };

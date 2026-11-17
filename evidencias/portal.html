@@ -289,6 +289,17 @@
         <li>Enlazar cada ID a la ficha o al video cuando el acervo deje de ser de demostración.</li>
       </ul>
     </section>
+    <section>
+      <h2>Avance 2</h2>
+      <p>El lenguaje sigue simulado. El clasificador de intenciones es un SVM real exportado desde Python con NLTK Snowball. El clasificador visual de esta copia es SIMULADO: no hay métricas de una CNN entrenada.</p>
+      <ul>
+        <li>Dataset: <code>ml/datos/intenciones_dataset.csv</code> (1.084 frases, 17 clases).</li>
+        <li>Métricas: <code>ml/resultados_texto/metricas_texto.json</code>. SVM en la prueba independiente: accuracy 0.784, F1 macro 0.774.</li>
+        <li>Ablación: <code>ml/resultados_texto/ablacion.json</code>.</li>
+        <li>Diferencias con las reglas: <code>evidencias/avance2/02_diferencias_clasificador_vs_reglas.md</code>.</li>
+        <li>Instrucciones de Colab: <code>ml/visual/INSTRUCCIONES_COLAB.md</code>.</li>
+      </ul>
+    </section>
   </main>
 </body>
 </html>

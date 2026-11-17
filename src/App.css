@@ -18,6 +18,63 @@
   line-height: 1.4;
 }
 
+.aviso p {
+  margin: 0.15rem 0;
+}
+
+.adjuntar {
+  padding: 0.4rem 1rem 0;
+}
+
+.adjuntar-aviso {
+  margin: 0.4rem 0;
+  color: #6d6256;
+  font-size: 0.85rem;
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(4.5rem, 1fr));
+  gap: 0.4rem;
+}
+
+.miniatura,
+.miniatura-mensaje {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.miniatura {
+  padding: 0;
+  border: 2px solid transparent;
+  background: transparent;
+}
+
+.miniatura.elegida {
+  border-color: #8d2f2a;
+}
+
+.miniatura img,
+.miniatura-mensaje {
+  display: block;
+  width: 100%;
+  height: 3.2rem;
+  object-fit: cover;
+}
+
+.previa {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.previa img {
+  width: 4rem;
+  height: 2.6rem;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
 /* Encabezado */
 .encabezado {
   display: flex;

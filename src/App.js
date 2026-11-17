@@ -27,17 +27,24 @@ export default function App() {
     diagnostico,
     enviar,
     reiniciar,
+    muestras,
+    imagenElegida,
+    elegirImagen,
+    modoVisual,
   } = useChatbot();
 
   return (
     <div className="aplicacion">
-      <AvisoModoSimulado />
+      <AvisoModoSimulado modoVisual={modoVisual} />
       <Header onReiniciar={reiniciar} />
       <main className="cuerpo">
         <ChatWindow
           mensajes={mensajes}
           escribiendo={escribiendo}
           onEnviar={enviar}
+          muestras={muestras}
+          imagenElegida={imagenElegida}
+          onElegirImagen={elegirImagen}
         />
         <PanelFlujo diagnostico={diagnostico} />
       </main>

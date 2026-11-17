@@ -566,6 +566,10 @@ function responderFiltro(datos, registros, catalogo, estados, plantillas) {
  * @returns {{ respuesta: string, materialUsado: string | null }}
  */
 function redactar(intencion, datos, registros, catalogo, estados, plantillas) {
+  if (intencion === 'describir_imagen') {
+    return { respuesta: plantillas.imagen_sin_adjunto, materialUsado: null };
+  }
+
   if (intencion === 'guia_de_busqueda') {
     return { respuesta: plantillas.guia, materialUsado: null };
   }
@@ -739,15 +743,104 @@ export class ModeloSimulado {
   }
 
   /**
+   * Redacta la escena de una imagen de muestra. No identifica personas.
+   *
+   * @param {object} paquete
+   * @returns {{ intencion: string, respuesta: string, puntajes: object[], saludo: boolean, materialUsado: null }}
+   */
+  responderImagen(paquete) {
+    const info = paquete.imagenInterpretada;
+    const plantillas = paquete.plantillas;
+    const confianza = `${Math.round((info.confianza || 0) * 100)}%`;
+    let respuesta;
+    if (!info.encontrada) {
+      respuesta = plantillas.imagen_no_disponible;
+    } else if (info.incierto) {
+      respuesta = rellenar(plantillas.imagen_incierta, { escena: info.nombre, confianza });
+    } else {
+      const materiales = info.materiales.length
+        ? `Materiales del archivo con ese tipo de escena: ${info.materiales.join(', ')}.`
+        : 'Por ahora ningún material del catálogo tiene ese tipo de escena registrado.';
+      respuesta = rellenar(plantillas.describir_imagen, {
+        escena: info.nombre,
+        confianza,
+        materiales,
+      });
+    }
+    if (info.modo === 'simulado') {
+      respuesta += ' (Clasificador visual SIMULADO: solo demostración.)';
+    }
+    return {
+      intencion: 'describir_imagen',
+      respuesta,
+      puntajes: [],
+      saludo: false,
+      materialUsado: null,
+    };
+  }
+
+  /**
    * Genera la intención y el texto. Es asíncrono para compartir contrato
    * con el adaptador de LM Studio, aunque aquí no hay espera de red.
    *
    * @param {object} paquete
-   * @returns {Promise<{ intencion: string | null, respuesta: string, puntajes: object[], saludo: boolean, materialUsado: string | null }>}
+   * @returns {Promise<{ intencion: string | null, respuesta: string, puntajes: object[], saludo: boolean, materialUsado: string | null, porUmbral?: boolean }>}
    */
   async generar(paquete) {
+    if (paquete.imagenInterpretada) {
+      return this.responderImagen(paquete);
+    }
+
     const tokens = raices(paquete.mensaje);
     const decision = this.puntuar(paquete.intenciones, tokens, paquete.datos);
+    const clasificada = paquete.intencionClasificada;
+    const usaClasificador = paquete.detector === 'clasificador' && clasificada;
+
+    if (usaClasificador) {
+      const puntajesClase = (clasificada.puntajes || []).map((item) => ({
+        intencion: item.clase || item.intencion,
+        puntaje: Number(item.puntaje.toFixed(3)),
+      }));
+      const bajoUmbral = clasificada.puntaje < paquete.umbralClasificador;
+      if (clasificada.intencion === 'fuera_de_alcance' || bajoUmbral) {
+        const textoRespaldo = paquete.respaldo?.respuestas?.[0] || '';
+        return {
+          intencion: clasificada.intencion === 'fuera_de_alcance' ? 'fuera_de_alcance' : null,
+          respuesta: clasificada.intencion === 'fuera_de_alcance' ? textoRespaldo : '',
+          puntajes: puntajesClase,
+          saludo: false,
+          materialUsado: null,
+          porUmbral: bajoUmbral && clasificada.intencion !== 'fuera_de_alcance',
+        };
+      }
+      if (clasificada.intencion === 'cortesia') {
+        return {
+          intencion: 'cortesia',
+          respuesta: this.respuestaCortesia(
+            paquete.intenciones.cortesia.subintenciones,
+            decision.puntajesSub,
+          ),
+          puntajes: puntajesClase,
+          saludo: decision.saludo,
+          materialUsado: null,
+        };
+      }
+      const redaccionClase = redactar(
+        clasificada.intencion,
+        paquete.datos,
+        paquete.registros,
+        paquete.catalogo,
+        paquete.estados,
+        paquete.plantillas,
+      );
+      return {
+        intencion: clasificada.intencion,
+        respuesta: redaccionClase.respuesta,
+        puntajes: puntajesClase,
+        saludo: decision.saludo,
+        materialUsado: redaccionClase.materialUsado,
+      };
+    }
 
     if (decision.intencion === null) {
       return {

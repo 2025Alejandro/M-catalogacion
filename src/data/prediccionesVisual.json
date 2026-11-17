@@ -1,0 +1,27 @@
+{
+  "modo": "simulado",
+  "aviso": "SIMULADO: no proviene de ningún modelo entrenado",
+  "modelo": "ResNet50 (transferencia de aprendizaje, ImageNet)",
+  "clases": [
+    "conferencia_prensa",
+    "entrevista_estudio",
+    "exteriores_calle",
+    "ceremonia_evento",
+    "multitud_manifestacion",
+    "deportes_estadio"
+  ],
+  "muestras": [
+    {"id": "muestra_conferencia_prensa_1", "archivo": "muestras/muestra_conferencia_prensa_1.jpg", "clase_real": "conferencia_prensa", "clase_predicha": "conferencia_prensa", "confianza": 0.93, "probabilidades": {"conferencia_prensa": 0.93, "entrevista_estudio": 0.03, "exteriores_calle": 0.01, "ceremonia_evento": 0.02, "multitud_manifestacion": 0.01, "deportes_estadio": 0.0}},
+    {"id": "muestra_conferencia_prensa_2", "archivo": "muestras/muestra_conferencia_prensa_2.jpg", "clase_real": "conferencia_prensa", "clase_predicha": "conferencia_prensa", "confianza": 0.88, "probabilidades": {"conferencia_prensa": 0.88, "entrevista_estudio": 0.04, "exteriores_calle": 0.02, "ceremonia_evento": 0.04, "multitud_manifestacion": 0.01, "deportes_estadio": 0.01}},
+    {"id": "muestra_entrevista_estudio_1", "archivo": "muestras/muestra_entrevista_estudio_1.jpg", "clase_real": "entrevista_estudio", "clase_predicha": "entrevista_estudio", "confianza": 0.91, "probabilidades": {"conferencia_prensa": 0.02, "entrevista_estudio": 0.91, "exteriores_calle": 0.03, "ceremonia_evento": 0.02, "multitud_manifestacion": 0.01, "deportes_estadio": 0.01}},
+    {"id": "muestra_entrevista_estudio_2", "archivo": "muestras/muestra_entrevista_estudio_2.jpg", "clase_real": "entrevista_estudio", "clase_predicha": "entrevista_estudio", "confianza": 0.86, "probabilidades": {"conferencia_prensa": 0.03, "entrevista_estudio": 0.86, "exteriores_calle": 0.05, "ceremonia_evento": 0.03, "multitud_manifestacion": 0.02, "deportes_estadio": 0.01}},
+    {"id": "muestra_exteriores_calle_1", "archivo": "muestras/muestra_exteriores_calle_1.jpg", "clase_real": "exteriores_calle", "clase_predicha": "exteriores_calle", "confianza": 0.9, "probabilidades": {"conferencia_prensa": 0.01, "entrevista_estudio": 0.02, "exteriores_calle": 0.9, "ceremonia_evento": 0.02, "multitud_manifestacion": 0.04, "deportes_estadio": 0.01}},
+    {"id": "muestra_exteriores_calle_2", "archivo": "muestras/muestra_exteriores_calle_2.jpg", "clase_real": "exteriores_calle", "clase_predicha": "exteriores_calle", "confianza": 0.84, "probabilidades": {"conferencia_prensa": 0.02, "entrevista_estudio": 0.03, "exteriores_calle": 0.84, "ceremonia_evento": 0.03, "multitud_manifestacion": 0.06, "deportes_estadio": 0.02}},
+    {"id": "muestra_ceremonia_evento_1", "archivo": "muestras/muestra_ceremonia_evento_1.jpg", "clase_real": "ceremonia_evento", "clase_predicha": "ceremonia_evento", "confianza": 0.89, "probabilidades": {"conferencia_prensa": 0.03, "entrevista_estudio": 0.02, "exteriores_calle": 0.02, "ceremonia_evento": 0.89, "multitud_manifestacion": 0.03, "deportes_estadio": 0.01}},
+    {"id": "muestra_ceremonia_evento_2", "archivo": "muestras/muestra_ceremonia_evento_2.jpg", "clase_real": "ceremonia_evento", "clase_predicha": "ceremonia_evento", "confianza": 0.81, "probabilidades": {"conferencia_prensa": 0.04, "entrevista_estudio": 0.03, "exteriores_calle": 0.04, "ceremonia_evento": 0.81, "multitud_manifestacion": 0.06, "deportes_estadio": 0.02}},
+    {"id": "muestra_multitud_manifestacion_1", "archivo": "muestras/muestra_multitud_manifestacion_1.jpg", "clase_real": "multitud_manifestacion", "clase_predicha": "multitud_manifestacion", "confianza": 0.87, "probabilidades": {"conferencia_prensa": 0.02, "entrevista_estudio": 0.02, "exteriores_calle": 0.05, "ceremonia_evento": 0.03, "multitud_manifestacion": 0.87, "deportes_estadio": 0.01}},
+    {"id": "muestra_multitud_manifestacion_2", "archivo": "muestras/muestra_multitud_manifestacion_2.jpg", "clase_real": "multitud_manifestacion", "clase_predicha": "multitud_manifestacion", "confianza": 0.8, "probabilidades": {"conferencia_prensa": 0.03, "entrevista_estudio": 0.02, "exteriores_calle": 0.07, "ceremonia_evento": 0.05, "multitud_manifestacion": 0.8, "deportes_estadio": 0.03}},
+    {"id": "muestra_deportes_estadio_1", "archivo": "muestras/muestra_deportes_estadio_1.jpg", "clase_real": "deportes_estadio", "clase_predicha": "deportes_estadio", "confianza": 0.92, "probabilidades": {"conferencia_prensa": 0.01, "entrevista_estudio": 0.01, "exteriores_calle": 0.02, "ceremonia_evento": 0.02, "multitud_manifestacion": 0.02, "deportes_estadio": 0.92}},
+    {"id": "muestra_deportes_estadio_2", "archivo": "muestras/muestra_deportes_estadio_2.jpg", "clase_real": "deportes_estadio", "clase_predicha": "deportes_estadio", "confianza": 0.42, "probabilidades": {"conferencia_prensa": 0.08, "entrevista_estudio": 0.1, "exteriores_calle": 0.12, "ceremonia_evento": 0.14, "multitud_manifestacion": 0.14, "deportes_estadio": 0.42}}
+  ]
+}

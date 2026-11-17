@@ -24,5 +24,12 @@ services:
       CI: "true"
     command: ["npm", "test", "--", "--watchAll=false"]
 
+  # Pipeline de texto en Python. La CNN no se entrena aquí.
+  ml:
+    build: ./ml
+    working_dir: /app
+    volumes:
+      - ./ml:/app
+
 volumes:
   web_node_modules:

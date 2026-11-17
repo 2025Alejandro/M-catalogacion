@@ -1,0 +1,65 @@
+texto,intencion,predicha
+Explícame brevemente el HI40033,resumen_material,fuera_de_alcance
+Explícame brevemente el VV50010,resumen_material,fuera_de_alcance
+Explícame brevemente el NT20112,resumen_material,fuera_de_alcance
+"Oye, ¿Quién habla en el EN10388 gracias",personas_en_material,resumen_material
+¿Quién habla en el NT20310?,personas_en_material,resumen_material
+¿Quién habla en el EN10391?,personas_en_material,resumen_material
+¿Qué imágenes se ven en EN10388?,lugares_y_elementos_visuales,personas_en_material
+¿Qué imágenes se ven en EN10402?,lugares_y_elementos_visuales,personas_en_material
+¿Qué imágenes se ven en NT20112?,lugares_y_elementos_visuales,personas_en_material
+"Oye, ¿Qué objetos aparecen en el HI40015?",lugares_y_elementos_visuales,personas_en_material
+¿Qué objetos aparecen en el VV50003?,lugares_y_elementos_visuales,personas_en_material
+¿Qué objetos aparecen en el EN10391?,lugares_y_elementos_visuales,personas_en_material
+"Hola, dame el texto del audio del EN10402",transcripcion_material,fragmento_por_timecode
+"Oye, dame el texto del audio del RB30201",transcripcion_material,fragmento_por_timecode
+Dame el texto del audio del VV50010,transcripcion_material,fragmento_por_timecode
+Texto completo del NT20045,transcripcion_material,fragmento_por_timecode
+Texto completo del RB30077,transcripcion_material,fragmento_por_timecode
+Necesito saber: texto completo del EN10391,transcripcion_material,fragmento_por_timecode
+¿Qué hablan en el HI40033 urgente,transcripcion_material,resumen_material
+¿Qué hablan en el RB30077 gracias,transcripcion_material,resumen_material
+¿Qué hablan en el RB30201?,transcripcion_material,resumen_material
+¿Cuáles son las frases más importantes del RB30201?,transcripcion_material,fuera_de_alcance
+"Mira, ¿Cuáles son las frases más importants del NT20201?",transcripcion_material,fuera_de_alcance
+¿Cuáles son las frases más importantes del VV50003?,transcripcion_material,fuera_de_alcance
+¿Existe algún video acerca de turismo?,buscar_por_tema,buscar_por_persona
+Todo lo que tenga a Ricardo Salas,buscar_por_persona,cortesia
+Muestra solo conferencias,buscar_por_fecha_tipo,describir_imagen
+Una duda: muestra solo emisioens en vivo,buscar_por_fecha_tipo,describir_imagen
+Busca materiales similares al RB30120,material_relacionado,buscar_por_tema
+Una duda: busca materiales similares al EN10402,material_relacionado,buscar_por_tema
+Busca materiales similares al NT20310,material_relacionado,buscar_por_tema
+Recomiéndame videos similares al VV50003,material_relacionado,buscar_por_id
+Recomiéndame videos similares al EN10455,material_relacionado,buscar_por_id
+Recomiéndame videos similares al NT20310,material_relacionado,buscar_por_id
+¿Sigue en proecso el RB30120?,disponibilidad_validacion,buscar_por_id
+¿Ya transcribieron el RB30201?,disponibilidad_validacion,transcripcion_material
+¿Ya transcribieron el NT20112?,disponibilidad_validacion,transcripcion_material
+¿Ya transcribieron el NT20045 urgente,disponibilidad_validacion,transcripcion_material
+¿Qué tipos de búsqueda existen?,guia_de_busqueda,describir_imagen
+¿Qué tipos de búsqueda existen gracias,guia_de_busqueda,describir_imagen
+Necesito saber: ¿Qué tipos de búsqueda existen?,guia_de_busqueda,describir_imagen
+Menú de opciones,guia_de_busqueda,fuera_de_alcance
+"Menú de opciones, por favor",guia_de_busqueda,fuera_de_alcance
+Menú de opciones urgente,guia_de_busqueda,fuera_de_alcance
+La transcripción del EN10388 está mal,corregir_o_reportar,transcripcion_material
+La transcripción del VV50003 está mal por favor,corregir_o_reportar,transcripcion_material
+Necesito hablar con soporte,corregir_o_reportar,buscar_por_tema
+"Hola, necesito hablar con soporte",corregir_o_reportar,buscar_por_tema
+Necesito hablar con sopote,corregir_o_reportar,buscar_por_tema
+"Mira, ¿Dónde corrjo una etiqueta?",corregir_o_reportar,resumen_material
+Describe esta captura del video,describir_imagen,lugares_y_elementos_visuales
+"Disculpa, describe esta captura del video",describir_imagen,lugares_y_elementos_visuales
+Una duda: describe esta captura del video,describir_imagen,lugares_y_elementos_visuales
+¿Cómo cambio la llanta del coche?,fuera_de_alcance,buscar_por_tema
+¿Cómo cambio la llanta del coche gracias,fuera_de_alcance,guia_de_busqueda
+"Por favor, ¿Cómo cambio la llanta del coche gracias",fuera_de_alcance,guia_de_busqueda
+Dime la receta del pozole,fuera_de_alcance,buscar_por_id
+"Mira, dime la receta del pozole",fuera_de_alcance,buscar_por_id
+"Hola, dime la receta del pozole",fuera_de_alcance,describir_imagen
+¿Cuántos años tienes?,fuera_de_alcance,buscar_por_id
+Necesito saber: ¿Cuántos años tienes?,fuera_de_alcance,buscar_por_id
+"Hola, ¿Cuántos años tienes?",fuera_de_alcance,personas_en_material
+Adiós,cortesia,fuera_de_alcance
+Chao,cortesia,fuera_de_alcance

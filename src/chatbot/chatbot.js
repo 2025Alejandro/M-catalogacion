@@ -14,11 +14,16 @@
 
 import { CONFIG } from '../config';
 import base from '../data/baseConocimiento.json';
+import modeloIntenciones from '../data/modeloIntenciones.json';
+import prediccionesVisual from '../data/prediccionesVisual.json';
+import { crearClasificador } from '../clasificador/clasificadorIntenciones';
+import { interpretarImagen } from '../clasificador/clasificadorVisual';
 import { AdaptadorLMStudio } from './adaptadorLMStudio';
 import { extraerDatos } from './extraccionDatos';
 import { GestorConversacion } from './gestorConversacion';
 import { ModeloSimulado } from './modeloSimulado';
 import { recuperar } from './recuperacion';
+import { raiz } from './textoUtils';
 import { validarRespuesta } from './validacion';
 
 /**
@@ -43,6 +48,7 @@ export class Chatbot {
     this.gestor = new GestorConversacion();
     this.modeloSimulado = new ModeloSimulado();
     this.adaptador = new AdaptadorLMStudio();
+    this.clasificador = crearClasificador(modeloIntenciones, raiz);
     this.diagnostico = null;
   }
 
@@ -61,12 +67,22 @@ export class Chatbot {
    * Responde un mensaje siguiendo el flujo completo.
    *
    * @param {string} mensaje
+   * @param {{ id: string } | null} [imagen]
    * @returns {Promise<string>}
    */
-  async responder(mensaje) {
+  async responder(mensaje, imagen = null) {
     this.gestor.turnos += 1;
     const datos = extraerDatos(mensaje);
     const registros = recuperar(datos, this.gestor.ultimoMaterial);
+    const clasificada = imagen ? null : this.clasificador.clasificar(mensaje);
+    const imagenInterpretada = imagen
+      ? interpretarImagen(
+        imagen.id,
+        prediccionesVisual,
+        base.catalogo_demo,
+        base.escenas_visuales,
+      )
+      : null;
 
     const paquete = {
       mensaje,
@@ -77,9 +93,12 @@ export class Chatbot {
       catalogo: base.catalogo_demo,
       estados: base.estados,
       plantillas: base.plantillas,
-      // Cortesía y la lista de intenciones no están en las plantillas.
-      // El modelo, simulado o real, las recibe en el paquete.
       intenciones: base.intenciones,
+      respaldo: base.respaldo,
+      detector: CONFIG.DETECTOR_INTENCION,
+      umbralClasificador: CONFIG.UMBRAL_CLASIFICADOR,
+      intencionClasificada: CONFIG.DETECTOR_INTENCION === 'clasificador' ? clasificada : null,
+      imagenInterpretada,
     };
 
     let salida;
@@ -128,6 +147,12 @@ export class Chatbot {
       intencion = 'respaldo';
     }
 
+    if (salida.porUmbral) {
+      aviso = aviso
+        ? `${aviso} El puntaje del clasificador quedó bajo el umbral.`
+        : 'El puntaje del clasificador quedó bajo el umbral. Se usó el respaldo.';
+    }
+
     this.gestor.registrarTurno({ mensaje, respuesta });
     this.diagnostico = {
       intencion,
@@ -138,6 +163,16 @@ export class Chatbot {
       validacion: valida,
       modelo,
       aviso,
+      detector: CONFIG.DETECTOR_INTENCION,
+      clasificador: CONFIG.DETECTOR_INTENCION === 'clasificador' && clasificada
+        ? {
+          intencion: clasificada.intencion,
+          puntaje: clasificada.puntaje,
+          margen: clasificada.margen,
+          puntajes: clasificada.puntajes,
+        }
+        : null,
+      imagen: imagenInterpretada,
     };
     this.gestor.diagnostico = this.diagnostico;
     return respuesta;

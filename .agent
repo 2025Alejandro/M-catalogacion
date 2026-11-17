@@ -1,0 +1,174 @@
+# Continuidad del proyecto Catalogacion
+
+Documento para otro agente. Léelo antes de modificar código. El producto es una maqueta React del asistente de un acervo histórico de noticias. El catálogo es ficticio y el modelo de lenguaje es simulado. No lo presentes como inteligencia artificial.
+
+Versión: 0.2 (Avance 2). Carpeta: `C:\Users\TheKraquen\Documents\Proyectos\Maestria\Catalogacion`. Paquete npm: `catalogacion`. Repositorio Git: `https://github.com/2025Alejandro/M-catalogacion.git`, rama `main`. El repositorio es privado.
+
+## Avance 2
+
+`CONFIG.DETECTOR_INTENCION` vale `reglas` para que las 13 conversaciones del Avance 1 sigan pasando. `clasificador` usa el SVM de `src/data/modeloIntenciones.json`. `UMBRAL_CLASIFICADOR` es 0.0 y `UMBRAL_VISUAL` es 0.50. Las pruebas de `multimodal.test.js` activan el clasificador ellas mismas.
+
+`Chatbot.responder(mensaje, imagen)` acepta `{ id }` de una muestra. Con imagen, la intención es `describir_imagen`. `fuera_de_alcance` muestra el respaldo y conserva esa etiqueta. `diagnostico` añade `detector`, `clasificador` e `imagen`.
+
+Carpetas: `ml/` (texto y scripts de Colab), `src/clasificador/`, `public/muestras/`, `evidencias/avance2/`. No se versionan `ml/modelos/`, `ml/imagenes_raw/`, `ml/dataset_visual/`, `*.keras` ni `*.h5`.
+
+Servicio Docker nuevo: `ml` (Python 3.12, monta `./ml`). El visual de la interfaz está en modo simulado. No hay métricas de una CNN entrenada.
+
+SVM con NLTK Snowball, prueba por plantilla: accuracy 0.708, F1 macro 0.694. Prueba independiente: accuracy 0.784, F1 macro 0.774. Naive Bayes independiente: accuracy 0.804, F1 macro 0.783. Dataset: 1084 frases y 17 clases. Dos turnos del Avance 1 cambian de etiqueta; el detalle está en `evidencias/avance2/02_diferencias_clasificador_vs_reglas.md`. JavaScript iguala a NLTK salvo `ambientacion` → `ambient`, equivalencia medida en la paridad.
+
+## Qué es y qué no es
+
+Periodistas, editores y archivistas consultan materiales por ID, tema, frase, persona, fecha y tipo, y preguntan de qué trata un material, quién aparece, qué se dice y en qué minuto.
+
+El diseño teórico usa un modelo (LM Studio o Hermes) que recibe la pregunta y los registros recuperados, detecta la intención y redacta. No hay hardware para desplegarlo. Por eso `CONFIG.MODO_MODELO` vale `simulado`. `ModeloSimulado.generar` cumple el mismo contrato que tendría el modelo real y rellena plantillas del JSON. No llama a la red ni a un modelo.
+
+`AdaptadorLMStudio` existe, está desactivado y no se probó. Solo correría si alguien cambia `MODO_MODELO` a `lmstudio`. Las pruebas automáticas no deben llamarlo.
+
+La interfaz muestra siempre: «Modo simulado: no hay ningún modelo de lenguaje cargado. Catálogo de demostración con datos ficticios.»
+
+## Cómo se construyó
+
+- Create React App con la plantilla JavaScript, dentro de Docker (`node:20-bookworm`). No hay Vite, Next ni TypeScript.
+- `npx create-react-app Catalogacion` falló porque npm no admite mayúsculas. Se creó `catalogacion` y la carpeta se renombró a `Catalogacion`. El nombre del paquete se quedó en minúsculas.
+- Dependencia añadida: `snowball-stemmers` (stemmer español). El paquete no tiene `export default` usable. En `textoUtils.js` se importa `{ newStemmer }`.
+- No hizo falta `--legacy-peer-deps`.
+- Se borraron `src/logo.svg`, `src/App.test.js`, `src/reportWebVitals.js`, `public/logo192.png` y `public/logo512.png`. Se conservó `src/setupTests.js`.
+- No hubo ajuste de `palabras_relacionadas`. Los 15 turnos de Jest pasaron con el JSON original.
+- El host de desarrollo no tenía Node en el PATH. Todo `npm` se ejecutó dentro del contenedor.
+- `web-vitals` sigue en `package.json` porque venía con CRA. Ya no se importa.
+
+## Cómo funciona cada mensaje
+
+`useChatbot` crea un `Chatbot` y llama `responder(mensaje)`. La bienvenida no es un turno: es el texto de `cortesia > saludo` leído del JSON. Hay una pausa visual de unos 400 ms («escribiendo…»). No hay `localStorage`.
+
+`Chatbot.responder`:
+
+1. `extraerDatos(mensaje)` sobre el texto normalizado (minúsculas, sin acentos; la ñ queda n).
+2. `recuperar(datos, ultimoMaterial)` contra un índice de raíces armado una sola vez.
+3. Arma el paquete: mensaje, historial (4 turnos previos), datos, registros, instrucciones, catálogo, estados, plantillas e intenciones.
+4. `ModeloSimulado.generar(paquete)` si `MODO_MODELO` es `simulado`. Si fuera `lmstudio` y el POST falla, vuelve al simulado y deja `diagnostico.aviso`.
+5. Si el modelo devuelve `materialUsado`, ese ID pasa a ser el último material.
+6. `validarRespuesta`: cada ID `\b[A-Z]{2,3}\d{4,6}\b` debe existir en el catálogo o ser el ID que escribió el usuario; cada timecode `\b\d{2}:\d{2}:\d{2}\b` debe ser un fragmento, una persona, una duración o `datos.tiempo`.
+7. Si no hay intención o la validación falla, la respuesta es el respaldo y `diagnostico.intencion` queda en `respaldo`. Al segundo fallo seguido se usa `respaldo.repetido`.
+8. Si el puntaje de saludo es mayor que 0 y la intención ganadora no es cortesía, se antepone «¡Hola! ».
+
+Contrato de `generar(paquete)`: `{ intencion, respuesta, puntajes, saludo, materialUsado }`. El modelo solo debe usar el paquete.
+
+### Extracción (`extraccionDatos.js`)
+
+Devuelve `{ id, tiempo, tipo, rango, anio, palabras, terminos, frase, terminosFrase }`.
+
+- ID: `/\b([a-z]{2,3})-?(\d{4,6})\b/`, en mayúsculas y sin guion. Ejemplo: NT20045.
+- Tiempo: `21:48` es mm:ss y se guarda como `00:21:48`. Tres grupos son hh:mm:ss.
+- Tipo: primera clave de `tipos_material` cuyo sinónimo aparece como palabra completa. El orden del JSON decide.
+- Rango, en este orden: «esta semana», «semana pasada», «hoy», «ayer», «este mes». Semanas de lunes a domingo. No uses `new Date()` para «hoy». La fecha de referencia es `2026-10-25` (domingo). Esa semana es del `2026-10-19` al `2026-10-25`. El cálculo está en `textoUtils.js` (`diaSemanaUTC`, `sumarDiasISO`).
+- Año: solo si no hay ID, el primer `19xx` o `20xx`.
+- Palabras de búsqueda: tokens que no están en `palabras_vacias_busqueda`, no son solo dígitos y no son un ID. `terminos` son sus raíces.
+- Frase: texto entre `«»`, `""` o `“”`. Si no hay comillas, lo que sigue en el texto normalizado a «dijeron que», «dijo que», «mencionaron que» o «mencionan que». `terminosFrase` quita `palabras_vacias_frase`.
+
+### Recuperación (`recuperacion.js`)
+
+Índice: raíces de título, resumen, tipo, etiquetas y `palabras_relacionadas`. Cada fragmento guarda sus raíces.
+
+- `porId`: el ID si está en el catálogo; si no, null.
+- `porContexto`: último material de la conversación.
+- `porTerminos`: términos distintos presentes en la meta o en algún fragmento. Orden: cantidad descendente, ID ascendente. `mejorFragmento` es el fragmento con más términos, o null si el acierto fue solo por título.
+- `porFrase`: solo si hay `terminosFrase`. Umbral `max(min(2, n), ceil(0.6 * n))`. Orden: k descendente, ID ascendente.
+- `porFiltro`: solo si hay tipo, rango o año. Debe cumplir todos los que existan. El año vale si es el de ingreso o aparece en título o resumen. Orden: ingreso descendente, ID descendente.
+- `relacionados`: base = `porId` o, si no hay, `porContexto`. Otros registros que comparten raíces de etiqueta. No usa el título.
+
+### Puntaje del modelo simulado
+
+`PESO_FUERTE = 3`, `PESO_CLAVE = 1`, `UMBRAL_INTENCION = 2`, `BONO_ID = 2` (solo `buscar_por_id` si hay ID), `BONO_TIMECODE = 4` (solo `fragmento_por_timecode` si hay tiempo).
+
+Cada frase pesa `peso * cantidad de raíces`. Si la misma tupla de raíces se repite, se queda el peso máximo. Una raíz coincide por igualdad, o por distancia de edición ≤ 1 si token y raíz tienen 6 caracteres o más. Varias raíces tienen que ir juntas y en orden. En empate gana la primera clave del JSON. `puntajes` son las tres mayores. Cortesía gana solo si ninguna intención sustantiva llega al umbral y alguna subintención (saludo, despedida, agradecimiento) puntúa.
+
+Las respuestas salen de `plantillas`. `{estado}` es la etiqueta («Completado», «En cola»), no la clave interna. Material procesado = `completado` o `pendiente_revision`. Un ID escrito que no está en el catálogo usa `id_inexistente` y no se recuerda como material.
+
+### Validación y memoria
+
+`gestorConversacion.js` guarda último material, fallos seguidos, turnos e historial de 4. `reiniciar()` lo vacía y también los contadores de cortesía.
+
+`diagnostico` queda en la instancia: intención, tres puntajes, id, datos extraídos, registros solo como IDs, validación, modelo (`simulado` o `lmstudio`) y aviso si hubo fallback.
+
+## Catálogo ficticio
+
+Ocho fichas en `src/data/baseConocimiento.json`, clave `catalogo_demo`:
+
+| ID | Tipo | Estado | Para qué sirve en las pruebas |
+|---|---|---|---|
+| NT20045 | conferencia de prensa | completado | Ficha, resumen, personas sin nombre, transcripción, frase de la tarifa |
+| EN10388 | entrevista | completado | Inundaciones; Ricardo Salas; ingreso 2026-10-22 |
+| NT20112 | ceremonia | pendiente_revision | Corregir una descripción |
+| EN10391 | entrevista | completado | Laura Mendoza; ingreso 2026-10-24 |
+| RB30077 | material en bruto | transcribiendo | Aún no hay personas |
+| HI40015 | cinta histórica | analizando_video | Ingreso 2026-10-24; título con 1998 |
+| NT20150 | cumbre | en_cola | Aún no se puede consultar por contenido |
+| VV50003 | emisión en vivo | error | No debe citarse al preguntar quién ganó un partido |
+
+Hay 14 intenciones de consulta más `cortesia` (saludo, despedida, agradecimiento). Con el respaldo son 16. El orden de las claves del JSON es el desempate. No reordenes intenciones ni cambies plantillas, textos del catálogo ni `casosPrueba.json`. Si un caso fallara por el stemmer, solo se puede añadir una frase más específica a la intención correcta y hay que documentarlo en el README.
+
+## Interfaz
+
+`App.js` monta el banner, el encabezado, el chat y el panel.
+
+- `AvisoModoSimulado.jsx`: banner fijo.
+- `Header.jsx`: título y «Reiniciar conversación».
+- `MessageList.jsx`: `aria-live="polite"` y `white-space: pre-line` para los `\n` y las viñetas.
+- `MessageInput.jsx`: Enter envía.
+- `QuickReplies.jsx`: seis textos que se envían tal cual.
+- `PanelFlujo.jsx`: `<details>` «Cómo respondió». Muestra datos extraídos, IDs por criterio, intención, tres puntajes, validación y modelo. Un clic automatizado a veces no abre el `<details>`; `summary.click()` desde la página sí.
+- `ChatWindow.jsx` y `useChatbot.js` unen la lista, las sugerencias y el envío.
+- Estilos en `src/App.css` (secciones comentadas) y un reset en `src/index.css`. Sin librería de UI. Foco visible con `:focus-visible`.
+
+## Scripts y servicios
+
+No hay backend ni API propia. Los únicos servicios son los de Docker Compose.
+
+Desde `Catalogacion`, con Docker Desktop en ejecución:
+
+```powershell
+docker compose build
+docker compose up web
+docker compose run --rm test
+docker compose run --rm web npm run build
+```
+
+- Servicio `web`: imagen del Dockerfile, puerto 3000, `HOST=0.0.0.0`, polling de archivos para Windows. Monta el código y deja `node_modules` en el volumen `web_node_modules`.
+- Servicio `test`: la misma imagen, sin montar el código del host. Ejecuta `npm test -- --watchAll=false` con `CI=true`. Hay que reconstruir la imagen después de cambiar código si se prueba así.
+- `Dockerfile`: `node:20-bookworm`. El entrypoint `docker-entrada.sh` se genera dentro de la imagen. Si el volumen no tiene `react-scripts`, hace `npm install` y luego ejecuta el comando. `CMD` es `npm start`.
+- `CI=true` hace que el build falle si ESLint emite warnings. El código debe quedar sin warnings.
+
+Scripts de `package.json`, pensados para correr dentro del contenedor:
+
+- `npm start`: servidor de desarrollo en el puerto 3000.
+- `npm test`: Jest. El archivo real es `src/tests/conversaciones.test.js`.
+- `npm run build`: build de producción.
+- `npm run eject`: no usarlo.
+
+Prueba automática: 13 conversaciones y 15 turnos en `src/tests/casosPrueba.json`. Cada conversación crea un `Chatbot` nuevo. Comprueba `diagnostico.intencion`, fragmentos que deben aparecer y fragmentos que no deben aparecer. La comparación usa `normalizar` (minúsculas y sin acentos). Resultado ya obtenido: 13 pruebas pasaron. No se usa Vitest.
+
+Evidencia visual, aparte de Jest: `evidencias/portal.html` y 14 capturas en `evidencias/capturas/`. Esas 14 conversaciones de la interfaz también coincidieron con la intención esperada. El portal se abre con doble clic; no está servido por React.
+
+## Reglas para continuar
+
+- Comentarios en español: cabecera de archivo (qué hace, qué recibe, qué devuelve, con qué se relaciona) y JSDoc en funciones, clases, hook y componentes. No escribas comentarios vacíos.
+- No agregues credenciales, tokens, URLs internas ni datos reales. El catálogo sigue siendo el ficticio.
+- No actives ni pruebes el adaptador de LM Studio mientras no haya hardware. Si se activa, un fallo debe volver al modelo simulado y avisarlo en el panel.
+- No uses la fecha del sistema para los rangos. Parte siempre de `referencia.fechaReferencia`.
+- No inventes intenciones, plantillas ni registros. Lo nuevo se agrega en `baseConocimiento.json` y, si cambia la redacción, en `modeloSimulado.js`.
+- Para una intención nueva: clave en `intenciones` (el orden importa en un empate), frases `fuertes` y `claves` sin acentos, plantilla y una rama en `redactar`.
+- Para un registro nuevo: ID de 2 o 3 letras y de 4 a 6 números, mismo esquema que las fichas actuales. `palabras_relacionadas` simula la búsqueda por significado y solo la llevan los materiales `completado` y `pendiente_revision`.
+- El panel lista todos los criterios recuperados, no solo el que armó la respuesta. En «¿Quién ganó el partido de ayer?» el índice ve VV50003, pero la respuesta es el respaldo y no lo cita. No «corrijas» eso haciendo que el respaldo mencione la ficha.
+
+## Límites conocidos
+
+- Solo entiende lo descrito en el JSON. Una clave suelta pesa 1 y no pasa el umbral de 2.
+- El panel muestra raíces (`inund`, `laur`) y, en el respaldo, dice «validación rechazada» aunque ese sea el comportamiento previsto.
+- La frase extraída puede conservar el signo de interrogación final.
+- No hay video, usuarios ni edición real de fichas. Reiniciar borra la memoria; recargar la página también.
+- Intenciones implementadas y no fotografiadas en `evidencias/capturas`: lugares y elementos visuales, material relacionado, y cortesía suelta (saludo, despedida, agradecimiento). El saludo sí se usa como mensaje inicial.
+
+## Siguiente etapa, si hay hardware
+
+Cambiar `MODO_MODELO` a `lmstudio`, cargar Hermes en LM Studio (o un servidor con la misma API) en `http://localhost:1234/v1` y mantener `validarRespuesta` antes de mostrar el texto. No hace falta cambiar el orquestador: el adaptador ya cumple `generar(paquete)`.

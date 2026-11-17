@@ -1,0 +1,45 @@
+{
+  "stemmer": "NLTK SnowballStemmer('spanish')",
+  "configuraciones": {
+    "completo": {
+      "plantilla": {
+        "accuracy": 0.708,
+        "f1_macro": 0.694
+      },
+      "independiente": {
+        "accuracy": 0.784,
+        "f1_macro": 0.774
+      }
+    },
+    "sin_stopwords": {
+      "plantilla": {
+        "accuracy": 0.722,
+        "f1_macro": 0.712
+      },
+      "independiente": {
+        "accuracy": 0.784,
+        "f1_macro": 0.767
+      }
+    },
+    "sin_stemming": {
+      "plantilla": {
+        "accuracy": 0.708,
+        "f1_macro": 0.689
+      },
+      "independiente": {
+        "accuracy": 0.784,
+        "f1_macro": 0.777
+      }
+    },
+    "sin_stopwords_ni_stemming": {
+      "plantilla": {
+        "accuracy": 0.713,
+        "f1_macro": 0.707
+      },
+      "independiente": {
+        "accuracy": 0.784,
+        "f1_macro": 0.776
+      }
+    }
+  }
+}

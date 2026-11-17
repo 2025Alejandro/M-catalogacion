@@ -1,0 +1,103 @@
+texto,intencion
+Necesito conocer el título y la fecha de ingreso del EN10388,buscar_por_id
+¿Me pasas la información básica de NT20112?,buscar_por_id
+Quiero saber cuánto tiempo dura el material RB30077,buscar_por_id
+¿Qué clase de archivo es HI40015?,buscar_por_id
+"Consulta el registro VV50003, por favor",buscar_por_id
+Revisa el material con ID NT20045 y dime sus datos,buscar_por_id
+¿Puedes contarme brevemente qué muestra el EN10391?,resumen_material
+Necesito una sinopsis corta del NT20112,resumen_material
+¿Cuál es el asunto principal del material NT20045?,resumen_material
+Dame un panorama de lo que trata el EN10388,resumen_material
+¿Qué se aborda en el video EN10391?,resumen_material
+¿Me haces un extracto del NT20045?,resumen_material
+¿Se logra identificar a algún entrevistado en el EN10388?,personas_en_material
+"En el NT20045, ¿quién es la persona que presenta?",personas_en_material
+¿Quién aparece rotulado en el video EN10391?,personas_en_material
+¿Hay nombres de personas en el material NT20112?,personas_en_material
+¿Podrías decirme qué personas intervienen en el RB30077?,personas_en_material
+¿Se ve a alguna autoridad en el NT20112?,personas_en_material
+¿En qué escenario se desarrolla el EN10391?,lugares_y_elementos_visuales
+¿Qué se alcanza a ver en las imágenes del NT20112?,lugares_y_elementos_visuales
+Cuéntame cómo es la ambientación visual del NT20045,lugares_y_elementos_visuales
+¿Qué ubicaciones aparecen en el material EN10388?,lugares_y_elementos_visuales
+¿Aparecen gráficos o letreros en el NT20045?,lugares_y_elementos_visuales
+Detalla el contenido visual del NT20112,lugares_y_elementos_visuales
+Necesito leer lo que se habla en el NT20045,transcripcion_material
+¿Me muestras el texto de lo que dicen en el EN10388?,transcripcion_material
+Quiero revisar las palabras del entrevistado en el EN10391,transcripcion_material
+¿Cuál es la transcripción disponible del NT20112?,transcripcion_material
+Pásame lo dicho en el audio del NT20045,transcripcion_material
+Sácame lo que se escucha en el material EN10388,transcripcion_material
+¿Qué comentan cuando va en 12:05 el EN10388?,fragmento_por_timecode
+Necesito saber lo dicho al minuto 05:32 del NT20045,fragmento_por_timecode
+¿Qué declaración se escucha a las 00:09:15 en EN10391?,fragmento_por_timecode
+Muéstrame el texto exacto en 07:40 del NT20112,fragmento_por_timecode
+Qué se menciona en el instante 21:48,fragmento_por_timecode
+¿Qué dice la persona hacia el minuto 03:10 del EN10388?,fragmento_por_timecode
+Quisiera revisar grabaciones que tengan que ver con lluvias fuertes,buscar_por_tema
+¿Existe archivo en el que se trate el tema de hospitales?,buscar_por_tema
+"Estoy preparando una nota sobre transporte público, ¿qué material tienen?",buscar_por_tema
+¿Qué hay guardado acerca de accidentes de tránsito?,buscar_por_tema
+Necesito tomas relacionadas con cambio climático,buscar_por_tema
+Ayúdame a ubicar contenido sobre tarifas del metro,buscar_por_tema
+"Recuerdo que alguien afirmó que no subirían las tarifas, ¿en qué material fue?",buscar_por_frase
+Necesito ubicar el momento exacto en que dijeron «cien camas»,buscar_por_frase
+¿En cuál grabación se escucha la frase «mochila de emergencia»?,buscar_por_frase
+¿Quién pronunció que la velocidad es la principal causa de accidentes?,buscar_por_frase
+Encuentra la declaración que habla de rutas de evacuación,buscar_por_frase
+"Me suena que dijeron «reducir veinte minutos los traslados», ¿dónde?",buscar_por_frase
+¿Tienes grabaciones donde participe Laura Mendoza?,buscar_por_persona
+Necesito todos los materiales de Ricardo Salas,buscar_por_persona
+¿En qué piezas del archivo interviene Ana Torres?,buscar_por_persona
+¿Cuántos videos hay con la entrevistada Laura Mendoza?,buscar_por_persona
+Ubica los clips donde se ve a Carlos Vega,buscar_por_persona
+¿Dónde puedo encontrar intervenciones de Ricardo Salas?,buscar_por_persona
+¿Cuáles conferencias entraron en los últimos días?,buscar_por_fecha_tipo
+Enséñame lo ingresado el lunes de esta semana,buscar_por_fecha_tipo
+Necesito las entrevistas del mes en curso,buscar_por_fecha_tipo
+¿Qué cintas antiguas de 1998 hay disponibles?,buscar_por_fecha_tipo
+Filtra emisiones en vivo recibidas ayer,buscar_por_fecha_tipo
+Listado de materiales que llegaron hoy,buscar_por_fecha_tipo
+¿Qué otros materiales tocan el mismo asunto que el EN10388?,material_relacionado
+Recomiéndame contenido emparentado con el NT20045,material_relacionado
+¿Hay piezas análogas al EN10391 en el archivo?,material_relacionado
+Quiero explorar más videos del estilo del NT20112,material_relacionado
+Sugiere otros materiales conectados con este,material_relacionado
+¿Se parece a algo más el material EN10388?,material_relacionado
+¿Cómo va el procesamiento del NT20150?,disponibilidad_validacion
+¿Puedo buscar ya por el contenido del RB30077?,disponibilidad_validacion
+¿El NT20112 ya cuenta con aprobación?,disponibilidad_validacion
+Me urge saber si el HI40015 terminó de analizarse,disponibilidad_validacion
+¿Sigue en cola el NT20150 o ya avanzó?,disponibilidad_validacion
+"¿Qué pasó con el VV50003, ya quedó?",disponibilidad_validacion
+"Soy nuevo aquí, ¿cómo le hago para encontrar cosas?",guia_de_busqueda
+¿Qué criterios puedo usar para localizar un material?,guia_de_busqueda
+Muéstrame ejemplos de consultas válidas,guia_de_busqueda
+"No entiendo cómo funciona esto, ¿me orientas?",guia_de_busqueda
+¿Puedo buscar por fecha o por persona?,guia_de_busqueda
+¿Cuáles son las opciones del asistente?,guia_de_busqueda
+Noté que la etiqueta del NT20045 no corresponde con el video,corregir_o_reportar
+"El texto transcrito del EN10388 tiene errores, ¿qué hago?",corregir_o_reportar
+Un material que subimos ayer no aparece en el catálogo,corregir_o_reportar
+Necesito avisar de una falla en la ficha del NT20112,corregir_o_reportar
+¿A quién le notifico una descripción equivocada?,corregir_o_reportar
+"El sistema marca error en el VV50003, quiero levantar un reporte",corregir_o_reportar
+"Muy buenas, qué gusto saludarte",cortesia
+Te lo agradezco un montón,cortesia
+"Con esto me quedo, que tengas excelente día",cortesia
+"Hola, buenas tardes a todos",cortesia
+Gracias por tu paciencia,cortesia
+"Nos hablamos después, cuídate",cortesia
+Subo una foto y quiero que me digas de qué escena se trata,describir_imagen
+¿Puedes interpretar este fotograma que adjunto?,describir_imagen
+Necesito que revises esta captura y la categorices,describir_imagen
+¿Qué clase de escena es la que aparece en la imagen?,describir_imagen
+"Con base en esta imagen, ¿qué materiales del archivo se le parecen?",describir_imagen
+Dime qué tipo de plano es el de la fotografía,describir_imagen
+¿Me recomiendas un buen restaurante cerca?,fuera_de_alcance
+¿A cuánto está el euro hoy?,fuera_de_alcance
+Platícame sobre la historia del futbol,fuera_de_alcance
+¿Puedes ayudarme a escribir una carta de renuncia?,fuera_de_alcance
+¿Qué películas están en cartelera?,fuera_de_alcance
+Calcula cuánto es el quince por ciento de 840,fuera_de_alcance

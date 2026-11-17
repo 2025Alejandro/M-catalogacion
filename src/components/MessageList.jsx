@@ -26,6 +26,13 @@ export default function MessageList({ mensajes, escribiendo }) {
       {mensajes.map((mensaje, indice) => (
         <li key={`${mensaje.rol}-${indice}`} className={`burbuja burbuja-${mensaje.rol}`}>
           <span className="burbuja-autor">{mensaje.rol === 'usuario' ? 'Tú' : 'Asistente'}</span>
+          {mensaje.imagen && (
+            <img
+              className="miniatura-mensaje"
+              src={`${process.env.PUBLIC_URL}/${mensaje.imagen.archivo}`}
+              alt={mensaje.imagen.id.replaceAll('_', ' ')}
+            />
+          )}
           <p>{mensaje.texto}</p>
         </li>
       ))}

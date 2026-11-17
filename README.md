@@ -96,3 +96,40 @@ No hubo. El stemmer de `snowball-stemmers` resolvió los 15 turnos sin cambiar `
 ## Limitaciones
 
 El modelo simulado solo entiende lo que está descrito en el JSON. No es IA, no parafrasea con libertad y no consulta nada fuera del catálogo de demostración. El catálogo es ficticio. El adaptador de LM Studio queda escrito y desactivado.
+
+## Avance 2
+
+Se añadió un clasificador de intenciones (TF-IDF y SVM lineal) entrenado en Python con NLTK Snowball y exportado a JSON para calcularlo en el navegador. El detector por reglas del Avance 1 sigue disponible: `CONFIG.DETECTOR_INTENCION` vale `reglas` porque dos turnos de la suite original cambian de etiqueta con el SVM. Las pruebas nuevas activan `clasificador`.
+
+También hay un componente visual. La CNN (ResNet50) no se entrenó aquí: no hay GPU en este entorno y no se inventan sus métricas. La interfaz muestra 12 imágenes sintéticas rotuladas «MUESTRA SIMULADA» y predicciones con `modo: "simulado"`. El entrenamiento real está en `ml/Avance2_Colab.ipynb` y `ml/visual/INSTRUCCIONES_COLAB.md`.
+
+### Reproducir el texto
+
+```powershell
+docker compose build ml
+docker compose run --rm ml python generar_dataset_intenciones.py
+docker compose run --rm ml python preprocesamiento.py
+docker compose run --rm ml python clasificador_intenciones.py
+docker compose run --rm ml python exportar_modelo_js.py
+docker compose run --rm ml python ablacion_preprocesamiento.py
+```
+
+`STEMMER_USADO` en esas salidas es `NLTK SnowballStemmer('spanish')`.
+
+### Resultados reales de texto
+
+Salen de `ml/resultados_texto/metricas_texto.json` (1.084 frases, 875 de entrenamiento, 209 de prueba por plantilla, 102 independientes, 17 clases).
+
+| Modelo | Prueba por plantilla | Prueba independiente |
+|---|---|---|
+| Naive Bayes | accuracy 0.694, F1 macro 0.686 | accuracy 0.804, F1 macro 0.783 |
+| SVM | accuracy 0.708, F1 macro 0.694 | accuracy 0.784, F1 macro 0.774 |
+
+Validación cruzada del SVM: F1 macro 0.959 ± 0.016. La del Naive Bayes: 0.954 ± 0.011. Es optimista porque repite estructuras de plantilla.
+
+### Qué es simulado
+
+- El modelo de lenguaje sigue siendo el de plantillas.
+- El clasificador visual de la interfaz es simulado hasta que se copie un `prediccionesVisual.json` con `modo: "real"` producido en Colab.
+- No hay accuracy, precision, recall ni F1 de la CNN en este repositorio.
+

@@ -13,10 +13,14 @@
  *
  * @returns {import('react').JSX.Element}
  */
-export default function AvisoModoSimulado() {
+export default function AvisoModoSimulado({ modoVisual }) {
+  const lineaVisual = modoVisual === 'real'
+    ? 'Clasificador visual: predicciones del modelo entrenado'
+    : 'Clasificador visual: SIMULADO (aún no hay modelo entrenado)';
   return (
-    <p className="aviso" role="status">
-      Modo simulado: no hay ningún modelo de lenguaje cargado. Catálogo de demostración con datos ficticios.
-    </p>
+    <div className="aviso" role="status">
+      <p>Modo simulado: no hay ningún modelo de lenguaje cargado. Catálogo de demostración con datos ficticios.</p>
+      <p>{lineaVisual}</p>
+    </div>
   );
 }

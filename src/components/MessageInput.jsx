@@ -13,17 +13,17 @@ import { useState } from 'react';
  * @param {{ onEnviar: (texto: string) => void, deshabilitado: boolean }} props
  * @returns {import('react').JSX.Element}
  */
-export default function MessageInput({ onEnviar, deshabilitado }) {
+export default function MessageInput({ onEnviar, deshabilitado, hayImagen }) {
   const [texto, setTexto] = useState('');
 
   /**
-   * Envía el texto recortado y vacía el campo.
+   * Envía el texto. Si solo hay imagen, el hook pone la pregunta de escena.
    *
    * @returns {void}
    */
   function enviar() {
     const limpio = texto.trim();
-    if (!limpio || deshabilitado) {
+    if (deshabilitado || (!limpio && !hayImagen)) {
       return;
     }
     onEnviar(limpio);
@@ -54,7 +54,7 @@ export default function MessageInput({ onEnviar, deshabilitado }) {
             }
           }}
         />
-        <button type="submit" disabled={deshabilitado || texto.trim() === ''}>
+        <button type="submit" disabled={deshabilitado || (texto.trim() === '' && !hayImagen)}>
           Enviar
         </button>
       </div>
